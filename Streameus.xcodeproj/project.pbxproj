@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
+		A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094118869ED0008FE4D3 /* CoreGraphics.framework */; };
+		A89F094418869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
+		A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F094818869ED0008FE4D3 /* InfoPlist.strings */; };
+		A89F094C18869ED0008FE4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F094B18869ED0008FE4D3 /* main.m */; };
+		A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F094F18869ED0008FE4D3 /* STAppDelegate.m */; };
+		A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89F095118869ED0008FE4D3 /* Main.storyboard */; };
+		A89F095618869ED0008FE4D3 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F095518869ED0008FE4D3 /* STViewController.m */; };
+		A89F095818869ED0008FE4D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89F095718869ED0008FE4D3 /* Images.xcassets */; };
+		A89F095F18869ED0008FE4D3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F095E18869ED0008FE4D3 /* XCTest.framework */; };
+		A89F096018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
+		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
+		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
+		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A89F096218869ED0008FE4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A89F093418869ED0008FE4D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A89F093B18869ED0008FE4D3;
+			remoteInfo = Streameus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A89F093C18869ED0008FE4D3 /* Streameus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streameus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A89F093F18869ED0008FE4D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A89F094118869ED0008FE4D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A89F094318869ED0008FE4D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A89F094718869ED0008FE4D3 /* Streameus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Streameus-Info.plist"; sourceTree = "<group>"; };
+		A89F094918869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A89F094B18869ED0008FE4D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A89F094D18869ED0008FE4D3 /* Streameus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Streameus-Prefix.pch"; sourceTree = "<group>"; };
+		A89F094E18869ED0008FE4D3 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		A89F094F18869ED0008FE4D3 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		A89F095218869ED0008FE4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A89F095418869ED0008FE4D3 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		A89F095518869ED0008FE4D3 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
+		A89F095718869ED0008FE4D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A89F095D18869ED0008FE4D3 /* StreameusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreameusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A89F095E18869ED0008FE4D3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
+		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A89F093918869ED0008FE4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */,
+				A89F094418869ED0008FE4D3 /* UIKit.framework in Frameworks */,
+				A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A89F095A18869ED0008FE4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F095F18869ED0008FE4D3 /* XCTest.framework in Frameworks */,
+				A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */,
+				A89F096018869ED0008FE4D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A89F093318869ED0008FE4D3 = {
+			isa = PBXGroup;
+			children = (
+				A89F094518869ED0008FE4D3 /* Streameus */,
+				A89F096418869ED0008FE4D3 /* StreameusTests */,
+				A89F093E18869ED0008FE4D3 /* Frameworks */,
+				A89F093D18869ED0008FE4D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A89F093D18869ED0008FE4D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A89F093C18869ED0008FE4D3 /* Streameus.app */,
+				A89F095D18869ED0008FE4D3 /* StreameusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A89F093E18869ED0008FE4D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A89F093F18869ED0008FE4D3 /* Foundation.framework */,
+				A89F094118869ED0008FE4D3 /* CoreGraphics.framework */,
+				A89F094318869ED0008FE4D3 /* UIKit.framework */,
+				A89F095E18869ED0008FE4D3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A89F094518869ED0008FE4D3 /* Streameus */ = {
+			isa = PBXGroup;
+			children = (
+				A89F094E18869ED0008FE4D3 /* STAppDelegate.h */,
+				A89F094F18869ED0008FE4D3 /* STAppDelegate.m */,
+				A89F095118869ED0008FE4D3 /* Main.storyboard */,
+				A89F095418869ED0008FE4D3 /* STViewController.h */,
+				A89F095518869ED0008FE4D3 /* STViewController.m */,
+				A89F095718869ED0008FE4D3 /* Images.xcassets */,
+				A89F094618869ED0008FE4D3 /* Supporting Files */,
+			);
+			path = Streameus;
+			sourceTree = "<group>";
+		};
+		A89F094618869ED0008FE4D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A89F094718869ED0008FE4D3 /* Streameus-Info.plist */,
+				A89F094818869ED0008FE4D3 /* InfoPlist.strings */,
+				A89F094B18869ED0008FE4D3 /* main.m */,
+				A89F094D18869ED0008FE4D3 /* Streameus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A89F096418869ED0008FE4D3 /* StreameusTests */ = {
+			isa = PBXGroup;
+			children = (
+				A89F096A18869ED0008FE4D3 /* StreameusTests.m */,
+				A89F096518869ED0008FE4D3 /* Supporting Files */,
+			);
+			path = StreameusTests;
+			sourceTree = "<group>";
+		};
+		A89F096518869ED0008FE4D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */,
+				A89F096718869ED0008FE4D3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A89F093B18869ED0008FE4D3 /* Streameus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A89F096E18869ED0008FE4D3 /* Build configuration list for PBXNativeTarget "Streameus" */;
+			buildPhases = (
+				A89F093818869ED0008FE4D3 /* Sources */,
+				A89F093918869ED0008FE4D3 /* Frameworks */,
+				A89F093A18869ED0008FE4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Streameus;
+			productName = Streameus;
+			productReference = A89F093C18869ED0008FE4D3 /* Streameus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A89F095C18869ED0008FE4D3 /* StreameusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A89F097118869ED0008FE4D3 /* Build configuration list for PBXNativeTarget "StreameusTests" */;
+			buildPhases = (
+				A89F095918869ED0008FE4D3 /* Sources */,
+				A89F095A18869ED0008FE4D3 /* Frameworks */,
+				A89F095B18869ED0008FE4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A89F096318869ED0008FE4D3 /* PBXTargetDependency */,
+			);
+			name = StreameusTests;
+			productName = StreameusTests;
+			productReference = A89F095D18869ED0008FE4D3 /* StreameusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A89F093418869ED0008FE4D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ST;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Streameus;
+				TargetAttributes = {
+					A89F095C18869ED0008FE4D3 = {
+						TestTargetID = A89F093B18869ED0008FE4D3;
+					};
+				};
+			};
+			buildConfigurationList = A89F093718869ED0008FE4D3 /* Build configuration list for PBXProject "Streameus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A89F093318869ED0008FE4D3;
+			productRefGroup = A89F093D18869ED0008FE4D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A89F093B18869ED0008FE4D3 /* Streameus */,
+				A89F095C18869ED0008FE4D3 /* StreameusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A89F093A18869ED0008FE4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F095818869ED0008FE4D3 /* Images.xcassets in Resources */,
+				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
+				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A89F095B18869ED0008FE4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A89F093818869ED0008FE4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F095618869ED0008FE4D3 /* STViewController.m in Sources */,
+				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
+				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A89F095918869ED0008FE4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A89F096318869ED0008FE4D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A89F093B18869ED0008FE4D3 /* Streameus */;
+			targetProxy = A89F096218869ED0008FE4D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A89F094818869ED0008FE4D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A89F094918869ED0008FE4D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A89F095118869ED0008FE4D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A89F095218869ED0008FE4D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A89F096718869ED0008FE4D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A89F096818869ED0008FE4D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A89F096C18869ED0008FE4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A89F096D18869ED0008FE4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A89F096F18869ED0008FE4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A89F097018869ED0008FE4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A89F097218869ED0008FE4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Streameus.app/Streameus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StreameusTests/StreameusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A89F097318869ED0008FE4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Streameus.app/Streameus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				INFOPLIST_FILE = "StreameusTests/StreameusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A89F093718869ED0008FE4D3 /* Build configuration list for PBXProject "Streameus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A89F096C18869ED0008FE4D3 /* Debug */,
+				A89F096D18869ED0008FE4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A89F096E18869ED0008FE4D3 /* Build configuration list for PBXNativeTarget "Streameus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A89F096F18869ED0008FE4D3 /* Debug */,
+				A89F097018869ED0008FE4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A89F097118869ED0008FE4D3 /* Build configuration list for PBXNativeTarget "StreameusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A89F097218869ED0008FE4D3 /* Debug */,
+				A89F097318869ED0008FE4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A89F093418869ED0008FE4D3 /* Project object */;
+}
