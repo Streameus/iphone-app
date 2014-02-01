@@ -230,6 +230,7 @@
                             <outlet property="delegate" destination="brP-h9-2d4" id="PzZ-D2-P1B"/>
                         </connections>
                     </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eet-cE-BF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
