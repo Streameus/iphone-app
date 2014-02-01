@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
+		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
+		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
 		A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
 		A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094118869ED0008FE4D3 /* CoreGraphics.framework */; };
 		A89F094418869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
@@ -14,13 +17,14 @@
 		A89F094C18869ED0008FE4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F094B18869ED0008FE4D3 /* main.m */; };
 		A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F094F18869ED0008FE4D3 /* STAppDelegate.m */; };
 		A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89F095118869ED0008FE4D3 /* Main.storyboard */; };
-		A89F095618869ED0008FE4D3 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F095518869ED0008FE4D3 /* STViewController.m */; };
 		A89F095818869ED0008FE4D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89F095718869ED0008FE4D3 /* Images.xcassets */; };
 		A89F095F18869ED0008FE4D3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F095E18869ED0008FE4D3 /* XCTest.framework */; };
 		A89F096018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
 		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
 		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
+		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSidebarViewController.h; sourceTree = "<group>"; };
+		A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSidebarViewController.m; sourceTree = "<group>"; };
+		A8774B04189CE7F8000A7E61 /* STProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilViewController.h; sourceTree = "<group>"; };
+		A8774B05189CE7F8000A7E61 /* STProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilViewController.m; sourceTree = "<group>"; };
+		A8774B07189CE871000A7E61 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
+		A8774B08189CE871000A7E61 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
 		A89F093C18869ED0008FE4D3 /* Streameus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streameus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89F093F18869ED0008FE4D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A89F094118869ED0008FE4D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +55,16 @@
 		A89F094E18869ED0008FE4D3 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		A89F094F18869ED0008FE4D3 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
 		A89F095218869ED0008FE4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A89F095418869ED0008FE4D3 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
-		A89F095518869ED0008FE4D3 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		A89F095718869ED0008FE4D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A89F095D18869ED0008FE4D3 /* StreameusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreameusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89F095E18869ED0008FE4D3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
 		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+		A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A8D1D466189CC61000186B1B /* STHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeViewController.h; sourceTree = "<group>"; };
+		A8D1D467189CC61000186B1B /* STHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8774B02189CDFF4000A7E61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8D1D466189CC61000186B1B /* STHomeViewController.h */,
+				A8D1D467189CC61000186B1B /* STHomeViewController.m */,
+				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
+				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
+				A8774B04189CE7F8000A7E61 /* STProfilViewController.h */,
+				A8774B05189CE7F8000A7E61 /* STProfilViewController.m */,
+				A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */,
+				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A8774B03189CE5A1000A7E61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A89F095118869ED0008FE4D3 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		A89F093318869ED0008FE4D3 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +149,9 @@
 			children = (
 				A89F094E18869ED0008FE4D3 /* STAppDelegate.h */,
 				A89F094F18869ED0008FE4D3 /* STAppDelegate.m */,
-				A89F095118869ED0008FE4D3 /* Main.storyboard */,
-				A89F095418869ED0008FE4D3 /* STViewController.h */,
-				A89F095518869ED0008FE4D3 /* STViewController.m */,
+				A8774B03189CE5A1000A7E61 /* Views */,
+				A8774B02189CDFF4000A7E61 /* Controllers */,
+				A8D1D462189CBF7D00186B1B /* Library */,
 				A89F095718869ED0008FE4D3 /* Images.xcassets */,
 				A89F094618869ED0008FE4D3 /* Supporting Files */,
 			);
@@ -150,6 +185,15 @@
 				A89F096718869ED0008FE4D3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8D1D462189CBF7D00186B1B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */,
+				A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A89F095618869ED0008FE4D3 /* STViewController.m in Sources */,
+				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
+				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
+				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
+				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
+				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +509,7 @@
 				A89F097018869ED0008FE4D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A89F097118869ED0008FE4D3 /* Build configuration list for PBXNativeTarget "StreameusTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +518,7 @@
 				A89F097318869ED0008FE4D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
