@@ -1,19 +1,19 @@
 //
-//  STProfilViewController.m
+//  STAproposViewController.m
 //  Streameus
 //
-//  Created by Anas Ait Ali on 01/02/2014.
+//  Created by Anas Ait Ali on 02/02/2014.
 //  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
-#import "STProfilViewController.h"
+#import "STAproposViewController.h"
 #import "SWRevealViewController.h"
 
-@interface STProfilViewController ()
+@interface STAproposViewController ()
 
 @end
 
-@implementation STProfilViewController
+@implementation STAproposViewController
 
 - (void)viewDidLoad
 {

@@ -26,6 +26,11 @@
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
 		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
 		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
+		A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */; };
+		A8F08077189E0A99005514AB /* STAgendaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F08076189E0A99005514AB /* STAgendaViewController.m */; };
+		A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F08079189E0AEA005514AB /* STAideViewController.m */; };
+		A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0807C189E0B0B005514AB /* STEquipeViewController.m */; };
+		A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0807F189E0B25005514AB /* STAproposViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,16 @@
 		A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A8D1D466189CC61000186B1B /* STHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeViewController.h; sourceTree = "<group>"; };
 		A8D1D467189CC61000186B1B /* STHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeViewController.m; sourceTree = "<group>"; };
+		A8F08071189DE451005514AB /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_simple_transparent.png; sourceTree = "<group>"; };
+		A8F08075189E0A99005514AB /* STAgendaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAgendaViewController.h; sourceTree = "<group>"; };
+		A8F08076189E0A99005514AB /* STAgendaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAgendaViewController.m; sourceTree = "<group>"; };
+		A8F08078189E0AEA005514AB /* STAideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAideViewController.h; sourceTree = "<group>"; };
+		A8F08079189E0AEA005514AB /* STAideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAideViewController.m; sourceTree = "<group>"; };
+		A8F0807B189E0B0B005514AB /* STEquipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEquipeViewController.h; sourceTree = "<group>"; };
+		A8F0807C189E0B0B005514AB /* STEquipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEquipeViewController.m; sourceTree = "<group>"; };
+		A8F0807E189E0B25005514AB /* STAproposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAproposViewController.h; sourceTree = "<group>"; };
+		A8F0807F189E0B25005514AB /* STAproposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAproposViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +111,14 @@
 		A8774B02189CDFF4000A7E61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8F08075189E0A99005514AB /* STAgendaViewController.h */,
+				A8F08076189E0A99005514AB /* STAgendaViewController.m */,
+				A8F08078189E0AEA005514AB /* STAideViewController.h */,
+				A8F08079189E0AEA005514AB /* STAideViewController.m */,
+				A8F0807E189E0B25005514AB /* STAproposViewController.h */,
+				A8F0807F189E0B25005514AB /* STAproposViewController.m */,
+				A8F0807B189E0B0B005514AB /* STEquipeViewController.h */,
+				A8F0807C189E0B0B005514AB /* STEquipeViewController.m */,
 				A8D1D466189CC61000186B1B /* STHomeViewController.h */,
 				A8D1D467189CC61000186B1B /* STHomeViewController.m */,
 				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
@@ -156,6 +179,7 @@
 				A8774B02189CDFF4000A7E61 /* Controllers */,
 				A8D1D462189CBF7D00186B1B /* Library */,
 				A89F095718869ED0008FE4D3 /* Images.xcassets */,
+				A8F08074189DEEEA005514AB /* Images */,
 				A89F094618869ED0008FE4D3 /* Supporting Files */,
 			);
 			path = Streameus;
@@ -168,6 +192,7 @@
 				A89F094818869ED0008FE4D3 /* InfoPlist.strings */,
 				A89F094B18869ED0008FE4D3 /* main.m */,
 				A89F094D18869ED0008FE4D3 /* Streameus-Prefix.pch */,
+				A8F08071189DE451005514AB /* Defines.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +222,14 @@
 				A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		A8F08074189DEEEA005514AB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +313,7 @@
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
+				A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +333,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
+				A8F08077189E0A99005514AB /* STAgendaViewController.m in Sources */,
+				A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */,
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
+				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
+				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

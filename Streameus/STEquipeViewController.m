@@ -1,19 +1,19 @@
 //
-//  STProfilViewController.m
+//  STEquipeViewController.m
 //  Streameus
 //
-//  Created by Anas Ait Ali on 01/02/2014.
+//  Created by Anas Ait Ali on 02/02/2014.
 //  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
-#import "STProfilViewController.h"
+#import "STEquipeViewController.h"
 #import "SWRevealViewController.h"
 
-@interface STProfilViewController ()
+@interface STEquipeViewController ()
 
 @end
 
-@implementation STProfilViewController
+@implementation STEquipeViewController
 
 - (void)viewDidLoad
 {

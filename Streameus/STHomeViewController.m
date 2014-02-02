@@ -19,7 +19,6 @@
 {
     [super viewDidLoad];
     
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealBtn;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];

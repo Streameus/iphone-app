@@ -1,19 +1,19 @@
 //
-//  STProfilViewController.m
+//  STAgendaViewController.m
 //  Streameus
 //
-//  Created by Anas Ait Ali on 01/02/2014.
+//  Created by Anas Ait Ali on 02/02/2014.
 //  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
-#import "STProfilViewController.h"
+#import "STAgendaViewController.h"
 #import "SWRevealViewController.h"
 
-@interface STProfilViewController ()
+@interface STAgendaViewController ()
 
 @end
 
-@implementation STProfilViewController
+@implementation STAgendaViewController
 
 - (void)viewDidLoad
 {
