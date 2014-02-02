@@ -22,6 +22,8 @@
     UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealBtn;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    self.title = @"Flux d'actualités";
 }
 
 @end

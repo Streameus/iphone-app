@@ -24,6 +24,9 @@
 		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
 		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+		A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115AF189E379F00D83511 /* STIntroViewController.m */; };
+		A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115B2189E380A00D83511 /* STIntroPageViewController.m */; };
+		A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */; };
 		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
 		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
 		A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */; };
@@ -68,6 +71,11 @@
 		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
 		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+		A8B115AE189E379F00D83511 /* STIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroViewController.h; sourceTree = "<group>"; };
+		A8B115AF189E379F00D83511 /* STIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroViewController.m; sourceTree = "<group>"; };
+		A8B115B1189E380A00D83511 /* STIntroPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroPageViewController.h; sourceTree = "<group>"; };
+		A8B115B2189E380A00D83511 /* STIntroPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroPageViewController.m; sourceTree = "<group>"; };
+		A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "freeios7.com_night-cafe_iphone5.jpg"; sourceTree = "<group>"; };
 		A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A8D1D466189CC61000186B1B /* STHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeViewController.h; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 				A8F0807C189E0B0B005514AB /* STEquipeViewController.m */,
 				A8D1D466189CC61000186B1B /* STHomeViewController.h */,
 				A8D1D467189CC61000186B1B /* STHomeViewController.m */,
+				A8B115B1189E380A00D83511 /* STIntroPageViewController.h */,
+				A8B115B2189E380A00D83511 /* STIntroPageViewController.m */,
+				A8B115AE189E379F00D83511 /* STIntroViewController.h */,
+				A8B115AF189E379F00D83511 /* STIntroViewController.m */,
 				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
 				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
 				A8774B04189CE7F8000A7E61 /* STProfilViewController.h */,
@@ -227,6 +239,7 @@
 		A8F08074189DEEEA005514AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */,
 				A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */,
 			);
 			name = Images;
@@ -310,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89F095818869ED0008FE4D3 /* Images.xcassets in Resources */,
+				A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */,
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
@@ -332,12 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
 				A8F08077189E0A99005514AB /* STAgendaViewController.m in Sources */,
 				A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */,
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
+				A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,

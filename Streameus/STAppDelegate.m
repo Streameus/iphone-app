@@ -13,6 +13,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xFAF3D5)];
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = UIColorFromRGBandAlpha(0xE1E1E1, 0.5);
+    pageControl.currentPageIndicatorTintColor = UIColorFromRGBandAlpha(0xFEFEFE, 0.8);
+    pageControl.backgroundColor = [UIColor clearColor];
+    
     [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
     return YES;
 }
