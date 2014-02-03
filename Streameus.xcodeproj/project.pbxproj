@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
+		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A86BCB7C189FB08000943483 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSidebarViewController.h; sourceTree = "<group>"; };
 		A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSidebarViewController.m; sourceTree = "<group>"; };
 		A8774B04189CE7F8000A7E61 /* STProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilViewController.h; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		A8F08074189DEEEA005514AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A86BCB7C189FB08000943483 /* user.png */,
 				A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */,
 				A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */,
 			);
@@ -326,6 +329,7 @@
 				A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */,
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
+				A86BCB7D189FB08000943483 /* user.png in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
 				A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */,
 			);
