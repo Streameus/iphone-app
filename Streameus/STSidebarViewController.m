@@ -8,6 +8,7 @@
 
 #import "STSidebarViewController.h"
 #import "SWRevealViewController.h"
+#import "STSearchViewController.h"
 
 @interface STSidebarViewController ()
 
@@ -27,6 +28,11 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
     destViewController.title = [[[[self.tableView cellForRowAtIndexPath:indexPath] textLabel] text] capitalizedString];
+    
+    if ([segue.identifier isEqualToString:@"searchSegue"]) {
+        STUserRepository *repo = [[STUserRepository alloc] init];
+        [(STSearchViewController *)destViewController configureWithRepository:repo];
+    }
 
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
         SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;

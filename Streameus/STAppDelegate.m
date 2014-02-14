@@ -19,6 +19,9 @@
     pageControl.backgroundColor = [UIColor clearColor];
     
     [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
+    
+    [[Streameus sharedInstance] initializeWithBaseUrl:@"api.bruyere.co.uk/rest"];
+    
     return YES;
 }
 							
