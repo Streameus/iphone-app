@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
+		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
+		A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366A18AB7D0300C23C38 /* Streameus.m */; };
+		A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366D18AB8FA400C23C38 /* STUtilities.m */; };
+		A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367118ABA0DC00C23C38 /* STSearchViewController.m */; };
+		A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367518ABA1AF00C23C38 /* STUserRepository.m */; };
+		A86E367918ABA24F00C23C38 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367818ABA24F00C23C38 /* Reachability.m */; };
+		A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */; };
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
@@ -49,7 +56,21 @@
 
 /* Begin PBXFileReference section */
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A832953F18AE6106006D0E75 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
+		A832954018AE6106006D0E75 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
 		A86BCB7C189FB08000943483 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A86E366918AB7D0300C23C38 /* Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streameus.h; sourceTree = "<group>"; };
+		A86E366A18AB7D0300C23C38 /* Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Streameus.m; sourceTree = "<group>"; };
+		A86E366C18AB8FA400C23C38 /* STUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUtilities.h; sourceTree = "<group>"; };
+		A86E366D18AB8FA400C23C38 /* STUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUtilities.m; sourceTree = "<group>"; };
+		A86E367018ABA0DC00C23C38 /* STSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSearchViewController.h; sourceTree = "<group>"; };
+		A86E367118ABA0DC00C23C38 /* STSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSearchViewController.m; sourceTree = "<group>"; };
+		A86E367418ABA1AF00C23C38 /* STUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUserRepository.h; sourceTree = "<group>"; };
+		A86E367518ABA1AF00C23C38 /* STUserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUserRepository.m; sourceTree = "<group>"; };
+		A86E367718ABA24F00C23C38 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A86E367818ABA24F00C23C38 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSidebarViewController.h; sourceTree = "<group>"; };
 		A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSidebarViewController.m; sourceTree = "<group>"; };
 		A8774B04189CE7F8000A7E61 /* STProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilViewController.h; sourceTree = "<group>"; };
@@ -118,6 +139,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A86E366F18AB8FAC00C23C38 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A86E366C18AB8FA400C23C38 /* STUtilities.h */,
+				A86E366D18AB8FA400C23C38 /* STUtilities.m */,
+				A86E367718ABA24F00C23C38 /* Reachability.h */,
+				A86E367818ABA24F00C23C38 /* Reachability.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		A86E367318ABA18000C23C38 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A86E367418ABA1AF00C23C38 /* STUserRepository.h */,
+				A86E367518ABA1AF00C23C38 /* STUserRepository.m */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
 		A8774B02189CDFF4000A7E61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +168,8 @@
 				A8F08079189E0AEA005514AB /* STAideViewController.m */,
 				A8F0807E189E0B25005514AB /* STAproposViewController.h */,
 				A8F0807F189E0B25005514AB /* STAproposViewController.m */,
+				A832953F18AE6106006D0E75 /* STConferenceViewController.h */,
+				A832954018AE6106006D0E75 /* STConferenceViewController.m */,
 				A8F0807B189E0B0B005514AB /* STEquipeViewController.h */,
 				A8F0807C189E0B0B005514AB /* STEquipeViewController.m */,
 				A8D1D466189CC61000186B1B /* STHomeViewController.h */,
@@ -139,6 +182,8 @@
 				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
 				A8774B04189CE7F8000A7E61 /* STProfilViewController.h */,
 				A8774B05189CE7F8000A7E61 /* STProfilViewController.m */,
+				A86E367018ABA0DC00C23C38 /* STSearchViewController.h */,
+				A86E367118ABA0DC00C23C38 /* STSearchViewController.m */,
 				A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */,
 				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
 			);
@@ -187,14 +232,18 @@
 		A89F094518869ED0008FE4D3 /* Streameus */ = {
 			isa = PBXGroup;
 			children = (
+				A8774B02189CDFF4000A7E61 /* Controllers */,
+				A8F08074189DEEEA005514AB /* Images */,
+				A89F095718869ED0008FE4D3 /* Images.xcassets */,
+				A8D1D462189CBF7D00186B1B /* Library */,
+				A86E367318ABA18000C23C38 /* Repositories */,
 				A89F094E18869ED0008FE4D3 /* STAppDelegate.h */,
 				A89F094F18869ED0008FE4D3 /* STAppDelegate.m */,
-				A8774B03189CE5A1000A7E61 /* Views */,
-				A8774B02189CDFF4000A7E61 /* Controllers */,
-				A8D1D462189CBF7D00186B1B /* Library */,
-				A89F095718869ED0008FE4D3 /* Images.xcassets */,
-				A8F08074189DEEEA005514AB /* Images */,
+				A86E366918AB7D0300C23C38 /* Streameus.h */,
+				A86E366A18AB7D0300C23C38 /* Streameus.m */,
 				A89F094618869ED0008FE4D3 /* Supporting Files */,
+				A86E366F18AB8FAC00C23C38 /* Tools */,
+				A8774B03189CE5A1000A7E61 /* Views */,
 			);
 			path = Streameus;
 			sourceTree = "<group>";
@@ -232,6 +281,8 @@
 		A8D1D462189CBF7D00186B1B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */,
+				A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */,
 				A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */,
 				A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */,
 			);
@@ -351,18 +402,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
+				A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */,
+				A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */,
+				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
 				A8F08077189E0A99005514AB /* STAgendaViewController.m in Sources */,
 				A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */,
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
+				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
 				A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
+				A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
+				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,
+				A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
