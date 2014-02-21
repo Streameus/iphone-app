@@ -26,4 +26,13 @@
     self.title = @"Flux d'actualités";
 }
 
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                    message:@"Calm down cowboy, this app is still under development!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok sry!"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 @end

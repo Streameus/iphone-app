@@ -19,9 +19,13 @@
 {
     [super viewDidLoad];
 
-    UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealBtn;
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    if (!self.user) { // Check pour pouvoir afficher back | A perfectionner
+        UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
+        self.navigationItem.leftBarButtonItem = revealBtn;
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    NSLog(@"User :\n%@", self.user);
+    [self.userInfosLabel setText:[NSString stringWithFormat:@"%@", self.user]];
 }
 
 - (void)didReceiveMemoryWarning

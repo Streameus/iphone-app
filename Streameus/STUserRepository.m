@@ -18,17 +18,6 @@
 @implementation STUserRepository
 
 - (void)fetch {
-    if ([Reachability isOffline]) {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Internet connection required"
-                              message:@"You are not connected to internet"
-                              delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles: nil];
-        [alert show];
-        [self didFetch:[[NSArray alloc] init]];
-        return;
-    }
     NSURLRequest *urlRequest = [[Streameus sharedInstance] createUrlController:@"user"
                                                                       withVerb:GET];
     [NSURLConnection sendAsynchronousRequest:urlRequest
@@ -51,6 +40,14 @@
                                    NSLog(@"No user found");
                                } else if (connectionError != nil){
                                    NSLog(@"Error happened = %@", connectionError);
+                                   UIAlertView *alert = [[UIAlertView alloc]
+                                                         initWithTitle:@"Error"
+                                                         message:[connectionError localizedDescription]
+                                                         delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles: nil];
+                                   [alert show];
+                                   [self didFetch:[[NSArray alloc] init]];
                                }
                            }];
 }
