@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import "Defines.h"
     #import "Streameus.h"
+    #import "MBProgressHUD.h"
 #endif

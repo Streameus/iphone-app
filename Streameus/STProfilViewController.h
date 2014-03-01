@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSDictionary *user;
 
 @property (weak, nonatomic) IBOutlet UILabel *userInfosLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pseudoLabel;
 
 @end

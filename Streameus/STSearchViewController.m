@@ -74,7 +74,7 @@
     static NSString *CellIdentifier = @"SearchCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[item objectForKey:@"lastName"]];
+    [cell.textLabel setText:[item objectForKey:@"pseudo"]];
     
     return cell;
 }
