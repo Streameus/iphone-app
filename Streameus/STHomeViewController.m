@@ -23,7 +23,7 @@
     self.navigationItem.leftBarButtonItem = revealBtn;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    self.title = @"Flux d'actualités";
+    self.title = NSLocalizedString(@"News feed", @"Title navigation bar home view");
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {

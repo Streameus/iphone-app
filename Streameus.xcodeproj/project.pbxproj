@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
+		A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85C8C2318C2D4100034BD64 /* Localizable.strings */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
 		A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366A18AB7D0300C23C38 /* Streameus.m */; };
 		A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366D18AB8FA400C23C38 /* STUtilities.m */; };
@@ -60,6 +61,11 @@
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A832953F18AE6106006D0E75 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A832954018AE6106006D0E75 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
+		A85423D018C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		A85423D118C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A85423D218C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A85C8C2418C2D4100034BD64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A85C8C2618C2D4260034BD64 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A86BCB7C189FB08000943483 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A86E366918AB7D0300C23C38 /* Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streameus.h; sourceTree = "<group>"; };
 		A86E366A18AB7D0300C23C38 /* Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Streameus.m; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 		A89F094618869ED0008FE4D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A85C8C2318C2D4100034BD64 /* Localizable.strings */,
 				A89F094718869ED0008FE4D3 /* Streameus-Info.plist */,
 				A89F094818869ED0008FE4D3 /* InfoPlist.strings */,
 				A89F094B18869ED0008FE4D3 /* main.m */,
@@ -316,6 +323,8 @@
 				A89F093818869ED0008FE4D3 /* Sources */,
 				A89F093918869ED0008FE4D3 /* Frameworks */,
 				A89F093A18869ED0008FE4D3 /* Resources */,
+				A85423D318C2CC3E00AA6FF8 /* ShellScript */,
+				A85C8C2718C2D4EE0034BD64 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -366,6 +375,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = A89F093318869ED0008FE4D3;
 			productRefGroup = A89F093D18869ED0008FE4D3 /* Products */;
@@ -388,6 +398,7 @@
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
 				A86BCB7D189FB08000943483 /* user.png in Resources */,
+				A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
 				A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */,
 			);
@@ -402,6 +413,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A85423D318C2CC3E00AA6FF8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/scripts/update_storyboard_strings.sh";
+			showEnvVarsInLog = 0;
+		};
+		A85C8C2718C2D4EE0034BD64 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find . -name \\*.m | xargs genstrings -o ${PROJECT_DIR}/${PROJECT_NAME}/en.lproj";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A89F093818869ED0008FE4D3 /* Sources */ = {
@@ -451,10 +493,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A85C8C2318C2D4100034BD64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A85C8C2418C2D4100034BD64 /* en */,
+				A85C8C2618C2D4260034BD64 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A89F094818869ED0008FE4D3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A89F094918869ED0008FE4D3 /* en */,
+				A85423D118C2C7A800AA6FF8 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -463,6 +515,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A89F095218869ED0008FE4D3 /* Base */,
+				A85423D018C2C7A800AA6FF8 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -471,6 +524,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A89F096818869ED0008FE4D3 /* en */,
+				A85423D218C2C7A800AA6FF8 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
