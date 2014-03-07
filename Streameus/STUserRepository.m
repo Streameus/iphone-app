@@ -30,7 +30,7 @@
                                    id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    NSMutableArray *tmpItems = [NSMutableArray array];
                                    NSLog(@"JSONData =\n%@", JSONData);
-                                   for (NSDictionary *it in [JSONData objectForKey:@"data"]) {
+                                   for (NSDictionary *it in JSONData) {
                                        [tmpItems addObject:it];
                                    }
                                    dispatch_async(dispatch_get_main_queue(), ^{

@@ -1,11 +1,23 @@
+/* Class = "IBUILabel"; text = "Rejoindre paul et les 10 autres participants"; ObjectID = "0On-c6-CxU"; */
+"0On-c6-CxU.text" = "Rejoindre paul et les 10 autres participants";
+
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "0pX-z6-mx1"; */
 "0pX-z6-mx1.text" = "Aide";
 
 /* Class = "IBUILabel"; text = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\""; ObjectID = "0sD-3Z-ahz"; */
 "0sD-3Z-ahz.text" = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\"";
 
+/* Class = "IBUIButton"; normalTitle = "Subscriptions"; ObjectID = "1JR-pu-bkP"; */
+"1JR-pu-bkP.normalTitle" = "Subscriptions";
+
+/* Class = "IBUILabel"; text = "Vous suivez désormais Léo"; ObjectID = "1PM-Xx-Voh"; */
+"1PM-Xx-Voh.text" = "Vous suivez désormais Léo";
+
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "21O-Nt-eMx"; */
 "21O-Nt-eMx.text" = "Calendrier";
+
+/* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "3LX-fa-XcS"; */
+"3LX-fa-XcS.text" = "Rejoindre Anas et les 220 autres participants";
 
 /* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "6di-Np-rGK"; */
 "6di-Np-rGK.normalTitle" = "S'enregistrer";
@@ -16,11 +28,17 @@
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "9et-ch-ov2"; */
 "9et-ch-ov2.text" = "Rejoindre Anas et les 220 autres participants";
 
+/* Class = "IBUILabel"; text = "Vous suivez désormais Guillaume"; ObjectID = "9jQ-Z0-Aia"; */
+"9jQ-Z0-Aia.text" = "Vous suivez désormais Guillaume";
+
 /* Class = "IBUILabel"; text = "Streameus IOS app"; ObjectID = "Afe-Oi-Bzt"; */
 "Afe-Oi-Bzt.text" = "Streameus IOS app";
 
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "DOe-qc-8eF"; */
 "DOe-qc-8eF.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
+
+/* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "EUq-rl-3WS"; */
+"EUq-rl-3WS.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
 
 /* Class = "IBUILabel"; text = "Team"; ObjectID = "Ed1-1g-Hl2"; */
 "Ed1-1g-Hl2.text" = "L'équipe";
@@ -31,11 +49,20 @@
 /* Class = "IBUILabel"; text = "Pseudo (Real name)"; ObjectID = "IYE-fq-GCx"; */
 "IYE-fq-GCx.text" = "Pseudo (Real name)";
 
-/* Class = "IBUILabel"; text = "User infos"; ObjectID = "JQR-1d-5Db"; */
-"JQR-1d-5Db.text" = "User infos";
+/* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "Jrs-iV-VZp"; */
+"Jrs-iV-VZp.text" = "Vous suivez désormais Kevyn";
 
 /* Class = "IBUILabel"; text = "About"; ObjectID = "K2E-uF-25I"; */
 "K2E-uF-25I.text" = "A propos";
+
+/* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "KnB-l4-OcW"; */
+"KnB-l4-OcW.normalTitle" = "A propos";
+
+/* Class = "IBUILabel"; text = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser"; ObjectID = "LOe-8Q-xqh"; */
+"LOe-8Q-xqh.text" = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser";
+
+/* Class = "IBUILabel"; text = "Paul participe à la conférence \"LS\""; ObjectID = "LXB-Wk-kbk"; */
+"LXB-Wk-kbk.text" = "Paul participe à la conférence \"LS\"";
 
 /* Class = "IBUILabel"; text = "PAGE 0"; ObjectID = "MRj-sD-YjM"; */
 "MRj-sD-YjM.text" = "PAGE 0";
@@ -52,17 +79,32 @@
 /* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "QnQ-UZ-giN"; */
 "QnQ-UZ-giN.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
 
+/* Class = "IBUILabel"; text = "OAuth not implemented yet"; ObjectID = "Sbc-b3-Bvr"; */
+"Sbc-b3-Bvr.text" = "OAuth pas encore implémenté";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "Uyt-el-bEs"; */
+"Uyt-el-bEs.normalTitle" = "Annuler";
+
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
 "VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
 
 /* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "Viv-y8-IFj"; */
 "Viv-y8-IFj.placeholder" = "Email";
 
+/* Class = "IBUILabel"; text = "User Infos"; ObjectID = "Xjf-jY-URe"; */
+"Xjf-jY-URe.text" = "User Infos";
+
+/* Class = "IBUIButton"; normalTitle = "Login through another service"; ObjectID = "fXF-px-Got"; */
+"fXF-px-Got.normalTitle" = "Se connecter via un autre service";
+
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Aide";
 
 /* Class = "IBUILabel"; text = "Vous suivez désormais Guillaume"; ObjectID = "i6M-R4-AQY"; */
 "i6M-R4-AQY.text" = "Vous suivez désormais Guillaume";
+
+/* Class = "IBUILabel"; text = "Rejoindre Alexandre et les 32 autres participants"; ObjectID = "jWP-E0-rn1"; */
+"jWP-E0-rn1.text" = "Rejoindre Alexandre et les 32 autres participants";
 
 /* Class = "IBUILabel"; text = "Team"; ObjectID = "kGj-v7-OLb"; */
 "kGj-v7-OLb.text" = "L'équipe";
@@ -82,6 +124,9 @@
 /* Class = "IBUINavigationItem"; title = "Streameus"; ObjectID = "qQ3-Rn-C1T"; */
 "qQ3-Rn-C1T.title" = "Streameus";
 
+/* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "rFM-Kh-1Xv"; */
+"rFM-Kh-1Xv.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
+
 /* Class = "IBUILabel"; text = "Rejoindre Alexandre et les 32 autres participants"; ObjectID = "seu-8x-8sH"; */
 "seu-8x-8sH.text" = "Rejoindre Alexandre et les 32 autres participants";
 
@@ -96,6 +141,9 @@
 
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "vvR-Ff-WTC"; */
 "vvR-Ff-WTC.text" = "Calendrier";
+
+/* Class = "IBUILabel"; text = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\""; ObjectID = "yka-Gp-Qr2"; */
+"yka-Gp-Qr2.text" = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\"";
 
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "Flux d'actualités";

@@ -8,6 +8,7 @@
 
 #import "STProfilViewController.h"
 #import "SWRevealViewController.h"
+#import "STProfilAboutViewController.h"
 
 @interface STProfilViewController ()
 
@@ -39,18 +40,17 @@
                                        id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                        NSMutableArray *tmpItems = [NSMutableArray array];
                                        NSLog(@"JSONData =\n%@", JSONData);
-                                       for (NSDictionary *it in [JSONData objectForKey:@"data"]) {
+                                       for (NSDictionary *it in JSONData) {
                                            [tmpItems addObject:it];
                                            break;
                                        }
                                        dispatch_async(dispatch_get_main_queue(), ^{
                                            self.user = [tmpItems objectAtIndex:0];
                                            [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                           [self.userInfosLabel setText:[NSString stringWithFormat:@"%@", self.user]];
                                            [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ (%@ %@)",
-                                                                      [self.user objectForKey:@"pseudo"],
-                                                                      [self.user objectForKey:@"firstName"],
-                                                                      [self.user objectForKey:@"lastName"]]];
+                                                                      [self.user objectForKey:@"Pseudo"],
+                                                                      [self.user objectForKey:@"FirstName"],
+                                                                      [self.user objectForKey:@"LastName"]]];
                                        });
                                    } else if (connectionError == nil && statusCode == 204){
                                        NSLog(@"No user found");
@@ -69,13 +69,27 @@
                                }];
     } else {
         NSLog(@"User :\n%@", self.user);
-        [self.userInfosLabel setText:[NSString stringWithFormat:@"%@", self.user]];
         [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ (%@ %@)",
-                                   [self.user objectForKey:@"pseudo"],
-                                   [self.user objectForKey:@"firstName"],
-                                   [self.user objectForKey:@"lastName"]]];
+                                   [self.user objectForKey:@"Pseudo"],
+                                   [self.user objectForKey:@"FirstName"],
+                                   [self.user objectForKey:@"LastName"]]];
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"profilAboutSegue"]) {
+        STProfilAboutViewController *destViewController = segue.destinationViewController;
+        destViewController.user = self.user;
+    }
+}
+
+//#pragma mark - Tableview
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//}
 
 - (void)didReceiveMemoryWarning
 {

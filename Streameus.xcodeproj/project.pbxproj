@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
+		A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3118C9EE050083BA4E /* STOauthViewController.m */; };
+		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
 		A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85C8C2318C2D4100034BD64 /* Localizable.strings */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
 		A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366A18AB7D0300C23C38 /* Streameus.m */; };
@@ -61,6 +63,10 @@
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A832953F18AE6106006D0E75 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A832954018AE6106006D0E75 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
+		A839FA3018C9EE050083BA4E /* STOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOauthViewController.h; sourceTree = "<group>"; };
+		A839FA3118C9EE050083BA4E /* STOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOauthViewController.m; sourceTree = "<group>"; };
+		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
+		A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilAboutViewController.m; sourceTree = "<group>"; };
 		A85423D018C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		A85423D118C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A85423D218C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -191,6 +197,10 @@
 				A8B115AF189E379F00D83511 /* STIntroViewController.m */,
 				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
 				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
+				A839FA3018C9EE050083BA4E /* STOauthViewController.h */,
+				A839FA3118C9EE050083BA4E /* STOauthViewController.m */,
+				A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */,
+				A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */,
 				A8774B04189CE7F8000A7E61 /* STProfilViewController.h */,
 				A8774B05189CE7F8000A7E61 /* STProfilViewController.m */,
 				A86E367018ABA0DC00C23C38 /* STSearchViewController.h */,
@@ -450,10 +460,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */,
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */,
 				A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
+				A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */,
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
 				A8F08077189E0A99005514AB /* STAgendaViewController.m in Sources */,
 				A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */,
