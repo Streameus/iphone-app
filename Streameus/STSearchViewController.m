@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Liste de utilisateurs";
+    self.title =  NSLocalizedString(@"User List", @"Search navigation title");
     
     UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealBtn;
