@@ -22,6 +22,7 @@
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
+		A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A88ACFDC18E5A30700626D92 /* libStreameusAPI.a */; };
 		A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
 		A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094118869ED0008FE4D3 /* CoreGraphics.framework */; };
 		A89F094418869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
@@ -50,6 +51,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A88ACFDB18E5A30700626D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A88ACFAD18E5A30600626D92;
+			remoteInfo = StreameusAPI;
+		};
+		A88ACFDD18E5A30700626D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A88ACFBD18E5A30600626D92;
+			remoteInfo = StreameusAPITests;
+		};
+		A88ACFE918E5AAF900626D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A88ACFAC18E5A30600626D92;
+			remoteInfo = StreameusAPI;
+		};
 		A89F096218869ED0008FE4D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A89F093418869ED0008FE4D3 /* Project object */;
@@ -91,6 +113,7 @@
 		A8774B05189CE7F8000A7E61 /* STProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilViewController.m; sourceTree = "<group>"; };
 		A8774B07189CE871000A7E61 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
 		A8774B08189CE871000A7E61 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
+		A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StreameusAPI.xcodeproj; path = StreameusAPI/StreameusAPI.xcodeproj; sourceTree = "<group>"; };
 		A89F093C18869ED0008FE4D3 /* Streameus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streameus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89F093F18869ED0008FE4D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A89F094118869ED0008FE4D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */,
 				A8F471EA18B7260800CBD8A5 /* SystemConfiguration.framework in Frameworks */,
 				A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */,
 				A89F094418869ED0008FE4D3 /* UIKit.framework in Frameworks */,
@@ -219,10 +243,20 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A88ACFD718E5A30600626D92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A88ACFDC18E5A30700626D92 /* libStreameusAPI.a */,
+				A88ACFDE18E5A30700626D92 /* StreameusAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A89F093318869ED0008FE4D3 = {
 			isa = PBXGroup;
 			children = (
 				A81C5BFD189D43FD007A2C9B /* README.md */,
+				A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */,
 				A89F094518869ED0008FE4D3 /* Streameus */,
 				A89F096418869ED0008FE4D3 /* StreameusTests */,
 				A89F093E18869ED0008FE4D3 /* Frameworks */,
@@ -339,6 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A88ACFEA18E5AAF900626D92 /* PBXTargetDependency */,
 			);
 			name = Streameus;
 			productName = Streameus;
@@ -390,6 +425,12 @@
 			mainGroup = A89F093318869ED0008FE4D3;
 			productRefGroup = A89F093D18869ED0008FE4D3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A88ACFD718E5A30600626D92 /* Products */;
+					ProjectRef = A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A89F093B18869ED0008FE4D3 /* Streameus */,
@@ -397,6 +438,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A88ACFDC18E5A30700626D92 /* libStreameusAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libStreameusAPI.a;
+			remoteRef = A88ACFDB18E5A30700626D92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A88ACFDE18E5A30700626D92 /* StreameusAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StreameusAPITests.xctest;
+			remoteRef = A88ACFDD18E5A30700626D92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A89F093A18869ED0008FE4D3 /* Resources */ = {
@@ -497,6 +555,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A88ACFEA18E5AAF900626D92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StreameusAPI;
+			targetProxy = A88ACFE918E5AAF900626D92 /* PBXContainerItemProxy */;
+		};
 		A89F096318869ED0008FE4D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A89F093B18869ED0008FE4D3 /* Streameus */;
@@ -622,8 +685,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SOURCE_ROOT/include,
+				);
 				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
 				OTHER_CODE_SIGN_FLAGS = "-gta";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -637,8 +706,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SOURCE_ROOT/include,
+				);
 				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
 				OTHER_CODE_SIGN_FLAGS = "-gta";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
