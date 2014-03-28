@@ -14,6 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Defines.h"
-    #import "Streameus.h"
+    #import "StreameusAPI/StreameusAPI.h"
     #import "MBProgressHUD.h"
 #endif

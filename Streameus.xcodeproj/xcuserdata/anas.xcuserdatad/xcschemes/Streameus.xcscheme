@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Streameus.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A88ACFBC18E5A30600626D92"
+               BuildableName = "StreameusAPITests.xctest"
+               BlueprintName = "StreameusAPITests"
+               ReferencedContainer = "container:StreameusAPI/StreameusAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

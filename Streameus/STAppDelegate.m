@@ -20,7 +20,7 @@
     
     [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
     
-    [[Streameus sharedInstance] initializeWithBaseUrl:@"streameus.apphb.com/api"];
+    [[StreameusAPI sharedInstance] initializeWithBaseUrl:@"streameus.apphb.com/api"];
     
     return YES;
 }

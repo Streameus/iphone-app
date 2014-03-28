@@ -28,7 +28,7 @@
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.labelText = @"Loading...";
         hud.animationType = MBProgressHUDAnimationZoomIn;
-        NSURLRequest *urlRequest = [[Streameus sharedInstance] createUrlController:@"user"
+        NSURLRequest *urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user"
                                                                           withVerb:GET];
         [NSURLConnection sendAsynchronousRequest:urlRequest
                                            queue:[NSOperationQueue mainQueue]

@@ -13,8 +13,6 @@
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
 		A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85C8C2318C2D4100034BD64 /* Localizable.strings */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
-		A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366A18AB7D0300C23C38 /* Streameus.m */; };
-		A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E366D18AB8FA400C23C38 /* STUtilities.m */; };
 		A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367118ABA0DC00C23C38 /* STSearchViewController.m */; };
 		A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367518ABA1AF00C23C38 /* STUserRepository.m */; };
 		A86E367918ABA24F00C23C38 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367818ABA24F00C23C38 /* Reachability.m */; };
@@ -95,10 +93,6 @@
 		A85C8C2418C2D4100034BD64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A85C8C2618C2D4260034BD64 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A86BCB7C189FB08000943483 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		A86E366918AB7D0300C23C38 /* Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streameus.h; sourceTree = "<group>"; };
-		A86E366A18AB7D0300C23C38 /* Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Streameus.m; sourceTree = "<group>"; };
-		A86E366C18AB8FA400C23C38 /* STUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUtilities.h; sourceTree = "<group>"; };
-		A86E366D18AB8FA400C23C38 /* STUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUtilities.m; sourceTree = "<group>"; };
 		A86E367018ABA0DC00C23C38 /* STSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSearchViewController.h; sourceTree = "<group>"; };
 		A86E367118ABA0DC00C23C38 /* STSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSearchViewController.m; sourceTree = "<group>"; };
 		A86E367418ABA1AF00C23C38 /* STUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUserRepository.h; sourceTree = "<group>"; };
@@ -183,8 +177,6 @@
 		A86E366F18AB8FAC00C23C38 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				A86E366C18AB8FA400C23C38 /* STUtilities.h */,
-				A86E366D18AB8FA400C23C38 /* STUtilities.m */,
 				A86E367718ABA24F00C23C38 /* Reachability.h */,
 				A86E367818ABA24F00C23C38 /* Reachability.m */,
 			);
@@ -295,8 +287,6 @@
 				A86E367318ABA18000C23C38 /* Repositories */,
 				A89F094E18869ED0008FE4D3 /* STAppDelegate.h */,
 				A89F094F18869ED0008FE4D3 /* STAppDelegate.m */,
-				A86E366918AB7D0300C23C38 /* Streameus.h */,
-				A86E366A18AB7D0300C23C38 /* Streameus.m */,
 				A89F094618869ED0008FE4D3 /* Supporting Files */,
 				A86E366F18AB8FAC00C23C38 /* Tools */,
 				A8774B03189CE5A1000A7E61 /* Views */,
@@ -521,7 +511,6 @@
 				A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */,
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */,
-				A86E366E18AB8FA400C23C38 /* STUtilities.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
 				A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */,
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
@@ -535,7 +524,6 @@
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
-				A86E366B18AB7D0300C23C38 /* Streameus.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,
@@ -694,6 +682,7 @@
 				OTHER_CODE_SIGN_FLAGS = "-gta";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -715,6 +704,7 @@
 				OTHER_CODE_SIGN_FLAGS = "-gta";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
