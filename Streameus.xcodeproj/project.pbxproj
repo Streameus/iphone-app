@@ -37,7 +37,6 @@
 		A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115AF189E379F00D83511 /* STIntroViewController.m */; };
 		A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115B2189E380A00D83511 /* STIntroPageViewController.m */; };
 		A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */; };
-		A8BEF75318C212AF009AA126 /* STLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BEF75218C212AF009AA126 /* STLoginTests.m */; };
 		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
 		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
 		A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */; };
@@ -130,7 +129,6 @@
 		A8B115B1189E380A00D83511 /* STIntroPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroPageViewController.h; sourceTree = "<group>"; };
 		A8B115B2189E380A00D83511 /* STIntroPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroPageViewController.m; sourceTree = "<group>"; };
 		A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "freeios7.com_night-cafe_iphone5.jpg"; sourceTree = "<group>"; };
-		A8BEF75218C212AF009AA126 /* STLoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginTests.m; sourceTree = "<group>"; };
 		A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A8D1D466189CC61000186B1B /* STHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeViewController.h; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				A89F096A18869ED0008FE4D3 /* StreameusTests.m */,
-				A8BEF75218C212AF009AA126 /* STLoginTests.m */,
 				A89F096518869ED0008FE4D3 /* Supporting Files */,
 			);
 			path = StreameusTests;
@@ -535,7 +532,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8BEF75318C212AF009AA126 /* STLoginTests.m in Sources */,
 				A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

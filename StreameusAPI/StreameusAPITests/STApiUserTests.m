@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "STApiUser.h"
+#import "STApiConstants.h"
 
 @interface STApiUserTests : XCTestCase
 
@@ -17,7 +19,7 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [[StreameusAPI sharedInstance] initializeWithBaseUrl:kSTStreameusAPIURL];
 }
 
 - (void)tearDown
@@ -26,9 +28,47 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testGetUserSatusCode
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    StartBlock();
+    [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        EndBlock();
+        XCTAssertTrue(connectionError == nil && (statusCode == 200 || statusCode == 204), @"Unable to GET /user from API. statusCode : %ld, connectionError : %@", (long)statusCode, connectionError);
+    }];
+    WaitUntilBlockCompletes();
+}
+
+- (void)testGetUserReturn
+{
+    StartBlock();
+    [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        EndBlock();
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        XCTAssertTrue([JSONData isKindOfClass:[NSArray class]], @"Returned data is not an NSArray, data class : %@", [JSONData class]);
+        if (statusCode != 204) {
+            NSArray *receivedKeys = [[[JSONData objectAtIndex:0] allKeys] sortedArrayUsingSelector:@selector(compare:)];
+            NSArray *expected = @[@"FirstName",
+                                  @"Id",
+                                  @"Reputation",
+                                  @"City",
+                                  @"Country",
+                                  @"Gender",
+                                  @"Address",
+                                  @"Email",
+                                  @"BirthDay",
+                                  @"Description",
+                                  @"Pseudo",
+                                  @"LastName",
+                                  @"Profession",
+                                  @"Phone",
+                                  @"Website"];
+            expected = [expected sortedArrayUsingSelector:@selector(compare:)];
+            XCTAssertTrue([receivedKeys isEqualToArray:expected], @"Object keys are different, received keys : %@", receivedKeys);
+        }
+    }];
+    WaitUntilBlockCompletes();
 }
 
 @end

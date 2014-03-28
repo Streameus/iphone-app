@@ -7,6 +7,7 @@
 //
 
 #import "STAppDelegate.h"
+#import "StreameusAPI/STApiConstants.h"
 
 @implementation STAppDelegate
 
@@ -20,7 +21,7 @@
     
     [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
     
-    [[StreameusAPI sharedInstance] initializeWithBaseUrl:@"streameus.apphb.com/api"];
+    [[StreameusAPI sharedInstance] initializeWithBaseUrl:kSTStreameusAPIURL];
     
     return YES;
 }

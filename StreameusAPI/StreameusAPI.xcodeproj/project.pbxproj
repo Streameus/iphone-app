@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		A83DA26818E5B3DF00A5EB69 /* STApiUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26718E5B3DF00A5EB69 /* STApiUser.m */; };
 		A83DA26C18E5B87700A5EB69 /* STApiUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */; };
+		A83DA26F18E5BFF500A5EB69 /* STApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26E18E5BFF500A5EB69 /* STApiConstants.m */; };
 		A88ACFB118E5A30600626D92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88ACFB018E5A30600626D92 /* Foundation.framework */; };
 		A88ACFB618E5A30600626D92 /* StreameusAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A88ACFB518E5A30600626D92 /* StreameusAPI.h */; };
 		A88ACFB818E5A30600626D92 /* StreameusAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A88ACFB718E5A30600626D92 /* StreameusAPI.m */; };
@@ -62,6 +63,8 @@
 		A83DA26618E5B3DF00A5EB69 /* STApiUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiUser.h; sourceTree = "<group>"; };
 		A83DA26718E5B3DF00A5EB69 /* STApiUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiUser.m; sourceTree = "<group>"; };
 		A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiUserTests.m; sourceTree = "<group>"; };
+		A83DA26D18E5BFF500A5EB69 /* STApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiConstants.h; sourceTree = "<group>"; };
+		A83DA26E18E5BFF500A5EB69 /* STApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiConstants.m; sourceTree = "<group>"; };
 		A88ACFAD18E5A30600626D92 /* libStreameusAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStreameusAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88ACFB018E5A30600626D92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A88ACFB418E5A30600626D92 /* StreameusAPI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StreameusAPI-Prefix.pch"; sourceTree = "<group>"; };
@@ -142,10 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				A83DA26518E5B2A000A5EB69 /* Classes */,
-				A88ACFEC18E5AE7400626D92 /* Tools */,
+				A83DA26D18E5BFF500A5EB69 /* STApiConstants.h */,
+				A83DA26E18E5BFF500A5EB69 /* STApiConstants.m */,
 				A88ACFB518E5A30600626D92 /* StreameusAPI.h */,
 				A88ACFB718E5A30600626D92 /* StreameusAPI.m */,
 				A88ACFB318E5A30600626D92 /* Supporting Files */,
+				A88ACFEC18E5AE7400626D92 /* Tools */,
 			);
 			path = StreameusAPI;
 			sourceTree = "<group>";
@@ -161,9 +166,9 @@
 		A88ACFC618E5A30600626D92 /* StreameusAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */,
 				A88ACFCC18E5A30600626D92 /* StreameusAPITests.m */,
 				A88ACFC718E5A30600626D92 /* Supporting Files */,
-				A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */,
 			);
 			path = StreameusAPITests;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83DA26818E5B3DF00A5EB69 /* STApiUser.m in Sources */,
+				A83DA26F18E5BFF500A5EB69 /* STApiConstants.m in Sources */,
 				A88ACFB818E5A30600626D92 /* StreameusAPI.m in Sources */,
 				A88ACFEF18E5AE9100626D92 /* STUtilities.m in Sources */,
 			);
