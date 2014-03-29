@@ -28,23 +28,13 @@
     [super tearDown];
 }
 
-- (void)testGetUserSatusCode
+- (void)testGetUser
 {
     StartBlock();
-    [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-        EndBlock();
-        XCTAssertTrue(connectionError == nil && (statusCode == 200 || statusCode == 204), @"Unable to GET /user from API. statusCode : %ld, connectionError : %@", (long)statusCode, connectionError);
-    }];
-    WaitUntilBlockCompletes();
-}
-
-- (void)testGetUserReturn
-{
-    StartBlock();
-    [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         EndBlock();
         NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        XCTAssertTrue(error == nil && (statusCode == 200 || statusCode == 204), @"Unable to GET /user from API. statusCode : %ld, error : %@", (long)statusCode, [error localizedDescription]);
         id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         XCTAssertTrue([JSONData isKindOfClass:[NSArray class]], @"Returned data is not an NSArray, data class : %@", [JSONData class]);
         if (statusCode != 204) {
