@@ -1,4 +1,3 @@
-
 /* Class = "IBUILabel"; text = "Rejoindre paul et les 10 autres participants"; ObjectID = "0On-c6-CxU"; */
 "0On-c6-CxU.text" = "Rejoindre paul et les 10 autres participants";
 
@@ -52,9 +51,6 @@
 
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "Jrs-iV-VZp"; */
 "Jrs-iV-VZp.text" = "Vous suivez désormais Kevyn";
-
-/* Class = "IBUILabel"; text = "About"; ObjectID = "K2E-uF-25I"; */
-"K2E-uF-25I.text" = "About";
 
 /* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "KnB-l4-OcW"; */
 "KnB-l4-OcW.normalTitle" = "About";
@@ -151,3 +147,4 @@
 
 /* Class = "IBUIButton"; normalTitle = "Log in"; ObjectID = "zg0-at-FB9"; */
 "zg0-at-FB9.normalTitle" = "Log in";
+

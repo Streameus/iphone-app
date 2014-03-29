@@ -52,9 +52,6 @@
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "Jrs-iV-VZp"; */
 "Jrs-iV-VZp.text" = "Vous suivez désormais Kevyn";
 
-/* Class = "IBUILabel"; text = "About"; ObjectID = "K2E-uF-25I"; */
-"K2E-uF-25I.text" = "A propos";
-
 /* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "KnB-l4-OcW"; */
 "KnB-l4-OcW.normalTitle" = "A propos";
 

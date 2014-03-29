@@ -587,15 +587,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2E-uF-25I">
-                                <rect key="frame" x="20" y="273" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-zg-jdv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mU9-zg-jdv" firstAttribute="top" secondItem="Np0-cs-i3X" secondAttribute="top" id="3kO-bs-k93"/>
+                            <constraint firstItem="mU9-zg-jdv" firstAttribute="leading" secondItem="Np0-cs-i3X" secondAttribute="leading" id="ZZz-s0-iMC"/>
+                            <constraint firstAttribute="trailing" secondItem="mU9-zg-jdv" secondAttribute="trailing" id="lk7-QU-o4S"/>
+                            <constraint firstAttribute="bottom" secondItem="mU9-zg-jdv" secondAttribute="bottom" id="njz-ax-Knx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webview" destination="mU9-zg-jdv" id="CNb-2K-Qfg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05d-aG-qf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
