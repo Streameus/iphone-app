@@ -8,6 +8,8 @@
 
 #import "STEquipeViewController.h"
 #import "SWRevealViewController.h"
+#import "StreameusAPI/STApiResource.h"
+#import "MBProgressHUD.h"
 
 @interface STEquipeViewController ()
 
@@ -22,6 +24,15 @@
     UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealBtn;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading...";
+    hud.animationType = MBProgressHUDAnimationZoomIn;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSURLResponse *response;
+        NSError *error;
+        [self.webview loadRequest:[STApiResource getTeamWithReturningResponse:&response error:&error]];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 - (void)didReceiveMemoryWarning

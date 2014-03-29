@@ -10,4 +10,6 @@
 
 @interface STEquipeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
+
 @end

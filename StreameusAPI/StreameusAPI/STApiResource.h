@@ -11,10 +11,11 @@
 @interface STApiResource : NSObject
 
 + (NSURLRequest *)urlGetAbout;
-//+ (NSURLRequest *)urlGetFaq;
-//+ (NSURLRequest *)urlGetTeam;
++ (NSURLRequest *)urlGetTeam;
++ (NSURLRequest *)urlGetFaq;
+
 + (NSURLRequest *)getAboutWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
-//+ (NSData *)getFaqWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
-//+ (NSData *)getTeamWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
++ (NSURLRequest *)getTeamWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
++ (NSURLRequest *)getFaqWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
 
 @end

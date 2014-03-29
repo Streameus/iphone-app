@@ -1,9 +1,6 @@
 /* Class = "IBUILabel"; text = "Rejoindre paul et les 10 autres participants"; ObjectID = "0On-c6-CxU"; */
 "0On-c6-CxU.text" = "Rejoindre paul et les 10 autres participants";
 
-/* Class = "IBUILabel"; text = "Help"; ObjectID = "0pX-z6-mx1"; */
-"0pX-z6-mx1.text" = "Aide";
-
 /* Class = "IBUILabel"; text = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\""; ObjectID = "0sD-3Z-ahz"; */
 "0sD-3Z-ahz.text" = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\"";
 
@@ -39,9 +36,6 @@
 
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "EUq-rl-3WS"; */
 "EUq-rl-3WS.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
-
-/* Class = "IBUILabel"; text = "Team"; ObjectID = "Ed1-1g-Hl2"; */
-"Ed1-1g-Hl2.text" = "L'équipe";
 
 /* Class = "IBUILabel"; text = "Log out"; ObjectID = "IRS-td-sYh"; */
 "IRS-td-sYh.text" = "Se déconnecter";

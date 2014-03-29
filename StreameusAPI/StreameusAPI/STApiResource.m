@@ -10,11 +10,23 @@
 
 @implementation STApiResource
 
+#pragma mark - get url
+
 + (NSURLRequest *)urlGetAbout {
     return [[StreameusAPI sharedInstance] createUrlController:@"resource/about" withVerb:GET];
 }
 
-+ (NSURLRequest *)getAboutWithReturningResponse:(NSURLResponse **)response error:(NSError **)error {
++ (NSURLRequest *)urlGetTeam {
+    return [[StreameusAPI sharedInstance] createUrlController:@"resource/team" withVerb:GET];
+}
+
++ (NSURLRequest *)urlGetFaq {
+    return [[StreameusAPI sharedInstance] createUrlController:@"resource/faq" withVerb:GET];
+}
+
+#pragma mark - get url content
+
++ (NSURLRequest *)getAboutWithReturningResponse:(NSURLResponse *__autoreleasing *)response error:(NSError *__autoreleasing *)error{
     NSData *data = [NSURLConnection sendSynchronousRequest:[self urlGetAbout]
                           returningResponse:response
                                       error:error];
@@ -28,5 +40,36 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     return request;
 }
+
++ (NSURLRequest *)getTeamWithReturningResponse:(NSURLResponse *__autoreleasing *)response error:(NSError *__autoreleasing *)error {
+    NSData *data = [NSURLConnection sendSynchronousRequest:[self urlGetTeam]
+                                         returningResponse:response
+                                                     error:error];
+    if (*error || [(NSHTTPURLResponse *)*response statusCode] != 200 || !data) {
+        return nil;
+    }
+    NSString *urlString = [[NSString stringWithUTF8String:[data bytes]]
+                           stringByReplacingOccurrencesOfString:@"\""
+                           withString:@""];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    return request;
+}
+
++ (NSURLRequest *)getFaqWithReturningResponse:(NSURLResponse *__autoreleasing *)response error:(NSError *__autoreleasing *)error {
+    NSData *data = [NSURLConnection sendSynchronousRequest:[self urlGetFaq]
+                                         returningResponse:response
+                                                     error:error];
+    if (*error || [(NSHTTPURLResponse *)*response statusCode] != 200 || !data) {
+        return nil;
+    }
+    NSString *urlString = [[NSString stringWithUTF8String:[data bytes]]
+                           stringByReplacingOccurrencesOfString:@"\""
+                           withString:@""];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    return request;
+}
+
 
 @end
