@@ -29,6 +29,9 @@
 - (id)init {
     if (self = [super init]) {
         self.baseUrl = nil;
+        self.aboutUrl = nil;
+        self.faqUrl = nil;
+        self.teamUrl = nil;
     }
     return self;
 }

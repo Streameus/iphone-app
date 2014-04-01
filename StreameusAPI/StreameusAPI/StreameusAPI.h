@@ -20,6 +20,9 @@ typedef enum {
 @interface StreameusAPI : NSObject
 
 @property (nonatomic, strong, readonly) NSString *baseUrl;
+@property (nonatomic, strong) NSURL *aboutUrl;
+@property (nonatomic, strong) NSURL *faqUrl;
+@property (nonatomic, strong) NSURL *teamUrl;
 
 + (StreameusAPI *) sharedInstance;
 

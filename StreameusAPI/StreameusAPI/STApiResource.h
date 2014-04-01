@@ -14,6 +14,10 @@
 + (NSURLRequest *)urlGetTeam;
 + (NSURLRequest *)urlGetFaq;
 
++ (void)getAllResource;
++ (NSURLRequest *)getAbout;
++ (NSURLRequest *)getTeam;
++ (NSURLRequest *)getFaq;
 + (NSURLRequest *)getAboutWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
 + (NSURLRequest *)getTeamWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;
 + (NSURLRequest *)getFaqWithReturningResponse:(NSURLResponse **)response error:(NSError **)error;

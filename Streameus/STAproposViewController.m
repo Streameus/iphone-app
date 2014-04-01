@@ -28,9 +28,8 @@
     hud.labelText = @"Loading...";
     hud.animationType = MBProgressHUDAnimationZoomIn;
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSURLResponse *response;
-        NSError *error;
-        [self.webview loadRequest:[STApiResource getAboutWithReturningResponse:&response error:&error]];
+        NSURLRequest *request = [STApiResource getAbout];
+        [self.webview loadRequest:request];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
 }
