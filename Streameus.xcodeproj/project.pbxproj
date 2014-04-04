@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
+		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
 		A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3118C9EE050083BA4E /* STOauthViewController.m */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A832953F18AE6106006D0E75 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A832954018AE6106006D0E75 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
 		A839FA3018C9EE050083BA4E /* STOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOauthViewController.h; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		A8F08074189DEEEA005514AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */,
 				A86BCB7C189FB08000943483 /* user.png */,
 				A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */,
 				A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */,
@@ -453,6 +456,7 @@
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
 				A86BCB7D189FB08000943483 /* user.png in Resources */,
+				A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */,
 				A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
 				A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */,

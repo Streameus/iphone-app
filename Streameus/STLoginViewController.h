@@ -10,4 +10,6 @@
 
 @interface STLoginViewController : UIViewController
 
+- (IBAction)connectOAuth:(id)sender;
+
 @end

@@ -8,4 +8,5 @@
 
 #import "STApiConstants.h"
 
+NSString * const kSTStreameusAPIDomain = @"streameus.apphb.com";
 NSString * const kSTStreameusAPIURL = @"streameus.apphb.com/api";

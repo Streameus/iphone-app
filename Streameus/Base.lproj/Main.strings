@@ -17,11 +17,8 @@
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "3LX-fa-XcS"; */
 "3LX-fa-XcS.text" = "Rejoindre Anas et les 220 autres participants";
 
-/* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "6di-Np-rGK"; */
-"6di-Np-rGK.normalTitle" = "Sign in";
-
-/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "8AS-fZ-PZq"; */
-"8AS-fZ-PZq.placeholder" = "Password";
+/* Class = "IBUIButton"; normalTitle = "Sign up"; ObjectID = "6di-Np-rGK"; */
+"6di-Np-rGK.normalTitle" = "Sign up";
 
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "9et-ch-ov2"; */
 "9et-ch-ov2.text" = "Rejoindre Anas et les 220 autres participants";
@@ -80,14 +77,11 @@
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
 "VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
 
-/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "Viv-y8-IFj"; */
-"Viv-y8-IFj.placeholder" = "Email";
-
 /* Class = "IBUILabel"; text = "User Infos"; ObjectID = "Xjf-jY-URe"; */
 "Xjf-jY-URe.text" = "User Infos";
 
-/* Class = "IBUIButton"; normalTitle = "Login through another service"; ObjectID = "fXF-px-Got"; */
-"fXF-px-Got.normalTitle" = "Login through another service";
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
+"YMA-R5-6Qb.normalTitle" = "Cancel";
 
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Help";
@@ -119,6 +113,9 @@
 /* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "rFM-Kh-1Xv"; */
 "rFM-Kh-1Xv.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
 
+/* Class = "IBUIButton"; normalTitle = "Google"; ObjectID = "rVp-OZ-6ym"; */
+"rVp-OZ-6ym.normalTitle" = "Google";
+
 /* Class = "IBUILabel"; text = "Rejoindre Alexandre et les 32 autres participants"; ObjectID = "seu-8x-8sH"; */
 "seu-8x-8sH.text" = "Rejoindre Alexandre et les 32 autres participants";
 
@@ -140,5 +137,5 @@
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "News feed";
 
-/* Class = "IBUIButton"; normalTitle = "Log in"; ObjectID = "zg0-at-FB9"; */
-"zg0-at-FB9.normalTitle" = "Log in";
+/* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "zg0-at-FB9"; */
+"zg0-at-FB9.normalTitle" = "Sign in";

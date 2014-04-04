@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STApiAccount.h"
 
 typedef enum {
     GET,
@@ -23,6 +24,7 @@ typedef enum {
 @property (nonatomic, strong) NSURL *aboutUrl;
 @property (nonatomic, strong) NSURL *faqUrl;
 @property (nonatomic, strong) NSURL *teamUrl;
+@property (nonatomic, strong) STApiAccount *account;
 
 + (StreameusAPI *) sharedInstance;
 

@@ -8,4 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kSTStreameusAPIDomain;
 extern NSString * const kSTStreameusAPIURL;

@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A82C2DDE18EE4ACE00AB2AC1 /* STApiAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A82C2DDD18EE4ACE00AB2AC1 /* STApiAccount.m */; };
+		A82C2DE118EE5D8600AB2AC1 /* STApiOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A82C2DE018EE5D8600AB2AC1 /* STApiOAuthViewController.m */; };
 		A83DA26818E5B3DF00A5EB69 /* STApiUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26718E5B3DF00A5EB69 /* STApiUser.m */; };
 		A83DA26C18E5B87700A5EB69 /* STApiUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */; };
 		A83DA26F18E5BFF500A5EB69 /* STApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A83DA26E18E5BFF500A5EB69 /* STApiConstants.m */; };
@@ -62,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A82C2DDC18EE4ACE00AB2AC1 /* STApiAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiAccount.h; sourceTree = "<group>"; };
+		A82C2DDD18EE4ACE00AB2AC1 /* STApiAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiAccount.m; sourceTree = "<group>"; };
+		A82C2DDF18EE5D8600AB2AC1 /* STApiOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiOAuthViewController.h; sourceTree = "<group>"; };
+		A82C2DE018EE5D8600AB2AC1 /* STApiOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiOAuthViewController.m; sourceTree = "<group>"; };
 		A83DA26618E5B3DF00A5EB69 /* STApiUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiUser.h; sourceTree = "<group>"; };
 		A83DA26718E5B3DF00A5EB69 /* STApiUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiUser.m; sourceTree = "<group>"; };
 		A83DA26B18E5B87700A5EB69 /* STApiUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiUserTests.m; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 				A83DA26718E5B3DF00A5EB69 /* STApiUser.m */,
 				A8F63B4418E65BE700373856 /* STApiResource.h */,
 				A8F63B4518E65BE700373856 /* STApiResource.m */,
+				A82C2DDC18EE4ACE00AB2AC1 /* STApiAccount.h */,
+				A82C2DDD18EE4ACE00AB2AC1 /* STApiAccount.m */,
+				A82C2DDF18EE5D8600AB2AC1 /* STApiOAuthViewController.h */,
+				A82C2DE018EE5D8600AB2AC1 /* STApiOAuthViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -298,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83DA26818E5B3DF00A5EB69 /* STApiUser.m in Sources */,
+				A82C2DDE18EE4ACE00AB2AC1 /* STApiAccount.m in Sources */,
 				A83DA26F18E5BFF500A5EB69 /* STApiConstants.m in Sources */,
 				A8F63B4618E65BE700373856 /* STApiResource.m in Sources */,
+				A82C2DE118EE5D8600AB2AC1 /* STApiOAuthViewController.m in Sources */,
 				A88ACFB818E5A30600626D92 /* StreameusAPI.m in Sources */,
 				A88ACFEF18E5AE9100626D92 /* STUtilities.m in Sources */,
 			);

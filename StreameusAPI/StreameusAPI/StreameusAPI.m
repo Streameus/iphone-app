@@ -28,6 +28,7 @@
 
 - (id)init {
     if (self = [super init]) {
+        self.account = [[STApiAccount alloc] init];
         self.baseUrl = nil;
         self.aboutUrl = nil;
         self.faqUrl = nil;
