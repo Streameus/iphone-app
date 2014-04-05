@@ -11,5 +11,6 @@
 @interface STLoginViewController : UIViewController
 
 - (IBAction)connectOAuth:(id)sender;
+- (void)loadNextViewOnSuccess:(BOOL)success;
 
 @end

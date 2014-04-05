@@ -9,6 +9,7 @@
 #import "STSidebarViewController.h"
 #import "SWRevealViewController.h"
 #import "STSearchViewController.h"
+#import "STApiOAuthViewController.h"
 
 @interface STSidebarViewController ()
 
@@ -32,6 +33,8 @@
     if ([segue.identifier isEqualToString:@"searchSegue"]) {
         STUserRepository *repo = [[STUserRepository alloc] init];
         [(STSearchViewController *)destViewController configureWithRepository:repo];
+    } else if ([segue.identifier isEqualToString:@"logoutSegue"]) {
+        [STApiOAuthViewController clearCookies];
     }
 
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {

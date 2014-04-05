@@ -123,10 +123,17 @@
 				A8F63B4518E65BE700373856 /* STApiResource.m */,
 				A82C2DDC18EE4ACE00AB2AC1 /* STApiAccount.h */,
 				A82C2DDD18EE4ACE00AB2AC1 /* STApiAccount.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A86AF4A418EF7BEC00285A5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				A82C2DDF18EE5D8600AB2AC1 /* STApiOAuthViewController.h */,
 				A82C2DE018EE5D8600AB2AC1 /* STApiOAuthViewController.m */,
 			);
-			name = Classes;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		A88ACFA418E5A30600626D92 = {
@@ -162,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A83DA26518E5B2A000A5EB69 /* Classes */,
+				A86AF4A418EF7BEC00285A5F /* Views */,
 				A83DA26D18E5BFF500A5EB69 /* STApiConstants.h */,
 				A83DA26E18E5BFF500A5EB69 /* STApiConstants.m */,
 				A88ACFB518E5A30600626D92 /* StreameusAPI.h */,

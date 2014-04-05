@@ -28,7 +28,7 @@
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.labelText = @"Loading...";
         hud.animationType = MBProgressHUDAnimationZoomIn;
-        NSURLRequest *urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user"
+        NSURLRequest *urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user/me"
                                                                           withVerb:GET];
         [NSURLConnection sendAsynchronousRequest:urlRequest
                                            queue:[NSOperationQueue mainQueue]
@@ -37,24 +37,14 @@
                                    NSLog(@"URL %@", [response URL]);
                                    NSLog(@"Response status code %ld", (long)statusCode);
                                    if (connectionError == nil && statusCode == 200) {
-                                       id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                       NSMutableArray *tmpItems = [NSMutableArray array];
-                                       NSLog(@"JSONData =\n%@", JSONData);
-                                       for (NSDictionary *it in JSONData) {
-                                           [tmpItems addObject:it];
-                                           break;
-                                       }
                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                           self.user = [tmpItems objectAtIndex:0];
+                                           self.user = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                            [MBProgressHUD hideHUDForView:self.view animated:YES];
                                            [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ (%@ %@)",
                                                                       [self.user objectForKey:@"Pseudo"],
                                                                       [self.user objectForKey:@"FirstName"],
                                                                       [self.user objectForKey:@"LastName"]]];
                                        });
-                                   } else if (connectionError == nil && statusCode == 204){
-                                       NSLog(@"No user found");
-                                       [MBProgressHUD hideHUDForView:self.view animated:YES];
                                    } else if (connectionError != nil){
                                        NSLog(@"Error happened = %@", connectionError);
                                        [MBProgressHUD hideHUDForView:self.view animated:YES];

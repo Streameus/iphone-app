@@ -11,8 +11,11 @@
 @interface STApiAccount : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *providers;
+@property (nonatomic, strong) NSString *accessToken;
+@property (nonatomic, strong) NSString *tokenType;
 
 - (BOOL)externalLogins;
 - (NSString *)getProviderUrl:(NSString *)provider;
+- (void)connectUser:(NSString *)accessToken andTokenType:(NSString *)tokenType completionHandler:(void (^)(BOOL success))block;
 
 @end

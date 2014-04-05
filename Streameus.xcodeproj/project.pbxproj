@@ -10,7 +10,6 @@
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
-		A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3118C9EE050083BA4E /* STOauthViewController.m */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
 		A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85C8C2318C2D4100034BD64 /* Localizable.strings */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
@@ -84,8 +83,6 @@
 		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A832953F18AE6106006D0E75 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A832954018AE6106006D0E75 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
-		A839FA3018C9EE050083BA4E /* STOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOauthViewController.h; sourceTree = "<group>"; };
-		A839FA3118C9EE050083BA4E /* STOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOauthViewController.m; sourceTree = "<group>"; };
 		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
 		A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilAboutViewController.m; sourceTree = "<group>"; };
 		A85423D018C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -213,8 +210,6 @@
 				A8B115AF189E379F00D83511 /* STIntroViewController.m */,
 				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
 				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
-				A839FA3018C9EE050083BA4E /* STOauthViewController.h */,
-				A839FA3118C9EE050083BA4E /* STOauthViewController.m */,
 				A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */,
 				A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */,
 				A8774B04189CE7F8000A7E61 /* STProfilViewController.h */,
@@ -359,6 +354,7 @@
 				A89F093A18869ED0008FE4D3 /* Resources */,
 				A85423D318C2CC3E00AA6FF8 /* ShellScript */,
 				A85C8C2718C2D4EE0034BD64 /* ShellScript */,
+				A86AF4A718EFA13300285A5F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -502,6 +498,20 @@
 			shellScript = "find . -name \\*.m | xargs genstrings -o ${PROJECT_DIR}/${PROJECT_NAME}/en.lproj";
 			showEnvVarsInLog = 0;
 		};
+		A86AF4A718EFA13300285A5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"@?TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -509,7 +519,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A839FA3218C9EE050083BA4E /* STOauthViewController.m in Sources */,
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,

@@ -15,26 +15,28 @@
 
 @implementation STLoginViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)connectOAuth:(id)sender {
     UIButton *btn = (UIButton *)sender;
     STApiAccount *account = [[StreameusAPI sharedInstance] account];
     STApiOAuthViewController *controller;
+    
+//    [STApiOAuthViewController clearCookies];
+    
     if ([btn.titleLabel.text isEqualToString:@"Google"]) {
-        controller = [[STApiOAuthViewController alloc] initWithUrlString:[account getProviderUrl:@"Google"]];
-        [self presentViewController:controller animated:YES completion:^{
-            [self performSegueWithIdentifier:@"sign-inSegue" sender:sender];
+        controller = [[STApiOAuthViewController alloc] initWithUrlString:[account getProviderUrl:@"Google"] completionHandler:^(NSString *accessToken, NSString *tokenType) {
+            [account connectUser:accessToken andTokenType:tokenType completionHandler:^(BOOL success) {
+                [self loadNextViewOnSuccess:success];
+            }];
         }];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+        navController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:navController animated:YES completion:nil];
+    }
+}
+
+- (void)loadNextViewOnSuccess:(BOOL)success {
+    if (success) {
+        [self performSegueWithIdentifier:@"sign-inSegue" sender:nil];
     }
 }
 

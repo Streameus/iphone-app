@@ -92,6 +92,10 @@
             httpverb = @"GET";
             break;
     }
+    if ([self.account accessToken] && [self.account tokenType]) {
+        [urlRequest addValue:[NSString stringWithFormat:@"%@ %@", [self.account tokenType], [self.account accessToken]] forHTTPHeaderField:@"Authorization"];
+    }
+    [urlRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [urlRequest setHTTPMethod:httpverb];
     [urlRequest setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
     return urlRequest;

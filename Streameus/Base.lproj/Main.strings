@@ -17,9 +17,6 @@
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "3LX-fa-XcS"; */
 "3LX-fa-XcS.text" = "Rejoindre Anas et les 220 autres participants";
 
-/* Class = "IBUIButton"; normalTitle = "Sign up"; ObjectID = "6di-Np-rGK"; */
-"6di-Np-rGK.normalTitle" = "Sign up";
-
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "9et-ch-ov2"; */
 "9et-ch-ov2.text" = "Rejoindre Anas et les 220 autres participants";
 
@@ -62,17 +59,8 @@
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser"; ObjectID = "PNc-4U-T2B"; */
 "PNc-4U-T2B.text" = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser";
 
-/* Class = "IBUIButton"; normalTitle = "Log in"; ObjectID = "Qa8-ya-wyO"; */
-"Qa8-ya-wyO.normalTitle" = "Log in";
-
 /* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "QnQ-UZ-giN"; */
 "QnQ-UZ-giN.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
-
-/* Class = "IBUILabel"; text = "OAuth not implemented yet"; ObjectID = "Sbc-b3-Bvr"; */
-"Sbc-b3-Bvr.text" = "OAuth not implemented yet";
-
-/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "Uyt-el-bEs"; */
-"Uyt-el-bEs.normalTitle" = "Cancel";
 
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
 "VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
@@ -104,9 +92,6 @@
 /* Class = "IBUILabel"; text = "Vous suivez désormais Léo"; ObjectID = "mi0-E2-P6M"; */
 "mi0-E2-P6M.text" = "Vous suivez désormais Léo";
 
-/* Class = "IBUILabel"; text = "Sign in not implemented"; ObjectID = "puD-KZ-7ZA"; */
-"puD-KZ-7ZA.text" = "Sign in not implemented";
-
 /* Class = "IBUINavigationItem"; title = "Streameus"; ObjectID = "qQ3-Rn-C1T"; */
 "qQ3-Rn-C1T.title" = "Streameus";
 
@@ -125,9 +110,6 @@
 /* Class = "IBUILabel"; text = "Paul participe à la conférence \"LS\""; ObjectID = "vUp-Ot-wxv"; */
 "vUp-Ot-wxv.text" = "Paul participe à la conférence \"LS\"";
 
-/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "vlE-Ho-atM"; */
-"vlE-Ho-atM.normalTitle" = "Cancel";
-
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "vvR-Ff-WTC"; */
 "vvR-Ff-WTC.text" = "Calendar";
 
@@ -137,5 +119,5 @@
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "News feed";
 
-/* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "zg0-at-FB9"; */
-"zg0-at-FB9.normalTitle" = "Sign in";
+/* Class = "IBUIButton"; normalTitle = "Discover now"; ObjectID = "zg0-at-FB9"; */
+"zg0-at-FB9.normalTitle" = "Discover now";

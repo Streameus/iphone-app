@@ -24,6 +24,13 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.title = NSLocalizedString(@"News feed", @"Title navigation bar home view");
+    
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:@"user/me" withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSLog(@"User me : \n%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
+                           }];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
