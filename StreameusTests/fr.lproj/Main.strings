@@ -61,6 +61,12 @@
 /* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "QnQ-UZ-giN"; */
 "QnQ-UZ-giN.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
 
+/* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[0] = "Following"; ObjectID = "Tac-Xe-t36"; */
+"Tac-Xe-t36.segmentTitles[0]" = "Following";
+
+/* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[1] = "Followers"; ObjectID = "Tac-Xe-t36"; */
+"Tac-Xe-t36.segmentTitles[1]" = "Followers";
+
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
 "VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
 

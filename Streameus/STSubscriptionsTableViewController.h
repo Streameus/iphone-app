@@ -12,5 +12,11 @@
 
 @property (nonatomic, strong) NSDictionary *user;
 @property (nonatomic, strong, readonly) NSArray *items;
+@property (nonatomic, strong, readonly) NSArray *following;
+@property (nonatomic, strong, readonly) NSArray *followers;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *followSegment;
+
+- (void)segmentFollowAction:(id)sender;
 
 @end

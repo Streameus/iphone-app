@@ -607,9 +607,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Tac-Xe-t36">
+                            <rect key="frame" x="0.0" y="64" width="320" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Following"/>
+                                <segment title="Followers"/>
+                            </segments>
+                        </segmentedControl>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SubscriptionsSimpleCell" id="Yeb-gc-DuU">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yeb-gc-DuU" id="4On-cI-lwK">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -626,6 +634,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="IB7-co-B8f"/>
+                    <connections>
+                        <outlet property="followSegment" destination="Tac-Xe-t36" id="YLR-Za-2Gb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSP-MO-c4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
