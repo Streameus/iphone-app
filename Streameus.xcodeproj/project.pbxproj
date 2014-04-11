@@ -12,6 +12,7 @@
 		A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A832954018AE6106006D0E75 /* STConferenceViewController.m */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
 		A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85C8C2318C2D4100034BD64 /* Localizable.strings */; };
+		A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */; };
 		A86BCB7D189FB08000943483 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A86BCB7C189FB08000943483 /* user.png */; };
 		A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367118ABA0DC00C23C38 /* STSearchViewController.m */; };
 		A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367518ABA1AF00C23C38 /* STUserRepository.m */; };
@@ -91,6 +92,8 @@
 		A85423D218C2C7A800AA6FF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A85C8C2418C2D4100034BD64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A85C8C2618C2D4260034BD64 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A86266A418F8097D006C10BD /* STSubscriptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSubscriptionsTableViewController.h; sourceTree = "<group>"; };
+		A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSubscriptionsTableViewController.m; sourceTree = "<group>"; };
 		A86BCB7C189FB08000943483 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A86E367018ABA0DC00C23C38 /* STSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSearchViewController.h; sourceTree = "<group>"; };
 		A86E367118ABA0DC00C23C38 /* STSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSearchViewController.m; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				A86E367118ABA0DC00C23C38 /* STSearchViewController.m */,
 				A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */,
 				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
+				A86266A418F8097D006C10BD /* STSubscriptionsTableViewController.h */,
+				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
+				A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,
@@ -626,6 +632,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -664,6 +671,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;

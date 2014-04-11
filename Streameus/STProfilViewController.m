@@ -9,6 +9,7 @@
 #import "STProfilViewController.h"
 #import "SWRevealViewController.h"
 #import "STProfilAboutViewController.h"
+#import "STSubscriptionsTableViewController.h"
 
 @interface STProfilViewController ()
 
@@ -74,6 +75,24 @@
         STProfilAboutViewController *destViewController = segue.destinationViewController;
         destViewController.user = self.user;
     }
+    if ([segue.identifier isEqualToString:@"subscriptionsSegue"]) {
+        STSubscriptionsTableViewController *destViewController = segue.destinationViewController;
+        destViewController.user = self.user;
+    }
+}
+
+- (IBAction)followAction:(id)sender {
+    // @TODO Mieux gérer (affichage ou non du btn, desactivation, etc..)
+    // @FIXME : A retester quand sera fonctionnelle.
+    self.followBtn.enabled = false;
+    [self.followActivityIndicator startAnimating];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"following/%@", [self.user objectForKey:@"Id"]] withVerb:POST];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                               NSLog(@"jsonData (%@) : %@", [JSONData class], JSONData);
+                               [self.followActivityIndicator stopAnimating];
+                           }];
 }
 
 - (void)loadProfilPicture:(NSString *)userId {

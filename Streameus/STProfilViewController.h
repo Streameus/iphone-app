@@ -15,6 +15,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *pseudoLabel;
 @property (weak, nonatomic) IBOutlet AsyncImageView *profilPicture;
+@property (weak, nonatomic) IBOutlet UIButton *followBtn;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *followActivityIndicator;
+
+- (IBAction)followAction:(id)sender;
 
 - (void)loadProfilPicture:(NSString *)userId;
 

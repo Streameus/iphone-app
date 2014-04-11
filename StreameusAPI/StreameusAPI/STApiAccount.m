@@ -105,6 +105,7 @@
                 }
             } else {
                 NSLog(@"RegisterExternal : %@", [NSJSONSerialization JSONObjectWithData:registerData options:0 error:nil]);
+                // @TODO Faire un external login
                 NSData *tmpData = [NSURLConnection sendSynchronousRequest:userInfoRequest
                                                              returningResponse:&response
                                                                          error:&error];
