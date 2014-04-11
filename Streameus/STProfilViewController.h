@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AsyncImageView.h"
 
 @interface STProfilViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *user;
 
 @property (weak, nonatomic) IBOutlet UILabel *pseudoLabel;
+@property (weak, nonatomic) IBOutlet AsyncImageView *profilPicture;
+
+- (void)loadProfilPicture:(NSString *)userId;
 
 @end

@@ -49,7 +49,7 @@
 }
 
 - (void)connectUser:(NSString *)accessToken andTokenType:(NSString *)tokenType completionHandler:(void (^)(BOOL))block{
-    // @TODO : Make everything async below
+    // @TODO : Make everything async below and under the same nsoperation queue
     StreameusAPI *api = [StreameusAPI sharedInstance];
     BOOL success = false;
     

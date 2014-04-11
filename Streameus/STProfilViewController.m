@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 
+    // @TODO : Afficher bouton follow que si on est sur le profil d'un autre
     if (!self.user) { // Check pour pouvoir afficher back | A perfectionner
         UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
         self.navigationItem.leftBarButtonItem = revealBtn;
@@ -44,6 +45,7 @@
                                                                       [self.user objectForKey:@"Pseudo"],
                                                                       [self.user objectForKey:@"FirstName"],
                                                                       [self.user objectForKey:@"LastName"]]];
+                                           [self loadProfilPicture:[self.user objectForKey:@"Id"]];
                                        });
                                    } else if (connectionError != nil){
                                        NSLog(@"Error happened = %@", connectionError);
@@ -63,6 +65,7 @@
                                    [self.user objectForKey:@"Pseudo"],
                                    [self.user objectForKey:@"FirstName"],
                                    [self.user objectForKey:@"LastName"]]];
+        [self loadProfilPicture:[self.user objectForKey:@"Id"]];
     }
 }
 
@@ -73,18 +76,12 @@
     }
 }
 
-//#pragma mark - Tableview
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadProfilPicture:(NSString *)userId {
+    if (userId) {
+        StreameusAPI *api = [StreameusAPI sharedInstance];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/%@", [api baseUrl], userId]];
+        [self.profilPicture setImageURL:url];
+    }
 }
 
 @end

@@ -34,6 +34,7 @@
 		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
 		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+		A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */; };
 		A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115AF189E379F00D83511 /* STIntroViewController.m */; };
 		A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115B2189E380A00D83511 /* STIntroPageViewController.m */; };
 		A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */; };
@@ -123,6 +124,8 @@
 		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
 		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+		A8AD03F018F7A03C00AFDD3B /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		A8B115AE189E379F00D83511 /* STIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroViewController.h; sourceTree = "<group>"; };
 		A8B115AF189E379F00D83511 /* STIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroViewController.m; sourceTree = "<group>"; };
 		A8B115B1189E380A00D83511 /* STIntroPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroPageViewController.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 		A8D1D462189CBF7D00186B1B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A8AD03F018F7A03C00AFDD3B /* AsyncImageView.h */,
+				A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */,
 				A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */,
 				A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */,
 				A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */,
@@ -530,6 +535,7 @@
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
+				A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */,
 				A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,

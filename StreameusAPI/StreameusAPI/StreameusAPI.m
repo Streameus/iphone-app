@@ -53,6 +53,7 @@
 
 - (NSURLRequest *)createUrlController:(NSString *)controller withVerb:(STHttpVerbs)verb args:(NSDictionary *)args andBody:(NSString *)body {
     NSAssert(self.baseUrl, @"You must initialize with a base url");
+    // @TODO : Remplacer tous les http par une variable
     NSString *urlAsString = [NSString stringWithFormat:@"http://%@/%@", self.baseUrl, controller];
     
     if (args != nil && [args count] > 1) {
