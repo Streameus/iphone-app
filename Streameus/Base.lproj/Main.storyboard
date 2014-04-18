@@ -405,9 +405,6 @@
                                     <constraint firstAttribute="height" constant="30" id="3CJ-6p-Ybh"/>
                                 </constraints>
                                 <state key="normal" title="Follow"/>
-                                <connections>
-                                    <action selector="followAction:" destination="BXJ-xj-Ur9" eventType="touchUpInside" id="UPd-vy-jc8"/>
-                                </connections>
                             </button>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njl-4z-SJz">
                                 <rect key="frame" x="0.0" y="289" width="320" height="279"/>

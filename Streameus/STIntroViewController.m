@@ -7,6 +7,7 @@
 //
 
 #import "STIntroViewController.h"
+#import "STApiOAuthViewController.h"
 
 @interface STIntroViewController ()
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+//        [STApiOAuthViewController clearCookies];
     [self.indexLabel setText:[NSString stringWithFormat:@"PAGE NUMERO %ld", (long)self.index]];
     switch (self.index) {
         case 0:

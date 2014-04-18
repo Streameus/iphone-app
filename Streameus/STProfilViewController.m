@@ -22,6 +22,8 @@
     [super viewDidLoad];
 
     // @TODO : Afficher bouton follow que si on est sur le profil d'un autre
+    self.followBtn.enabled = false;
+    [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
     if (!self.user) { // Check pour pouvoir afficher back | A perfectionner
         UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
         self.navigationItem.leftBarButtonItem = revealBtn;
@@ -32,6 +34,7 @@
         hud.animationType = MBProgressHUDAnimationZoomIn;
         NSURLRequest *urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user/me"
                                                                           withVerb:GET];
+        [self.followBtn setHidden:YES];
         [NSURLConnection sendAsynchronousRequest:urlRequest
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -67,6 +70,7 @@
                                    [self.user objectForKey:@"FirstName"],
                                    [self.user objectForKey:@"LastName"]]];
         [self loadProfilPicture:[self.user objectForKey:@"Id"]];
+        [self updateFollowBtn];
     }
 }
 
@@ -81,17 +85,49 @@
     }
 }
 
-- (IBAction)followAction:(id)sender {
-    // @TODO Mieux gérer (affichage ou non du btn, desactivation, etc..)
-    // @FIXME : A retester quand sera fonctionnelle.
+- (void)updateFollowBtn {
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"user/amIfollowing/%@", [self.user objectForKey:@"Id"]] withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               BOOL amIFollowing = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] isEqualToString:@"true"] ? true : false;
+                               NSLog(@"updateFollow [%ld] : %hhd", (long)[(NSHTTPURLResponse *)response statusCode], amIFollowing);
+                               if (amIFollowing) {
+                                   [self.followBtn removeTarget:self action:@selector(follow) forControlEvents:UIControlEventTouchUpInside];
+                                   [self.followBtn addTarget:self action:@selector(unFollow) forControlEvents:UIControlEventTouchUpInside];
+                                   [self.followBtn setTitle:NSLocalizedString(@"unFollow", nil) forState:UIControlStateNormal];
+                               } else {
+                                   [self.followBtn removeTarget:self action:@selector(unFollow) forControlEvents:UIControlEventTouchUpInside];
+                                   [self.followBtn addTarget:self action:@selector(follow) forControlEvents:UIControlEventTouchUpInside];
+                                   [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
+                               }
+                               [self.followActivityIndicator stopAnimating];
+                               self.followBtn.enabled = true;
+                           }];
+}
+
+- (void)unFollow {
+    NSLog(@"unfollow");
+    self.followBtn.enabled = false;
+    [self.followActivityIndicator startAnimating];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"following/%@", [self.user objectForKey:@"Id"]] withVerb:DELETE];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                               NSLog(@"unfollow [%ld](%@) : %@", (long)[(NSHTTPURLResponse *)response statusCode],[JSONData class], JSONData);
+                               [self updateFollowBtn];
+                           }];
+}
+
+- (void)follow {
+    NSLog(@"follow");
     self.followBtn.enabled = false;
     [self.followActivityIndicator startAnimating];
     NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"following/%@", [self.user objectForKey:@"Id"]] withVerb:POST];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                               NSLog(@"jsonData (%@) : %@", [JSONData class], JSONData);
-                               [self.followActivityIndicator stopAnimating];
+                               NSLog(@"follow [%ld](%@) : %@", (long)[(NSHTTPURLResponse *)response statusCode],[JSONData class], JSONData);
+                               [self updateFollowBtn];
                            }];
 }
 

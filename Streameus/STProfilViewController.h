@@ -18,8 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *followBtn;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *followActivityIndicator;
 
-- (IBAction)followAction:(id)sender;
-
+- (void)follow;
+- (void)unFollow;
+- (void)updateFollowBtn;
 - (void)loadProfilPicture:(NSString *)userId;
 
 @end
