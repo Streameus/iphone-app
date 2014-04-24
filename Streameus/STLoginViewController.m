@@ -29,7 +29,7 @@
             }];
         }];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
-        navController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         [self presentViewController:navController animated:YES completion:nil];
     }
 }

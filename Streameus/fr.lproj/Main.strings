@@ -28,8 +28,14 @@
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "DOe-qc-8eF"; */
 "DOe-qc-8eF.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
 
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "E0d-Xd-tgs"; */
+"E0d-Xd-tgs.text" = "Title";
+
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "EUq-rl-3WS"; */
 "EUq-rl-3WS.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "Fvl-M3-mE7"; */
+"Fvl-M3-mE7.text" = "Subtitle";
 
 /* Class = "IBUILabel"; text = "Log out"; ObjectID = "IRS-td-sYh"; */
 "IRS-td-sYh.text" = "Se déconnecter";
@@ -69,9 +75,6 @@
 
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
 "VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
-
-/* Class = "IBUILabel"; text = "User Infos"; ObjectID = "Xjf-jY-URe"; */
-"Xjf-jY-URe.text" = "User Infos";
 
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Annuler";

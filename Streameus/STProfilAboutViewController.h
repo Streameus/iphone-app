@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STProfilAboutViewController : UIViewController
+@interface STProfilAboutViewController : UITableViewController {
+    NSMutableArray *dataArray;
+}
 
 @property (nonatomic, strong) NSDictionary *user;
-
-@property (weak, nonatomic) IBOutlet UILabel *userInfos;
 
 @end
