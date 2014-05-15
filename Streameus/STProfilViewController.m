@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "STProfilAboutViewController.h"
 #import "STSubscriptionsTableViewController.h"
+#import "STConferenceTableViewController.h"
 
 @interface STProfilViewController ()
 
@@ -82,6 +83,11 @@
     if ([segue.identifier isEqualToString:@"subscriptionsSegue"]) {
         STSubscriptionsTableViewController *destViewController = segue.destinationViewController;
         destViewController.user = self.user;
+    }
+    if ([segue.identifier isEqualToString:@"profilConferenceSegue"]) {
+        STConferenceRepository *confRepo = [[STConferenceRepository alloc] init];
+        [confRepo setUserId:[[self.user objectForKey:@"Id"] intValue]];
+        [(STConferenceTableViewController *)segue.destinationViewController configureWithRepository:confRepo];
     }
 }
 

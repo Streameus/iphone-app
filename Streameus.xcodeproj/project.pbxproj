@@ -35,6 +35,8 @@
 		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
 		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+		A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */; };
+		A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACF06C1924E71C00C026D9 /* STConferenceRepository.m */; };
 		A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */; };
 		A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115AF189E379F00D83511 /* STIntroViewController.m */; };
 		A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115B2189E380A00D83511 /* STIntroPageViewController.m */; };
@@ -127,6 +129,10 @@
 		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
 		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+		A8ACF0661924E48B00C026D9 /* STConferenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceTableViewController.h; sourceTree = "<group>"; };
+		A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceTableViewController.m; sourceTree = "<group>"; };
+		A8ACF06B1924E71C00C026D9 /* STConferenceRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceRepository.h; sourceTree = "<group>"; };
+		A8ACF06C1924E71C00C026D9 /* STConferenceRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceRepository.m; sourceTree = "<group>"; };
 		A8AD03F018F7A03C00AFDD3B /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		A8B115AE189E379F00D83511 /* STIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroViewController.h; sourceTree = "<group>"; };
@@ -191,6 +197,8 @@
 			children = (
 				A86E367418ABA1AF00C23C38 /* STUserRepository.h */,
 				A86E367518ABA1AF00C23C38 /* STUserRepository.m */,
+				A8ACF06B1924E71C00C026D9 /* STConferenceRepository.h */,
+				A8ACF06C1924E71C00C026D9 /* STConferenceRepository.m */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
 				A86266A418F8097D006C10BD /* STSubscriptionsTableViewController.h */,
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
+				A8ACF0661924E48B00C026D9 /* STConferenceTableViewController.h */,
+				A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -543,12 +553,14 @@
 				A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */,
 				A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
+				A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
 				A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,
+				A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */,
 				A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

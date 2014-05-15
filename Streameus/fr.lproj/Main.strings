@@ -37,6 +37,9 @@
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "Fvl-M3-mE7"; */
 "Fvl-M3-mE7.text" = "Subtitle";
 
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "GKp-5z-Ykf"; */
+"GKp-5z-Ykf.text" = "Titre";
+
 /* Class = "IBUILabel"; text = "Log out"; ObjectID = "IRS-td-sYh"; */
 "IRS-td-sYh.text" = "Se déconnecter";
 
@@ -46,8 +49,8 @@
 /* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "Jrs-iV-VZp"; */
 "Jrs-iV-VZp.text" = "Vous suivez désormais Kevyn";
 
-/* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "KnB-l4-OcW"; */
-"KnB-l4-OcW.normalTitle" = "A propos";
+/* Class = "IBUIButton"; normalTitle = "Conference"; ObjectID = "KnB-l4-OcW"; */
+"KnB-l4-OcW.normalTitle" = "Conférence";
 
 /* Class = "IBUILabel"; text = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser"; ObjectID = "LOe-8Q-xqh"; */
 "LOe-8Q-xqh.text" = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser";
@@ -99,6 +102,9 @@
 
 /* Class = "IBUILabel"; text = "Vous suivez désormais Léo"; ObjectID = "mi0-E2-P6M"; */
 "mi0-E2-P6M.text" = "Vous suivez désormais Léo";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
+"qFk-Vz-Q4T.text" = "Sous-titre";
 
 /* Class = "IBUINavigationItem"; title = "Streameus"; ObjectID = "qQ3-Rn-C1T"; */
 "qQ3-Rn-C1T.title" = "Streameus";
