@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STConferenceRepository.h"
 
-@interface STConferenceViewController : UIViewController
+@interface STConferenceViewController : UITableViewController
+
+- (void)configureWithRepository:(STConferenceRepository *)repository;
+- (void)refresh;
 
 @end
