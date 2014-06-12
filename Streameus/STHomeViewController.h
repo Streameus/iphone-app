@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STEventsRepository.h"
 
 @interface STHomeViewController : UITableViewController
+
+- (void)configureWithRepository:(STEventsRepository *)repository;
+- (void)refresh;
 
 @end

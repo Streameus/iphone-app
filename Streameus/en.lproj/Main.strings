@@ -1,9 +1,6 @@
 /* Class = "IBUILabel"; text = "Rejoindre paul et les 10 autres participants"; ObjectID = "0On-c6-CxU"; */
 "0On-c6-CxU.text" = "Rejoindre paul et les 10 autres participants";
 
-/* Class = "IBUILabel"; text = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\""; ObjectID = "0sD-3Z-ahz"; */
-"0sD-3Z-ahz.text" = "Anas participe à la conférence \"Comment cuisiner des lasagnes ?\"";
-
 /* Class = "IBUIButton"; normalTitle = "Subscriptions"; ObjectID = "1JR-pu-bkP"; */
 "1JR-pu-bkP.normalTitle" = "Subscriptions";
 
@@ -16,17 +13,8 @@
 /* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "3LX-fa-XcS"; */
 "3LX-fa-XcS.text" = "Rejoindre Anas et les 220 autres participants";
 
-/* Class = "IBUILabel"; text = "Rejoindre Anas et les 220 autres participants"; ObjectID = "9et-ch-ov2"; */
-"9et-ch-ov2.text" = "Rejoindre Anas et les 220 autres participants";
-
 /* Class = "IBUILabel"; text = "Vous suivez désormais Guillaume"; ObjectID = "9jQ-Z0-Aia"; */
 "9jQ-Z0-Aia.text" = "Vous suivez désormais Guillaume";
-
-/* Class = "IBUILabel"; text = "Streameus IOS app"; ObjectID = "Afe-Oi-Bzt"; */
-"Afe-Oi-Bzt.text" = "Streameus IOS app";
-
-/* Class = "IBUILabel"; text = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser"; ObjectID = "DOe-qc-8eF"; */
-"DOe-qc-8eF.text" = "Cette conférence sur \"Créer son entreprise à l'étranger\" peut vous interesser";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "E0d-Xd-tgs"; */
 "E0d-Xd-tgs.text" = "Title";
@@ -64,29 +52,17 @@
 /* Class = "IBUILabel"; text = "My profile"; ObjectID = "Ma5-V1-g2V"; */
 "Ma5-V1-g2V.text" = "My profile";
 
-/* Class = "IBUILabel"; text = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser"; ObjectID = "PNc-4U-T2B"; */
-"PNc-4U-T2B.text" = "Cette conférence sur \"Les OGM et l'informatique\" peut vous interesser";
-
-/* Class = "IBUILabel"; text = "Alexandre participe à la conférence \"Ruby le language des dieux\""; ObjectID = "QnQ-UZ-giN"; */
-"QnQ-UZ-giN.text" = "Alexandre participe à la conférence \"Ruby le language des dieux\"";
-
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[0] = "Following"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[0]" = "Following";
 
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[1] = "Followers"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[1]" = "Followers";
 
-/* Class = "IBUILabel"; text = "Vous suivez désormais Kevyn"; ObjectID = "VCd-tb-qM9"; */
-"VCd-tb-qM9.text" = "Vous suivez désormais Kevyn";
-
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Cancel";
 
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Help";
-
-/* Class = "IBUILabel"; text = "Vous suivez désormais Guillaume"; ObjectID = "i6M-R4-AQY"; */
-"i6M-R4-AQY.text" = "Vous suivez désormais Guillaume";
 
 /* Class = "IBUILabel"; text = "Rejoindre Alexandre et les 32 autres participants"; ObjectID = "jWP-E0-rn1"; */
 "jWP-E0-rn1.text" = "Rejoindre Alexandre et les 32 autres participants";
@@ -97,11 +73,8 @@
 /* Class = "IBUIButton"; normalTitle = "Follow"; ObjectID = "lnP-xW-1Y0"; */
 "lnP-xW-1Y0.normalTitle" = "Follow";
 
-/* Class = "IBUILabel"; text = "Rejoindre paul et les 10 autres participants"; ObjectID = "mTn-vx-cTo"; */
-"mTn-vx-cTo.text" = "Rejoindre paul et les 10 autres participants";
-
-/* Class = "IBUILabel"; text = "Vous suivez désormais Léo"; ObjectID = "mi0-E2-P6M"; */
-"mi0-E2-P6M.text" = "Vous suivez désormais Léo";
+/* Class = "IBUILabel"; text = "Event description"; ObjectID = "mTn-vx-cTo"; */
+"mTn-vx-cTo.text" = "Event description";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
 "qFk-Vz-Q4T.text" = "Subtitle";
@@ -115,14 +88,11 @@
 /* Class = "IBUIButton"; normalTitle = "Google"; ObjectID = "rVp-OZ-6ym"; */
 "rVp-OZ-6ym.normalTitle" = "Google";
 
-/* Class = "IBUILabel"; text = "Rejoindre Alexandre et les 32 autres participants"; ObjectID = "seu-8x-8sH"; */
-"seu-8x-8sH.text" = "Rejoindre Alexandre et les 32 autres participants";
-
 /* Class = "IBUILabel"; text = "About"; ObjectID = "tec-3j-LAj"; */
 "tec-3j-LAj.text" = "About";
 
-/* Class = "IBUILabel"; text = "Paul participe à la conférence \"LS\""; ObjectID = "vUp-Ot-wxv"; */
-"vUp-Ot-wxv.text" = "Paul participe à la conférence \"LS\"";
+/* Class = "IBUILabel"; text = "Event Title"; ObjectID = "vUp-Ot-wxv"; */
+"vUp-Ot-wxv.text" = "Event Title";
 
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "vvR-Ff-WTC"; */
 "vvR-Ff-WTC.text" = "Calendar";
