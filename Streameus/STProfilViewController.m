@@ -11,8 +11,11 @@
 #import "STProfilAboutViewController.h"
 #import "STSubscriptionsTableViewController.h"
 #import "STConferenceTableViewController.h"
+#import "STHomeViewController.h"
 
 @interface STProfilViewController ()
+
+@property (nonatomic, strong) STHomeViewController *eventsViewController;
 
 @end
 
@@ -51,6 +54,9 @@
                                                                       [self.user objectForKey:@"FirstName"],
                                                                       [self.user objectForKey:@"LastName"]]];
                                            [self loadProfilPicture:[self.user objectForKey:@"Id"]];
+                                           [[self.eventsViewController repository] setDontLoad:false];
+                                           [[self.eventsViewController repository] setAuthorId:[[self.user objectForKey:@"Id"] intValue]];
+                                           [self.eventsViewController refresh];
                                        });
                                    } else if (connectionError != nil){
                                        NSLog(@"Error happened = %@", connectionError);
@@ -71,6 +77,9 @@
                                    [self.user objectForKey:@"FirstName"],
                                    [self.user objectForKey:@"LastName"]]];
         [self loadProfilPicture:[self.user objectForKey:@"Id"]];
+        [[self.eventsViewController repository] setDontLoad:false];
+        [[self.eventsViewController repository] setAuthorId:[[self.user objectForKey:@"Id"] intValue]];
+        [self.eventsViewController refresh];
         [self updateFollowBtn];
     }
 }
@@ -88,6 +97,16 @@
         STConferenceRepository *confRepo = [[STConferenceRepository alloc] init];
         [confRepo setUserId:[[self.user objectForKey:@"Id"] intValue]];
         [(STConferenceTableViewController *)segue.destinationViewController configureWithRepository:confRepo];
+    }
+    if ([segue.identifier isEqualToString:@"embedEventProfil"]) {
+        int userId = [[self.user objectForKey:@"Id"] intValue];
+        STEventsRepository *repo = [[STEventsRepository alloc] init];
+        repo.authorId = userId;
+        if (![self.user objectForKey:@"Id"]) {
+            repo.dontLoad = true;
+        }
+        self.eventsViewController = segue.destinationViewController;
+        [self.eventsViewController configureWithRepository:repo];
     }
 }
 

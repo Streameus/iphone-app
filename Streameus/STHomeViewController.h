@@ -11,6 +11,8 @@
 
 @interface STHomeViewController : UITableViewController
 
+@property (nonatomic, strong) STEventsRepository *repository;
+
 - (void)configureWithRepository:(STEventsRepository *)repository;
 - (void)refresh;
 

@@ -17,6 +17,10 @@
 @implementation STEventsRepository
 
 - (void)fetch {
+    if (self.dontLoad) {
+        return;
+    }
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     StreameusAPI *api = [StreameusAPI sharedInstance];
     NSURLRequest *request;
     if (self.authorId) {
@@ -33,7 +37,7 @@
                                if (connectionError == nil && statusCode == 200) {
                                    id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    NSMutableArray *tmpItems = [NSMutableArray array];
-                                   NSLog(@"JSONData =\n%@", JSONData);
+                                   NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);
                                    for (NSDictionary *it in JSONData) {
                                        [tmpItems addObject:it];
                                    }
@@ -42,6 +46,7 @@
                                    });
                                } else if (connectionError == nil && statusCode == 204){
                                    NSLog(@"No user found");
+                                   [self didFetch:nil];
                                } else if (connectionError != nil){
                                    NSLog(@"Error happened = %@", connectionError);
                                    UIAlertView *alert = [[UIAlertView alloc]
@@ -58,6 +63,7 @@
 }
 
 - (void)didFetch:(NSArray *)items {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     self.items = items;
     [self.delegate didFetch:self.items];
 }

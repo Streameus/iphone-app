@@ -9,10 +9,9 @@
 #import "STHomeViewController.h"
 #import "SWRevealViewController.h"
 #import "MBProgressHUD.h"
+#import "STApiEvent.h"
 
 @interface STHomeViewController () <STEventsRepositoryDelegate>
-
-@property (nonatomic, strong) STEventsRepository *repository;
 
 @end
 
@@ -27,12 +26,14 @@
 {
     [super viewDidLoad];
  
-    STEventsRepository *repo = [[STEventsRepository alloc] init];
-    [self configureWithRepository:repo];
+    if (!self.repository) {
+        STEventsRepository *repo = [[STEventsRepository alloc] init];
+        [self configureWithRepository:repo];
+    }
     
     UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealBtn;
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.title = NSLocalizedString(@"News feed", @"Title navigation bar home view");
     
@@ -60,16 +61,12 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading...";
-    hud.animationType = MBProgressHUDAnimationZoomIn;
     [self.repository fetch];
 }
 
 #pragma mark - refresh
 
 - (void)didFetch:(NSArray *)items {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.refreshControl endRefreshing];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self.tableView reloadData];
@@ -92,7 +89,8 @@
     static NSString *CellIdentifier = @"eventCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[item objectForKey:@"Content"]];
+    [cell.textLabel setText:[STApiEvent getContentString:item]];
+    [cell.detailTextLabel setText:[item objectForKey:@"Date"]];
     
     return cell;
 }

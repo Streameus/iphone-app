@@ -19,6 +19,7 @@
 @property (nonatomic, weak) id<STEventsRepositoryDelegate>delegate;
 @property (nonatomic, strong, readonly) NSArray *items;
 @property (nonatomic, assign) int authorId;
+@property (nonatomic, assign) BOOL dontLoad;
 
 - (void)fetch;
 
