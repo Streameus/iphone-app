@@ -34,11 +34,17 @@
 /* Class = "IBUILabel"; text = "My profile"; ObjectID = "Ma5-V1-g2V"; */
 "Ma5-V1-g2V.text" = "Mon profil";
 
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "N6m-Ow-TYK"; */
+"N6m-Ow-TYK.text" = "Title";
+
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[0] = "Following"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[0]" = "Following";
 
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[1] = "Followers"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[1]" = "Followers";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "VE3-lX-WzJ"; */
+"VE3-lX-WzJ.text" = "Subtitle";
 
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Annuler";
@@ -63,9 +69,6 @@
 
 /* Class = "IBUILabel"; text = "About"; ObjectID = "tec-3j-LAj"; */
 "tec-3j-LAj.text" = "A propos";
-
-/* Class = "IBUILabel"; text = "Calendar"; ObjectID = "vvR-Ff-WTC"; */
-"vvR-Ff-WTC.text" = "Calendrier";
 
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "Flux d'actualités";

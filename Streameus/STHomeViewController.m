@@ -11,6 +11,7 @@
 #import "MBProgressHUD.h"
 #import "STApiEvent.h"
 #import "STEventTableViewCell.h"
+#import "NSString+Common.h"
 
 static NSString *EventCellIdentifier = @"eventCell";
 
@@ -124,10 +125,10 @@ static NSString *EventCellIdentifier = @"eventCell";
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
 
     StreameusAPI *api = [StreameusAPI sharedInstance];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/%@", [api baseUrl], [item objectForKey:@"AuthorId"]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [api baseUrl], [item objectForKey:@"AuthorId"]]];
     [cell.picture setImageURL:url];
     cell.content.text = [STApiEvent getContentString:item];
-    cell.date.text = [item objectForKey:@"Date"];
+    cell.date.text = [[item objectForKey:@"Date"] dateFromApi];
     
     UIImage *background = [self cellBackgroundForRowAtIndexPath:indexPath];
     

@@ -159,7 +159,7 @@
 - (void)loadProfilPicture:(NSString *)userId {
     if (userId) {
         StreameusAPI *api = [StreameusAPI sharedInstance];
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/%@", [api baseUrl], userId]];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [api baseUrl], userId]];
         [self.profilPicture setImageURL:url];
     }
 }

@@ -37,6 +37,7 @@
 		A88ACFCB18E5A30600626D92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A88ACFC918E5A30600626D92 /* InfoPlist.strings */; };
 		A88ACFCD18E5A30600626D92 /* StreameusAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A88ACFCC18E5A30600626D92 /* StreameusAPITests.m */; };
 		A88ACFEF18E5AE9100626D92 /* STUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A88ACFEE18E5AE9100626D92 /* STUtilities.m */; };
+		A8BE5BDB196D8CD6003D8199 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BE5BDA196D8CD6003D8199 /* NSString+Common.m */; };
 		A8F63B4618E65BE700373856 /* STApiResource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F63B4518E65BE700373856 /* STApiResource.m */; };
 		A8F63B4818E6B48C00373856 /* STApiResourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F63B4718E6B48C00373856 /* STApiResourceTests.m */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,8 @@
 		A88ACFCC18E5A30600626D92 /* StreameusAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusAPITests.m; sourceTree = "<group>"; };
 		A88ACFED18E5AE9100626D92 /* STUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUtilities.h; sourceTree = "<group>"; };
 		A88ACFEE18E5AE9100626D92 /* STUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUtilities.m; sourceTree = "<group>"; };
+		A8BE5BD9196D8CD6003D8199 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		A8BE5BDA196D8CD6003D8199 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
 		A8F63B4418E65BE700373856 /* STApiResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STApiResource.h; sourceTree = "<group>"; };
 		A8F63B4518E65BE700373856 /* STApiResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiResource.m; sourceTree = "<group>"; };
 		A8F63B4718E6B48C00373856 /* STApiResourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STApiResourceTests.m; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 			children = (
 				A88ACFED18E5AE9100626D92 /* STUtilities.h */,
 				A88ACFEE18E5AE9100626D92 /* STUtilities.m */,
+				A8BE5BD9196D8CD6003D8199 /* NSString+Common.h */,
+				A8BE5BDA196D8CD6003D8199 /* NSString+Common.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				A8F63B4618E65BE700373856 /* STApiResource.m in Sources */,
 				A82C2DE118EE5D8600AB2AC1 /* STApiOAuthViewController.m in Sources */,
 				A88ACFB818E5A30600626D92 /* StreameusAPI.m in Sources */,
+				A8BE5BDB196D8CD6003D8199 /* NSString+Common.m in Sources */,
 				A88ACFEF18E5AE9100626D92 /* STUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,7 +69,7 @@
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
     cell.textLabel.text = [item objectForKey:@"Name"];
     cell.detailTextLabel.text = [item objectForKey:@"Description"];
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/%d", [[StreameusAPI sharedInstance] baseUrl], self.repository.userId]];
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%d", [[StreameusAPI sharedInstance] baseUrl], self.repository.userId]];
     NSURL *url = [NSURL URLWithString:@"http://lorempixel.com/128/128/"];
     [(AsyncImageView *)cell.imageView setImageURL:url];
     
