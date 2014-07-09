@@ -5,6 +5,9 @@
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "21O-Nt-eMx"; */
 "21O-Nt-eMx.text" = "Calendar";
 
+/* Class = "IBUILabel"; text = "date here"; ObjectID = "AZr-zx-XNt"; */
+"AZr-zx-XNt.text" = "date here";
+
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "E0d-Xd-tgs"; */
 "E0d-Xd-tgs.text" = "Title";
 
@@ -13,6 +16,9 @@
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "GKp-5z-Ykf"; */
 "GKp-5z-Ykf.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Content here"; ObjectID = "Hfw-GE-QaO"; */
+"Hfw-GE-QaO.text" = "Content here";
 
 /* Class = "IBUILabel"; text = "Log out"; ObjectID = "IRS-td-sYh"; */
 "IRS-td-sYh.text" = "Log out";
@@ -47,9 +53,6 @@
 /* Class = "IBUIButton"; normalTitle = "Follow"; ObjectID = "lnP-xW-1Y0"; */
 "lnP-xW-1Y0.normalTitle" = "Follow";
 
-/* Class = "IBUILabel"; text = "Event description"; ObjectID = "mTn-vx-cTo"; */
-"mTn-vx-cTo.text" = "Event description";
-
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
 "qFk-Vz-Q4T.text" = "Subtitle";
 
@@ -61,9 +64,6 @@
 
 /* Class = "IBUILabel"; text = "About"; ObjectID = "tec-3j-LAj"; */
 "tec-3j-LAj.text" = "About";
-
-/* Class = "IBUILabel"; text = "Event Title"; ObjectID = "vUp-Ot-wxv"; */
-"vUp-Ot-wxv.text" = "Event Title";
 
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "vvR-Ff-WTC"; */
 "vvR-Ff-WTC.text" = "Calendar";
