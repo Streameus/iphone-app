@@ -15,10 +15,13 @@
 #import "NSString+Common.h"
 #import "STProfilViewController.h"
 #import "STSuggestionCollectionViewCell.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 
 static NSString *EventCellIdentifier = @"eventCell";
 
 @interface STHomeViewController () <STEventsRepositoryDelegate>
+
+@property (nonatomic, assign) int currentRow;
 
 @end
 
@@ -32,7 +35,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+
     if (!self.repository) {
         STEventsRepository *repo = [[STEventsRepository alloc] init];
         [self configureWithRepository:repo];
@@ -63,13 +66,13 @@ static NSString *EventCellIdentifier = @"eventCell";
     UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 5, 0);
     self.tableView.contentInset = inset;
     
-    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:@"user/me" withVerb:GET];
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               NSLog(@"User me : \n%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
-                           }];
-
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        weakSelf.currentRow = [weakSelf.repository.items count];
+        [weakSelf.repository fetchMore];
+    }];
+    
+    [self.repository fetch];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,7 +85,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.repository fetch];
+//    [self.repository fetch];
 }
 
 #pragma mark - refresh
@@ -93,8 +96,28 @@ static NSString *EventCellIdentifier = @"eventCell";
     [self.tableView reloadData];
 }
 
+- (void)didFetchMore:(NSArray *)items {
+    [self.tableView.infiniteScrollingView stopAnimating];
+    [self reloadTableView:self.currentRow];
+}
+
+- (void)reloadTableView:(int)startingRow;
+{
+    // the last row after added new items
+    int endingRow = [self.repository.items count];
+    
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    for (; startingRow < endingRow; startingRow++) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:startingRow inSection:0]];
+    }
+    
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+}
+
 - (void)refresh {
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
+    [self.repository clear];
+    [self.tableView reloadData];
     [self.repository fetch];
 }
 

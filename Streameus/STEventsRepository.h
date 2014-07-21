@@ -11,6 +11,7 @@
 @protocol STEventsRepositoryDelegate <NSObject>
 
 - (void)didFetch:(NSArray *)items;
+- (void)didFetchMore:(NSArray *)items;
 
 @end
 
@@ -20,7 +21,11 @@
 @property (nonatomic, strong, readonly) NSArray *items;
 @property (nonatomic, assign) int authorId;
 @property (nonatomic, assign) BOOL dontLoad;
+@property (nonatomic, assign) NSInteger top;
+@property (nonatomic, assign) NSInteger skip;
 
 - (void)fetch;
+- (void)fetchMore;
+- (void)clear;
 
 @end

@@ -52,6 +52,9 @@
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Cancel";
 
+/* Class = "IBUILabel"; text = "Streameus EIP"; ObjectID = "bTw-cP-ovw"; */
+"bTw-cP-ovw.text" = "Streameus EIP";
+
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Help";
 

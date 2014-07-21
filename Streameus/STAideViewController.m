@@ -25,15 +25,14 @@
     self.navigationItem.leftBarButtonItem = revealBtn;
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    // @TODO :  Localize all strings like this one in a specific commit
-    hud.labelText = @"Loading...";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     hud.animationType = MBProgressHUDAnimationZoomIn;
     dispatch_async(dispatch_get_main_queue(), ^{
         NSURLRequest *request = [STApiResource getFaq];
         [self.webview loadRequest:request];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
-
+    self.shyNavBarManager.scrollView = self.webview.scrollView;
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,3 +10,6 @@
 
 NSString * const kSTStreameusAPIDomain = @"streameusdev.apphb.com";
 NSString * const kSTStreameusAPIURL = @"streameusdev.apphb.com/api";
+
+NSInteger const kSTEventDefaultTop = 5;
+NSInteger const kSTEventDefaultSkip = 0;

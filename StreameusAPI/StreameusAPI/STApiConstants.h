@@ -10,3 +10,6 @@
 
 extern NSString * const kSTStreameusAPIDomain;
 extern NSString * const kSTStreameusAPIURL;
+
+extern NSInteger const kSTEventDefaultTop;
+extern NSInteger const kSTEventDefaultSkip;

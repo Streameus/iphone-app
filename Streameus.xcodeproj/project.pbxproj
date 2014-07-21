@@ -25,6 +25,13 @@
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
 		A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */; };
 		A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */; };
+		A887FC87197D86FD000B1BE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A887FC86197D86FD000B1BE2 /* QuartzCore.framework */; };
+		A887FC8A197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC89197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m */; };
+		A887FC9A197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC91197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m */; };
+		A887FC9B197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC93197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m */; };
+		A887FC9C197D973E000B1BE2 /* TLYDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC95197D973E000B1BE2 /* TLYDelegateProxy.m */; };
+		A887FC9D197D973E000B1BE2 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC97197D973E000B1BE2 /* TLYShyNavBarManager.m */; };
+		A887FC9E197D973E000B1BE2 /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC99197D973E000B1BE2 /* TLYShyViewController.m */; };
 		A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A88ACFDC18E5A30700626D92 /* libStreameusAPI.a */; };
 		A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
 		A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094118869ED0008FE4D3 /* CoreGraphics.framework */; };
@@ -127,6 +134,19 @@
 		A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionTableViewCell.m; sourceTree = "<group>"; };
 		A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionCollectionViewCell.h; sourceTree = "<group>"; };
 		A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionCollectionViewCell.m; sourceTree = "<group>"; };
+		A887FC86197D86FD000B1BE2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A887FC88197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		A887FC89197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		A887FC90197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TLYSwizzlingHelpers.h"; sourceTree = "<group>"; };
+		A887FC91197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TLYSwizzlingHelpers.m"; sourceTree = "<group>"; };
+		A887FC92197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BetterLayoutGuides.h"; sourceTree = "<group>"; };
+		A887FC93197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BetterLayoutGuides.m"; sourceTree = "<group>"; };
+		A887FC94197D973E000B1BE2 /* TLYDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYDelegateProxy.h; sourceTree = "<group>"; };
+		A887FC95197D973E000B1BE2 /* TLYDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYDelegateProxy.m; sourceTree = "<group>"; };
+		A887FC96197D973E000B1BE2 /* TLYShyNavBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyNavBarManager.h; sourceTree = "<group>"; };
+		A887FC97197D973E000B1BE2 /* TLYShyNavBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyNavBarManager.m; sourceTree = "<group>"; };
+		A887FC98197D973E000B1BE2 /* TLYShyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyViewController.h; sourceTree = "<group>"; };
+		A887FC99197D973E000B1BE2 /* TLYShyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyViewController.m; sourceTree = "<group>"; };
 		A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StreameusAPI.xcodeproj; path = StreameusAPI/StreameusAPI.xcodeproj; sourceTree = "<group>"; };
 		A89F093C18869ED0008FE4D3 /* Streameus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streameus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89F093F18869ED0008FE4D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A887FC87197D86FD000B1BE2 /* QuartzCore.framework in Frameworks */,
 				A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */,
 				A8F471EA18B7260800CBD8A5 /* SystemConfiguration.framework in Frameworks */,
 				A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */,
@@ -274,6 +295,31 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A887FC8E197D973E000B1BE2 /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				A887FC8F197D973E000B1BE2 /* Categories */,
+				A887FC94197D973E000B1BE2 /* TLYDelegateProxy.h */,
+				A887FC95197D973E000B1BE2 /* TLYDelegateProxy.m */,
+				A887FC96197D973E000B1BE2 /* TLYShyNavBarManager.h */,
+				A887FC97197D973E000B1BE2 /* TLYShyNavBarManager.m */,
+				A887FC98197D973E000B1BE2 /* TLYShyViewController.h */,
+				A887FC99197D973E000B1BE2 /* TLYShyViewController.m */,
+			);
+			path = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		A887FC8F197D973E000B1BE2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A887FC90197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.h */,
+				A887FC91197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m */,
+				A887FC92197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.h */,
+				A887FC93197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		A88ACFD718E5A30600626D92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +353,7 @@
 		A89F093E18869ED0008FE4D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A887FC86197D86FD000B1BE2 /* QuartzCore.framework */,
 				A8F471E918B7260800CBD8A5 /* SystemConfiguration.framework */,
 				A89F093F18869ED0008FE4D3 /* Foundation.framework */,
 				A89F094118869ED0008FE4D3 /* CoreGraphics.framework */,
@@ -383,6 +430,9 @@
 		A8D1D462189CBF7D00186B1B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A887FC8E197D973E000B1BE2 /* TLYShyNavBar */,
+				A887FC88197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.h */,
+				A887FC89197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m */,
 				A8AD03F018F7A03C00AFDD3B /* AsyncImageView.h */,
 				A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */,
 				A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */,
@@ -598,15 +648,21 @@
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
+				A887FC9B197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
+				A887FC8A197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A861CBEC19443A5E0080DF8A /* STEventsRepository.m in Sources */,
+				A887FC9C197D973E000B1BE2 /* TLYDelegateProxy.m in Sources */,
 				A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */,
 				A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */,
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
+				A887FC9E197D973E000B1BE2 /* TLYShyViewController.m in Sources */,
 				A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */,
+				A887FC9D197D973E000B1BE2 /* TLYShyNavBarManager.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
 				A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */,
+				A887FC9A197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
 				A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */,
 				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,

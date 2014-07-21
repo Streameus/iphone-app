@@ -32,6 +32,7 @@
         [self.webview loadRequest:request];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
+    self.shyNavBarManager.scrollView = self.webview.scrollView;
 }
 
 - (void)didReceiveMemoryWarning
