@@ -11,5 +11,6 @@
 @interface NSString (Common)
 
 - (NSString *)dateFromApi;
+- (NSString *)dateFromApiDay;
 
 @end

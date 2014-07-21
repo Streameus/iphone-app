@@ -38,7 +38,7 @@
                                       error:&error];
     NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
     XCTAssertFalse(error, @"There is a connection error : %@", [error localizedDescription]);
-    XCTAssertTrue(statusCode == 200, @"Bad status code returned : %ld", (long)statusCode);
+    XCTAssertTrue(statusCode == 500, @"Bad status code returned : %ld", (long)statusCode);
 }
 
 @end

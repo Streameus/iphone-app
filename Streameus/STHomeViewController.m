@@ -11,7 +11,10 @@
 #import "MBProgressHUD.h"
 #import "STApiEvent.h"
 #import "STEventTableViewCell.h"
+#import "STSuggestionTableViewCell.h"
 #import "NSString+Common.h"
+#import "STProfilViewController.h"
+#import "STSuggestionCollectionViewCell.h"
 
 static NSString *EventCellIdentifier = @"eventCell";
 
@@ -57,7 +60,7 @@ static NSString *EventCellIdentifier = @"eventCell";
     self.tableView.backgroundColor = [UIColor clearColor];
     
     // Add padding to the top of the table view
-    UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 0, 0);
+    UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 5, 0);
     self.tableView.contentInset = inset;
     
     NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:@"user/me" withVerb:GET];
@@ -95,6 +98,14 @@ static NSString *EventCellIdentifier = @"eventCell";
     [self.repository fetch];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"suggestionToProfilSegue"]) {
+        STProfilViewController *destViewController = segue.destinationViewController;
+        [destViewController setUser:[(STSuggestionCollectionViewCell *)sender user]];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -102,25 +113,13 @@ static NSString *EventCellIdentifier = @"eventCell";
     return [self.repository.items count];
 }
 
-- (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
-    NSInteger rowIndex = indexPath.row;
-    UIImage *background = nil;
-    
-    if (rowIndex == 0) {
-        background = [UIImage imageNamed:@"cell_top.png"];
-    } else if (rowIndex == rowCount - 1) {
-        background = [UIImage imageNamed:@"cell_bottom.png"];
-    } else {
-        background = [UIImage imageNamed:@"cell_middle.png"];
-    }
-    
-    return background;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]) {
+        STSuggestionTableViewCell *cell = (STSuggestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"suggestCell" forIndexPath:indexPath];
+        cell.items = [self.repository.items objectAtIndex:indexPath.row];
+        return cell;
+    }
     STEventTableViewCell *cell = (STEventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:EventCellIdentifier forIndexPath:indexPath];
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
 
@@ -130,13 +129,15 @@ static NSString *EventCellIdentifier = @"eventCell";
     cell.content.text = [STApiEvent getContentString:item];
     cell.date.text = [[item objectForKey:@"Date"] dateFromApi];
     
-    UIImage *background = [self cellBackgroundForRowAtIndexPath:indexPath];
-    
-    UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:background];
-    cellBackgroundView.image = background;
-    cell.backgroundView = cellBackgroundView;
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]])
+        return 135;
+    return 115;
 }
 
 @end

@@ -23,6 +23,8 @@
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
+		A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */; };
+		A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */; };
 		A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A88ACFDC18E5A30700626D92 /* libStreameusAPI.a */; };
 		A89F094018869ED0008FE4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F093F18869ED0008FE4D3 /* Foundation.framework */; };
 		A89F094218869ED0008FE4D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094118869ED0008FE4D3 /* CoreGraphics.framework */; };
@@ -48,13 +50,6 @@
 		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
 		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
 		A8EB54061957B22B00A15831 /* MMCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB54051957B22B00A15831 /* MMCellBackground.m */; };
-		A8EB54121957B5F200A15831 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB54091957B5F200A15831 /* cell_bottom.png */; };
-		A8EB54131957B5F200A15831 /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540A1957B5F200A15831 /* cell_bottom@2x.png */; };
-		A8EB54141957B5F200A15831 /* cell_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540B1957B5F200A15831 /* cell_middle.png */; };
-		A8EB54151957B5F200A15831 /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540C1957B5F200A15831 /* cell_middle@2x.png */; };
-		A8EB54161957B5F200A15831 /* cell_top_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540D1957B5F200A15831 /* cell_top_tile.png */; };
-		A8EB54171957B5F200A15831 /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540E1957B5F200A15831 /* cell_top.png */; };
-		A8EB54181957B5F200A15831 /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB540F1957B5F200A15831 /* cell_top@2x.png */; };
 		A8EB54191957B5F200A15831 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB54101957B5F200A15831 /* common_bg.png */; };
 		A8EB541A1957B5F200A15831 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB54111957B5F200A15831 /* common_bg@2x.png */; };
 		A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */; };
@@ -128,6 +123,10 @@
 		A8774B05189CE7F8000A7E61 /* STProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilViewController.m; sourceTree = "<group>"; };
 		A8774B07189CE871000A7E61 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
 		A8774B08189CE871000A7E61 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
+		A887FC7E197BE274000B1BE2 /* STSuggestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionTableViewCell.h; sourceTree = "<group>"; };
+		A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionTableViewCell.m; sourceTree = "<group>"; };
+		A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionCollectionViewCell.h; sourceTree = "<group>"; };
+		A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionCollectionViewCell.m; sourceTree = "<group>"; };
 		A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StreameusAPI.xcodeproj; path = StreameusAPI/StreameusAPI.xcodeproj; sourceTree = "<group>"; };
 		A89F093C18869ED0008FE4D3 /* Streameus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streameus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89F093F18869ED0008FE4D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -167,13 +166,6 @@
 		A8D1D467189CC61000186B1B /* STHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHomeViewController.m; sourceTree = "<group>"; };
 		A8EB54041957B22B00A15831 /* MMCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCellBackground.h; sourceTree = "<group>"; };
 		A8EB54051957B22B00A15831 /* MMCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCellBackground.m; sourceTree = "<group>"; };
-		A8EB54091957B5F200A15831 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
-		A8EB540A1957B5F200A15831 /* cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom@2x.png"; sourceTree = "<group>"; };
-		A8EB540B1957B5F200A15831 /* cell_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_middle.png; sourceTree = "<group>"; };
-		A8EB540C1957B5F200A15831 /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
-		A8EB540D1957B5F200A15831 /* cell_top_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top_tile.png; sourceTree = "<group>"; };
-		A8EB540E1957B5F200A15831 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
-		A8EB540F1957B5F200A15831 /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
 		A8EB54101957B5F200A15831 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
 		A8EB54111957B5F200A15831 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
 		A8F08071189DE451005514AB /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
@@ -380,6 +372,10 @@
 				A8EB54051957B22B00A15831 /* MMCellBackground.m */,
 				A8C8DD491952BAC30036B6FD /* STEventTableViewCell.h */,
 				A8C8DD4A1952BAC30036B6FD /* STEventTableViewCell.m */,
+				A887FC7E197BE274000B1BE2 /* STSuggestionTableViewCell.h */,
+				A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */,
+				A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */,
+				A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -400,13 +396,6 @@
 		A8F08074189DEEEA005514AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A8EB54091957B5F200A15831 /* cell_bottom.png */,
-				A8EB540A1957B5F200A15831 /* cell_bottom@2x.png */,
-				A8EB540B1957B5F200A15831 /* cell_middle.png */,
-				A8EB540C1957B5F200A15831 /* cell_middle@2x.png */,
-				A8EB540D1957B5F200A15831 /* cell_top_tile.png */,
-				A8EB540E1957B5F200A15831 /* cell_top.png */,
-				A8EB540F1957B5F200A15831 /* cell_top@2x.png */,
 				A8EB54101957B5F200A15831 /* common_bg.png */,
 				A8EB54111957B5F200A15831 /* common_bg@2x.png */,
 				A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */,
@@ -526,19 +515,12 @@
 				A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */,
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
-				A8EB54171957B5F200A15831 /* cell_top.png in Resources */,
-				A8EB54141957B5F200A15831 /* cell_middle.png in Resources */,
-				A8EB54151957B5F200A15831 /* cell_middle@2x.png in Resources */,
 				A86BCB7D189FB08000943483 /* user.png in Resources */,
 				A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */,
 				A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
-				A8EB54121957B5F200A15831 /* cell_bottom.png in Resources */,
 				A8EB541A1957B5F200A15831 /* common_bg@2x.png in Resources */,
-				A8EB54161957B5F200A15831 /* cell_top_tile.png in Resources */,
 				A8F08073189DEEE6005514AB /* Logo_simple_transparent.png in Resources */,
-				A8EB54181957B5F200A15831 /* cell_top@2x.png in Resources */,
-				A8EB54131957B5F200A15831 /* cell_bottom@2x.png in Resources */,
 				A8EB54191957B5F200A15831 /* common_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,10 +589,12 @@
 				A832954118AE6106006D0E75 /* STConferenceViewController.m in Sources */,
 				A8C8DD4B1952BAC30036B6FD /* STEventTableViewCell.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
+				A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */,
 				A8BE5BD5196D7527003D8199 /* STAgendaRepository.m in Sources */,
 				A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */,
 				A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */,
 				A8F0807A189E0AEA005514AB /* STAideViewController.m in Sources */,
+				A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */,
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
@@ -731,6 +715,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "-gta";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -763,6 +748,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CODE_SIGN_FLAGS = "-gta";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

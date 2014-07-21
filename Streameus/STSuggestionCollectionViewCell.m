@@ -1,15 +1,27 @@
 //
-//  MMCellBackground.m
-//  MonitorMe
+//  STSuggestionCollectionViewCell.m
+//  Streameus
 //
-//  Created by Anas Ait Ali on 08/10/13.
-//  Copyright (c) 2013 s3450434s3450581. All rights reserved.
+//  Created by Anas Ait Ali on 21/07/2014.
+//  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
-#import "MMCellBackground.h"
+#import "STSuggestionCollectionViewCell.h"
 
-@implementation MMCellBackground
+@implementation STSuggestionCollectionViewCell
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     //// General Declarations
@@ -40,7 +52,7 @@
     //// Group
     {
         //// Rectangle Drawing
-        UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(CGRectGetMinX(frame) + 10, CGRectGetMinY(frame) + 5, CGRectGetWidth(frame) - 20, CGRectGetHeight(frame) - 5) cornerRadius: 1];
+        UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(CGRectGetMinX(frame) + 5, CGRectGetMinY(frame) + 5, CGRectGetWidth(frame) - 10, CGRectGetHeight(frame) - 5) cornerRadius: 1];
         [grisClair setFill];
         [rectanglePath fill];
         [fillColor setStroke];
@@ -49,7 +61,7 @@
         
         
         //// Rectangle interne Drawing
-        UIBezierPath* rectangleInternePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(CGRectGetMinX(frame) + 15, CGRectGetMinY(frame) + 10, CGRectGetWidth(frame) - 30, CGRectGetHeight(frame) - 15) cornerRadius: 1];
+        UIBezierPath* rectangleInternePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(CGRectGetMinX(frame) + 10, CGRectGetMinY(frame) + 10, CGRectGetWidth(frame) - 20, CGRectGetHeight(frame) - 34) cornerRadius: 1];
         CGContextSaveGState(context);
         CGContextSetShadowWithColor(context, shadow2Offset, shadow2BlurRadius, shadow2.CGColor);
         [color setFill];
@@ -85,7 +97,11 @@
         
     }
     
+    
+
+    
 
 }
+
 
 @end

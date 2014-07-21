@@ -7,6 +7,9 @@
 /* Class = "IBUILabel"; text = "date here"; ObjectID = "AZr-zx-XNt"; */
 "AZr-zx-XNt.text" = "date here";
 
+/* Class = "IBUILabel"; text = "Streameus EIP"; ObjectID = "DAd-Xf-mtV"; */
+"DAd-Xf-mtV.text" = "Streameus EIP";
+
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "E0d-Xd-tgs"; */
 "E0d-Xd-tgs.text" = "Title";
 

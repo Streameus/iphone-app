@@ -56,7 +56,7 @@
     // @TODO : Remplacer tous les http par une variable
     NSString *urlAsString = [NSString stringWithFormat:@"http://%@/%@", self.baseUrl, controller];
     
-    if (args != nil && [args count] > 1) {
+    if (args != nil && [args count] > 0) {
         NSMutableArray *argArray = [NSMutableArray array];
         for (NSString *key in args) {
             [argArray addObject:[NSString stringWithFormat:@"%@=%@", key, MMEscapedURLString(args[key])]];

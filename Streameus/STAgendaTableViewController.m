@@ -9,6 +9,7 @@
 #import "STAgendaTableViewController.h"
 #import "SWRevealViewController.h"
 #import "NSString+Common.h"
+#import "AsyncImageView.h"
 
 @interface STAgendaTableViewController () <STAgendaRepositoryDelegate>
 
@@ -66,17 +67,28 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.repository.items count];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[[self.repository.items objectAtIndex:section] objectForKey:@"Value"] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[[self.repository.items objectAtIndex:section] objectForKey:@"Key"] dateFromApiDay];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"agendaCell" forIndexPath:indexPath];
-    NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
+    NSDictionary *item = [[[self.repository.items objectAtIndex:indexPath.section] objectForKey:@"Value"] objectAtIndex:indexPath.row];
     
+    StreameusAPI *api = [StreameusAPI sharedInstance];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [api baseUrl], [item objectForKey:@"Id"]]];
+//    [self.profilPicture setImageURL:url];
+    [(AsyncImageView *)cell.imageView setImageURL:url];
     cell.textLabel.text = [item objectForKey:@"Name"];
     cell.detailTextLabel.text = [[item objectForKey:@"Date"] dateFromApi];
     
@@ -84,53 +96,5 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
