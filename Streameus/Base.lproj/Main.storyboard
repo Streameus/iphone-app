@@ -24,12 +24,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_simple_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-YI-6nz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hsf-or-cpy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_simple_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-YI-6nz">
                                 <rect key="frame" x="40" y="36" width="240" height="91"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="ben-2e-aAv"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAGE 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRj-sD-YjM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRj-sD-YjM">
                                 <rect key="frame" x="20" y="396" width="280" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -40,9 +47,22 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7r-6D-YrZ" firstAttribute="top" secondItem="MRj-sD-YjM" secondAttribute="bottom" constant="150" id="16e-v2-qdb"/>
+                            <constraint firstItem="dZU-YI-6nz" firstAttribute="top" secondItem="U10-j5-HuL" secondAttribute="bottom" constant="16" id="40S-nn-6PW"/>
+                            <constraint firstItem="hsf-or-cpy" firstAttribute="top" secondItem="zNN-jf-Ioa" secondAttribute="top" id="6HE-R3-2C5"/>
+                            <constraint firstItem="hsf-or-cpy" firstAttribute="centerX" secondItem="dZU-YI-6nz" secondAttribute="centerX" id="R2D-xv-beF"/>
+                            <constraint firstAttribute="bottom" secondItem="hsf-or-cpy" secondAttribute="bottom" id="TiE-do-8sa"/>
+                            <constraint firstItem="MRj-sD-YjM" firstAttribute="leading" secondItem="zNN-jf-Ioa" secondAttribute="leading" constant="20" symbolic="YES" id="Vgy-9E-RXv"/>
+                            <constraint firstItem="hsf-or-cpy" firstAttribute="leading" secondItem="zNN-jf-Ioa" secondAttribute="leading" id="Z0e-Hv-7wU"/>
+                            <constraint firstAttribute="trailing" secondItem="MRj-sD-YjM" secondAttribute="trailing" constant="20" symbolic="YES" id="eoi-Kp-Xhv"/>
+                            <constraint firstItem="MRj-sD-YjM" firstAttribute="centerX" secondItem="dZU-YI-6nz" secondAttribute="centerX" id="f6c-Mx-YYD"/>
+                            <constraint firstItem="dZU-YI-6nz" firstAttribute="leading" secondItem="zNN-jf-Ioa" secondAttribute="leading" constant="40" id="iRK-4d-Gfb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="indexLabel" destination="MRj-sD-YjM" id="zeN-Qb-3qN"/>
+                        <outlet property="pageImage" destination="hsf-or-cpy" id="5UB-ec-iuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og9-bU-xXf" userLabel="First Responder" sceneMemberID="firstResponder"/>

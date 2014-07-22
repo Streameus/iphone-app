@@ -12,5 +12,6 @@
 
 @property (assign, nonatomic) NSInteger index;
 @property (weak, nonatomic) IBOutlet UILabel *indexLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pageImage;
 
 @end
