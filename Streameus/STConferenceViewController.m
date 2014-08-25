@@ -2,87 +2,38 @@
 //  STConferenceViewController.m
 //  Streameus
 //
-//  Created by Anas Ait Ali on 15/02/2014.
+//  Created by Anas Ait Ali on 24/08/2014.
 //  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
 #import "STConferenceViewController.h"
-#import "MBProgressHUD.h"
-#import "SWRevealViewController.h"
+#import "STProfilViewController.h"
 
-@interface STConferenceViewController () <STConferenceRepositoryDelegate>
-
-@property (nonatomic, strong) STConferenceRepository *repository;
+@interface STConferenceViewController ()
 
 @end
 
 @implementation STConferenceViewController
 
-- (void)configureWithRepository:(STConferenceRepository *)repository {
-    self.repository = repository;
-    self.repository.delegate = self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.title =  NSLocalizedString(@"Conf List", @"Search navigation title");
     
-    UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealBtn;
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    NSLog(@"Conference : \n %@", self.conference);
     
-    self.refreshControl = nil;
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
-    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
+    self.Name.text = [self.conference objectForKey:@"Name"];
+    self.Picture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Id"]]];
+    self.OwnerPicture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Owner"]]];
+    self.Status.text = [[self.conference objectForKey:@"Status"] stringValue];
+    self.Date.text = [[self.conference objectForKey:@"Time"] dateFromApi];
+    self.Description.text = [self.conference objectForKey:@"Description"];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading...";
-    hud.animationType = MBProgressHUDAnimationZoomIn;
-    [self.repository fetch];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - refresh
-
-- (void)didFetch:(NSArray *)items {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [self.refreshControl endRefreshing];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
-    [self.tableView reloadData];
-}
-
-- (void)refresh {
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-    [self.repository fetch];
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.repository.items count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"conferenceCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[item objectForKey:@"Name"]];
-    [cell.detailTextLabel setText:[item objectForKey:@"Description"]];
-    
-    return cell;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"conferenceToProfilSegue"]) {
+        STProfilViewController *destviewController = segue.destinationViewController;
+        [destviewController setUserId:[self.conference objectForKey:@"Owner"]];
+    }
 }
 
 @end

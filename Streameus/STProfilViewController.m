@@ -28,16 +28,25 @@
     // @TODO : Afficher bouton follow que si on est sur le profil d'un autre
     self.followBtn.enabled = false;
     [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
-    if (!self.user) { // Check pour pouvoir afficher back | A perfectionner
-        UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
-        self.navigationItem.leftBarButtonItem = revealBtn;
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    if (!self.user || self.userId) { // Check pour pouvoir afficher back | A perfectionner
+        if (!self.userId) {
+            UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
+            self.navigationItem.leftBarButtonItem = revealBtn;
+            [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        }
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.labelText = @"Loading...";
         hud.animationType = MBProgressHUDAnimationZoomIn;
-        NSURLRequest *urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user/me"
-                                                                          withVerb:GET];
+        
+        NSURLRequest *urlRequest;
+        if (self.userId) {
+            urlRequest = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"user/%@", self.userId] withVerb:GET];
+        } else {
+            urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user/me" withVerb:GET];
+        }
+        
+        
         [self.followBtn setHidden:YES];
         [NSURLConnection sendAsynchronousRequest:urlRequest
                                            queue:[NSOperationQueue mainQueue]

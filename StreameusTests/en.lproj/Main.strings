@@ -1,8 +1,17 @@
+/* Class = "IBUILabel"; text = "Date"; ObjectID = "0h4-Il-xxI"; */
+"0h4-Il-xxI.text" = "Date";
+
 /* Class = "IBUIButton"; normalTitle = "Subscriptions"; ObjectID = "1JR-pu-bkP"; */
 "1JR-pu-bkP.normalTitle" = "Subscriptions";
 
 /* Class = "IBUILabel"; text = "Calendar"; ObjectID = "21O-Nt-eMx"; */
 "21O-Nt-eMx.text" = "Calendar";
+
+/* Class = "IBUILabel"; text = "Conference name"; ObjectID = "6FQ-eF-Po4"; */
+"6FQ-eF-Po4.text" = "Conference name";
+
+/* Class = "IBUITextView"; text = "Description"; ObjectID = "ARg-g7-OSh"; */
+"ARg-g7-OSh.text" = "Description";
 
 /* Class = "IBUILabel"; text = "date here"; ObjectID = "AZr-zx-XNt"; */
 "AZr-zx-XNt.text" = "date here";
@@ -55,6 +64,9 @@
 /* Class = "IBUILabel"; text = "Streameus EIP"; ObjectID = "bTw-cP-ovw"; */
 "bTw-cP-ovw.text" = "Streameus EIP";
 
+/* Class = "IBUIButton"; normalTitle = "Join the conference"; ObjectID = "eLY-zI-0Ei"; */
+"eLY-zI-0Ei.normalTitle" = "Join the conference";
+
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Help";
 
@@ -72,6 +84,9 @@
 
 /* Class = "IBUIButton"; normalTitle = "Google"; ObjectID = "rVp-OZ-6ym"; */
 "rVp-OZ-6ym.normalTitle" = "Google";
+
+/* Class = "IBUILabel"; text = "Status"; ObjectID = "rZx-aZ-gBg"; */
+"rZx-aZ-gBg.text" = "Status";
 
 /* Class = "IBUILabel"; text = "About"; ObjectID = "tec-3j-LAj"; */
 "tec-3j-LAj.text" = "About";
