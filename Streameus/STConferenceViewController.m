@@ -25,8 +25,18 @@
     self.Picture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Id"]]];
     self.OwnerPicture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Owner"]]];
     self.Status.text = [[self.conference objectForKey:@"Status"] stringValue];
-    self.Date.text = [[self.conference objectForKey:@"Time"] dateFromApi];
-    self.Description.text = [self.conference objectForKey:@"Description"];
+    
+    NSDictionary *descContentAttrs = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Italic" size:16], NSForegroundColorAttributeName : [UIColor colorWithWhite:0.5f alpha:1.0f]};
+    NSDictionary *descTitleAttrs = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Medium" size:16], NSForegroundColorAttributeName : [UIColor colorWithWhite:0.5f alpha:1.0f]};
+    
+    NSMutableAttributedString* attributedDescText = [[NSMutableAttributedString alloc] init];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"Title : ", @"Date conference description") attributes:descTitleAttrs]];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n", [self.conference objectForKey:@"Name"]] attributes:descContentAttrs]];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"Date : ", @"Date conference description") attributes:descTitleAttrs]];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n", [[self.conference objectForKey:@"Time"] dateFromApi]] attributes:descContentAttrs]];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"Description : ", @"Description conference") attributes:descTitleAttrs]];
+    [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:[self.conference objectForKey:@"Description"] attributes:descContentAttrs]];
+    self.Description.attributedText = attributedDescText;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

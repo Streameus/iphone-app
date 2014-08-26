@@ -43,6 +43,7 @@
 - (void)close {
     if (![[self presentedViewController] isBeingDismissed])
     {
+        [STApiOAuthViewController clearCookies];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }

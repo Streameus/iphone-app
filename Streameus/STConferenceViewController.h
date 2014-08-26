@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet AsyncImageView *Picture;
 @property (weak, nonatomic) IBOutlet AsyncImageView *OwnerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *Status;
-@property (weak, nonatomic) IBOutlet UILabel *Date;
 @property (weak, nonatomic) IBOutlet UITextView *Description;
 
 @end

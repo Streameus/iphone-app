@@ -23,6 +23,7 @@
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
 		A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634719AA4C5A00747F62 /* STConferenceViewController.m */; };
+		A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634D19ACB20000747F62 /* STButtonBackground.m */; };
 		A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */; };
 		A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */; };
 		A887FC87197D86FD000B1BE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A887FC86197D86FD000B1BE2 /* QuartzCore.framework */; };
@@ -132,6 +133,8 @@
 		A8774B08189CE871000A7E61 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
 		A87A634619AA4C5900747F62 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A87A634719AA4C5A00747F62 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
+		A87A634C19ACB20000747F62 /* STButtonBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STButtonBackground.h; sourceTree = "<group>"; };
+		A87A634D19ACB20000747F62 /* STButtonBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STButtonBackground.m; sourceTree = "<group>"; };
 		A887FC7E197BE274000B1BE2 /* STSuggestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionTableViewCell.h; sourceTree = "<group>"; };
 		A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionTableViewCell.m; sourceTree = "<group>"; };
 		A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionCollectionViewCell.h; sourceTree = "<group>"; };
@@ -427,6 +430,8 @@
 				A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */,
 				A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */,
 				A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */,
+				A87A634C19ACB20000747F62 /* STButtonBackground.h */,
+				A87A634D19ACB20000747F62 /* STButtonBackground.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */,
 				A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */,
 				A85900D8196D739C0084C527 /* STAgendaTableViewController.m in Sources */,
+				A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */,
 				A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
