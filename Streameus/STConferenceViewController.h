@@ -17,5 +17,14 @@
 @property (weak, nonatomic) IBOutlet AsyncImageView *OwnerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *Status;
 @property (weak, nonatomic) IBOutlet UITextView *Description;
+@property (weak, nonatomic) IBOutlet UIButton *subscribeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *participantsBtn;
+@property (weak, nonatomic) IBOutlet UIButton *categorieBtn;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingParticipants;
+
+@property (nonatomic, strong) NSArray *participants;
+
+- (void)getParticipantsFromConferenceWithId:(NSString *)confId;
+- (void)didFetchParticipants:(NSArray *)items;
 
 @end

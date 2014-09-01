@@ -46,6 +46,9 @@
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "N6m-Ow-TYK"; */
 "N6m-Ow-TYK.text" = "Title";
 
+/* Class = "IBUIButton"; normalTitle = "0 registered"; ObjectID = "Pd9-L5-NzW"; */
+"Pd9-L5-NzW.normalTitle" = "0 registered";
+
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[0] = "Following"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[0]" = "Following";
 
@@ -55,20 +58,23 @@
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "VE3-lX-WzJ"; */
 "VE3-lX-WzJ.text" = "Subtitle";
 
-/* Class = "IBUILabel"; text = "List of Participants"; ObjectID = "VEh-5s-AaU"; */
-"VEh-5s-AaU.text" = "List of Participants";
-
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Annuler";
 
 /* Class = "IBUILabel"; text = "Streameus EIP"; ObjectID = "bTw-cP-ovw"; */
 "bTw-cP-ovw.text" = "Streameus EIP";
 
+/* Class = "IBUIButton"; normalTitle = "Categorie"; ObjectID = "bZW-Hq-Et0"; */
+"bZW-Hq-Et0.normalTitle" = "Categorie";
+
 /* Class = "IBUIButton"; normalTitle = "Subscribe"; ObjectID = "eLY-zI-0Ei"; */
 "eLY-zI-0Ei.normalTitle" = "Subscribe";
 
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Aide";
+
+/* Class = "IBUILabel"; text = "UserName"; ObjectID = "icd-2s-9bU"; */
+"icd-2s-9bU.text" = "UserName";
 
 /* Class = "IBUILabel"; text = "Team"; ObjectID = "kGj-v7-OLb"; */
 "kGj-v7-OLb.text" = "L'équipe";

@@ -8,6 +8,7 @@
 
 #import "STConferenceViewController.h"
 #import "STProfilViewController.h"
+#import "STConferenceRegisteredTableViewController.h"
 
 @interface STConferenceViewController ()
 
@@ -20,7 +21,8 @@
     [super viewDidLoad];
     
     NSLog(@"Conference : \n %@", self.conference);
-    
+
+    [self getParticipantsFromConferenceWithId:[self.conference objectForKey:@"Id"]];
     self.Name.text = [self.conference objectForKey:@"Name"];
     self.Picture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Id"]]];
     self.OwnerPicture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Owner"]]];
@@ -37,12 +39,67 @@
     [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"Description : ", @"Description conference") attributes:descTitleAttrs]];
     [attributedDescText appendAttributedString:[[NSAttributedString alloc] initWithString:[self.conference objectForKey:@"Description"] attributes:descContentAttrs]];
     self.Description.attributedText = attributedDescText;
+    
+    [self.categorieBtn setTitle:[[self.conference objectForKey:@"Category"] objectForKey:@"Name"] forState:UIControlStateNormal];
+}
+
+- (void)getParticipantsFromConferenceWithId:(NSString *)confId {
+    self.participantsBtn.enabled = false;
+//    [self.participantsBtn setTitle:@"" forState:UIControlStateNormal];
+    self.loadingParticipants.hidden = false;
+    StreameusAPI *api = [StreameusAPI sharedInstance];
+    NSURLRequest *request;
+        request = [api createUrlController:[NSString stringWithFormat:@"conference/%@/Registered", confId] withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                               NSLog(@"URL %@", [response URL]);
+                               NSLog(@"Response status code %ld", (long)statusCode);
+                               if (connectionError == nil && statusCode == 200) {
+                                   id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                   NSMutableArray *tmpItems = [NSMutableArray array];
+                                   NSLog(@"JSONData =\n%@", JSONData);
+                                   for (NSDictionary *it in JSONData) {
+                                       [tmpItems addObject:it];
+                                   }
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                       [self didFetchParticipants:tmpItems];
+                                   });
+                               } else if (connectionError != nil){
+                                   NSLog(@"Error happened = %@", connectionError);
+                                   UIAlertView *alert = [[UIAlertView alloc]
+                                                         initWithTitle:@"Error"
+                                                         message:[connectionError localizedDescription]
+                                                         delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles: nil];
+                                   [alert show];
+                                   [self didFetchParticipants:[[NSArray alloc] init]];
+                               }
+                           }];
+}
+
+- (void)didFetchParticipants:(NSArray *)items {
+    self.loadingParticipants.hidden = true;
+    self.participants = items;
+    NSInteger count = [items count];
+    if (items == nil) {
+        count = 0;
+    }
+    [self.participantsBtn setTitle:[NSString stringWithFormat:@"%ld %@", (long)count, NSLocalizedString(@"registered", nil)] forState:UIControlStateNormal];
+    if (count > 0) {
+        self.participantsBtn.enabled = true;
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"conferenceToProfilSegue"]) {
         STProfilViewController *destviewController = segue.destinationViewController;
         [destviewController setUserId:[self.conference objectForKey:@"Owner"]];
+    } else if ([segue.identifier isEqualToString:@"confToParticipantsSegue"]) {
+        STConferenceRegisteredTableViewController *destViewController = segue.destinationViewController;
+        [destViewController setParticipants:self.participants];
     }
 }
 
