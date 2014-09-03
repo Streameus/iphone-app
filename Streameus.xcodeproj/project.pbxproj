@@ -58,6 +58,7 @@
 		A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */; };
 		A8BE5BD5196D7527003D8199 /* STAgendaRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BE5BD4196D7527003D8199 /* STAgendaRepository.m */; };
 		A8C8DD4B1952BAC30036B6FD /* STEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C8DD4A1952BAC30036B6FD /* STEventTableViewCell.m */; };
+		A8C9E9E619B508E8008FAA8A /* STLocalLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */; };
 		A8D1D465189CBFBA00186B1B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */; };
 		A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D467189CC61000186B1B /* STHomeViewController.m */; };
 		A8EB54061957B22B00A15831 /* MMCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB54051957B22B00A15831 /* MMCellBackground.m */; };
@@ -190,6 +191,8 @@
 		A8BE5BD4196D7527003D8199 /* STAgendaRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAgendaRepository.m; sourceTree = "<group>"; };
 		A8C8DD491952BAC30036B6FD /* STEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEventTableViewCell.h; sourceTree = "<group>"; };
 		A8C8DD4A1952BAC30036B6FD /* STEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEventTableViewCell.m; sourceTree = "<group>"; };
+		A8C9E9E419B508E8008FAA8A /* STLocalLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLocalLoginViewController.h; sourceTree = "<group>"; };
+		A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLocalLoginViewController.m; sourceTree = "<group>"; };
 		A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A8D1D466189CC61000186B1B /* STHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHomeViewController.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
 				A87A634F19AD392B00747F62 /* STConferenceRegisteredTableViewController.h */,
 				A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */,
+				A8C9E9E419B508E8008FAA8A /* STLocalLoginViewController.h */,
+				A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A887FC9B197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m in Sources */,
+				A8C9E9E619B508E8008FAA8A /* STLocalLoginViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
 				A887FC8A197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A861CBEC19443A5E0080DF8A /* STEventsRepository.m in Sources */,

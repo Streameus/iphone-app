@@ -25,6 +25,9 @@
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "GKp-5z-Ykf"; */
 "GKp-5z-Ykf.text" = "Title";
 
+/* Class = "IBUIButton"; normalTitle = "Sign in with Streameus"; ObjectID = "HI6-Ia-PtE"; */
+"HI6-Ia-PtE.normalTitle" = "Sign in with Streameus";
+
 /* Class = "IBUILabel"; text = "Content here"; ObjectID = "Hfw-GE-QaO"; */
 "Hfw-GE-QaO.text" = "Content here";
 
@@ -36,6 +39,12 @@
 
 /* Class = "IBUIButton"; normalTitle = "Conference"; ObjectID = "KnB-l4-OcW"; */
 "KnB-l4-OcW.normalTitle" = "Conference";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "LZp-vo-c1W"; */
+"LZp-vo-c1W.normalTitle" = "Cancel";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "MHz-Bs-WYX"; */
+"MHz-Bs-WYX.placeholder" = "Password";
 
 /* Class = "IBUILabel"; text = "PAGE 0"; ObjectID = "MRj-sD-YjM"; */
 "MRj-sD-YjM.text" = "PAGE 0";
@@ -55,11 +64,17 @@
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[1] = "Followers"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[1]" = "Followers";
 
+/* Class = "IBUILabel"; text = "Error message"; ObjectID = "Tc0-te-TWB"; */
+"Tc0-te-TWB.text" = "Error message";
+
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "VE3-lX-WzJ"; */
 "VE3-lX-WzJ.text" = "Subtitle";
 
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Cancel";
+
+/* Class = "IBUITextField"; placeholder = "Username or email"; ObjectID = "aKr-6N-iL8"; */
+"aKr-6N-iL8.placeholder" = "Username or email";
 
 /* Class = "IBUILabel"; text = "Streameus EIP"; ObjectID = "bTw-cP-ovw"; */
 "bTw-cP-ovw.text" = "Streameus EIP";
@@ -76,11 +91,17 @@
 /* Class = "IBUILabel"; text = "UserName"; ObjectID = "icd-2s-9bU"; */
 "icd-2s-9bU.text" = "UserName";
 
+/* Class = "IBUILabel"; text = "or"; ObjectID = "ixj-u2-BFn"; */
+"ixj-u2-BFn.text" = "or";
+
 /* Class = "IBUILabel"; text = "Team"; ObjectID = "kGj-v7-OLb"; */
 "kGj-v7-OLb.text" = "Team";
 
 /* Class = "IBUIButton"; normalTitle = "Follow"; ObjectID = "lnP-xW-1Y0"; */
 "lnP-xW-1Y0.normalTitle" = "Follow";
+
+/* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "oa0-e2-XUn"; */
+"oa0-e2-XUn.normalTitle" = "Sign in";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
 "qFk-Vz-Q4T.text" = "Subtitle";
