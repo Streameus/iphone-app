@@ -38,7 +38,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                BOOL amIFollowing = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] isEqualToString:@"true"] ? true : false;
-                               NSLog(@"updateFollow [%ld] : %hhd", (long)[(NSHTTPURLResponse *)response statusCode], amIFollowing);
+                               NSLog(@"updateFollow [%ld] : %d", (long)[(NSHTTPURLResponse *)response statusCode], amIFollowing);
                                if (amIFollowing) {
                                    btn.hidden = true;
                                } else {

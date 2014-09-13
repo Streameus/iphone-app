@@ -22,8 +22,8 @@
     
 //    [STApiOAuthViewController clearCookies];
     
-    if ([btn.titleLabel.text isEqualToString:@"Google"]) {
-        controller = [[STApiOAuthViewController alloc] initWithUrlString:[account getProviderUrl:@"Google"] completionHandler:^(NSString *accessToken, NSString *tokenType) {
+    if ([btn.titleLabel.text isEqualToString:@"Google"] || [btn.titleLabel.text isEqualToString:@"Facebook"]) {
+        controller = [[STApiOAuthViewController alloc] initWithUrlString:[account getProviderUrl:btn.titleLabel.text] completionHandler:^(NSString *accessToken, NSString *tokenType) {
             [account connectUser:accessToken andTokenType:tokenType completionHandler:^(BOOL success) {
                 [self loadNextViewOnSuccess:success];
             }];

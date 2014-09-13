@@ -70,7 +70,7 @@
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
     cell.textLabel.text = [item objectForKey:@"Name"];
     cell.detailTextLabel.text = [item objectForKey:@"Description"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/picture/%d", [[StreameusAPI sharedInstance] baseUrl], [item objectForKey:@"Id"]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/picture/%@", [[StreameusAPI sharedInstance] baseUrl], [item objectForKey:@"Id"]]];
     [(AsyncImageView *)cell.imageView setImageURL:url];
     
     return cell;

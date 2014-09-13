@@ -25,7 +25,6 @@
 {
     [super viewDidLoad];
 
-    // @TODO : Afficher bouton follow que si on est sur le profil d'un autre
     self.followBtn.enabled = false;
     [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
     if (!self.user || self.userId) { // Check pour pouvoir afficher back | A perfectionner
@@ -124,7 +123,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                BOOL amIFollowing = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] isEqualToString:@"true"] ? true : false;
-                               NSLog(@"updateFollow [%ld] : %hhd", (long)[(NSHTTPURLResponse *)response statusCode], amIFollowing);
+                               NSLog(@"updateFollow [%ld] : %d", (long)[(NSHTTPURLResponse *)response statusCode], amIFollowing);
                                if (amIFollowing) {
                                    [self.followBtn removeTarget:self action:@selector(follow) forControlEvents:UIControlEventTouchUpInside];
                                    [self.followBtn addTarget:self action:@selector(unFollow) forControlEvents:UIControlEventTouchUpInside];

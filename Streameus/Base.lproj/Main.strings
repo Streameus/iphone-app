@@ -101,6 +101,9 @@
 /* Class = "IBUIButton"; normalTitle = "Follow"; ObjectID = "lnP-xW-1Y0"; */
 "lnP-xW-1Y0.normalTitle" = "Follow";
 
+/* Class = "IBUIButton"; normalTitle = "Facebook"; ObjectID = "mBc-Mz-rDK"; */
+"mBc-Mz-rDK.normalTitle" = "Facebook";
+
 /* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "oa0-e2-XUn"; */
 "oa0-e2-XUn.normalTitle" = "Sign in";
 

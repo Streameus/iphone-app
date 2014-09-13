@@ -31,7 +31,6 @@
 
     dataArray = [[NSMutableArray alloc] init];
     
-    // @TODO replace user by const keys..
     [dataArray addObject:@[@[@"Pseudo", [self replaceNil:[self.user objectForKey:@"Pseudo"]]],
                            @[@"Email", [self replaceNil:[self.user objectForKey:@"Email"]]],
                            @[@"FirstName", [self replaceNil:[self.user objectForKey:@"FirstName"]]],

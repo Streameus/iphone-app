@@ -34,10 +34,10 @@
     [STApiUser getUserWithCompletionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         EndBlock();
         NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-        XCTAssertTrue(error == nil && (statusCode == 200 || statusCode == 204), @"Unable to GET /user from API. statusCode : %ld, error : %@", (long)statusCode, [error localizedDescription]);
+        XCTAssertTrue(error == nil && (statusCode == 200 || statusCode == 404), @"Unable to GET /user from API. statusCode : %ld, error : %@", (long)statusCode, [error localizedDescription]);
         id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         XCTAssertTrue([JSONData isKindOfClass:[NSArray class]], @"Returned data is not an NSArray, data class : %@", [JSONData class]);
-        if (statusCode != 204) {
+        if (statusCode != 404) {
             NSArray *receivedKeys = [[[JSONData objectAtIndex:0] allKeys] sortedArrayUsingSelector:@selector(compare:)];
             NSArray *expected = @[@"FirstName",
                                   @"Id",

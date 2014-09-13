@@ -21,10 +21,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *participantsBtn;
 @property (weak, nonatomic) IBOutlet UIButton *categorieBtn;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingParticipants;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityRegisteredIndicator;
 
 @property (nonatomic, strong) NSArray *participants;
 
 - (void)getParticipantsFromConferenceWithId:(NSString *)confId;
 - (void)didFetchParticipants:(NSArray *)items;
+- (void)subscribe;
+- (void)unsubscribe;
+- (void)updateSubscribe:(BOOL)registered;
 
 @end

@@ -21,7 +21,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 
 @interface STHomeViewController () <STEventsRepositoryDelegate>
 
-@property (nonatomic, assign) int currentRow;
+@property (nonatomic, assign) NSUInteger currentRow;
 
 @end
 
@@ -101,10 +101,10 @@ static NSString *EventCellIdentifier = @"eventCell";
     [self reloadTableView:self.currentRow];
 }
 
-- (void)reloadTableView:(int)startingRow;
+- (void)reloadTableView:(NSUInteger)startingRow;
 {
     // the last row after added new items
-    int endingRow = [self.repository.items count];
+    NSUInteger endingRow = [self.repository.items count];
     
     NSMutableArray *indexPaths = [NSMutableArray array];
     for (; startingRow < endingRow; startingRow++) {

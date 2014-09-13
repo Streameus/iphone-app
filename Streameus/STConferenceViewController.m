@@ -41,6 +41,9 @@
     self.Description.attributedText = attributedDescText;
     
     [self.categorieBtn setTitle:[[self.conference objectForKey:@"Category"] objectForKey:@"Name"] forState:UIControlStateNormal];
+    
+    BOOL registered = [[self.conference objectForKey:@"Registered"] isEqualToString:@"true"] ? true : false;
+    [self updateSubscribe:registered];
 }
 
 - (void)getParticipantsFromConferenceWithId:(NSString *)confId {
@@ -101,6 +104,55 @@
         STConferenceRegisteredTableViewController *destViewController = segue.destinationViewController;
         [destViewController setParticipants:self.participants];
     }
+}
+
+- (void)updateSubscribe:(BOOL)registered {
+    [self.activityRegisteredIndicator stopAnimating];
+    if (registered) {
+        [self.subscribeBtn removeTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
+        [self.subscribeBtn addTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
+        [self.subscribeBtn setTitle:NSLocalizedString(@"Subscribe", @"Register to a conference") forState:UIControlStateNormal];
+        [self.subscribeBtn setBackgroundColor:[UIColor colorWithRed:80/255 green:170/255 blue:56/255 alpha:1]];
+    } else {
+        [self.subscribeBtn removeTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
+        [self.subscribeBtn addTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
+        [self.subscribeBtn setTitle:NSLocalizedString(@"Unsubscribe", @"Un-Register from a conference") forState:UIControlStateNormal];
+        [self.subscribeBtn setBackgroundColor:[UIColor colorWithRed:238/255 green:77/255 blue:89/255 alpha:1]];
+    }
+    self.subscribeBtn.enabled = true;
+}
+
+- (void)subscribe {
+    self.subscribeBtn.enabled = false;
+    [self.activityRegisteredIndicator startAnimating];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/suscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                               if (connectionError == nil && (statusCode <= 204)) {
+                                       [self updateSubscribe:true];
+                               } else {
+                                   [self.activityRegisteredIndicator stopAnimating];
+                                   self.subscribeBtn.enabled = true;
+                               }
+                           }];
+
+}
+
+- (void)unsubscribe {
+    self.subscribeBtn.enabled = false;
+    [self.activityRegisteredIndicator startAnimating];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/unsuscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                               if (connectionError == nil && (statusCode <= 204)) {
+                                   [self updateSubscribe:false];
+                               } else {
+                                   [self.activityRegisteredIndicator stopAnimating];
+                                   self.subscribeBtn.enabled = true;
+                               }
+                           }];
 }
 
 @end

@@ -93,7 +93,7 @@
                                    dispatch_async(dispatch_get_main_queue(), ^{
                                        [self didFetch:tmpItems];
                                    });
-                               } else if (connectionError == nil && statusCode == 204){
+                               } else if (connectionError == nil && statusCode == 404){
                                    NSLog(@"No user found");
                                    [self didFetch:nil];
                                } else if (connectionError != nil){
@@ -140,7 +140,7 @@
                                    dispatch_async(dispatch_get_main_queue(), ^{
                                        [self didFetchMore:tmpItems];
                                    });
-                               } else if (connectionError == nil && statusCode == 204){
+                               } else if (connectionError == nil && statusCode == 404){
                                    [self didFetchMore:nil];
                                } else if (connectionError != nil){
                                    NSLog(@"Error happened = %@", connectionError);
