@@ -9,6 +9,7 @@
 #import "STConferenceViewController.h"
 #import "STProfilViewController.h"
 #import "STConferenceRegisteredTableViewController.h"
+#import "STConferenceTableViewController.h"
 
 @interface STConferenceViewController ()
 
@@ -26,7 +27,14 @@
     self.Name.text = [self.conference objectForKey:@"Name"];
     self.Picture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Id"]]];
     self.OwnerPicture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Owner"]]];
-    self.Status.text = [[self.conference objectForKey:@"Status"] stringValue];
+    NSString* confStatus = [[self.conference objectForKey:@"Status"] stringValue];
+    if ([confStatus isEqualToString:@"1"]) {
+        self.Status.text = NSLocalizedString(@"On going", "CONF STATUS");
+    } else if ([confStatus isEqualToString:@"2"]) {
+        self.Status.text = NSLocalizedString(@"Starting soon", "CONF STATUS");
+    } else {
+        self.Status.text = NSLocalizedString(@"Done", "CONF STATUS");
+    }
     
     NSDictionary *descContentAttrs = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Italic" size:16], NSForegroundColorAttributeName : [UIColor colorWithWhite:0.5f alpha:1.0f]};
     NSDictionary *descTitleAttrs = @{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Medium" size:16], NSForegroundColorAttributeName : [UIColor colorWithWhite:0.5f alpha:1.0f]};
@@ -103,6 +111,10 @@
     } else if ([segue.identifier isEqualToString:@"confToParticipantsSegue"]) {
         STConferenceRegisteredTableViewController *destViewController = segue.destinationViewController;
         [destViewController setParticipants:self.participants];
+    } else if ([segue.identifier isEqualToString:@"categorieToConferenceSegue"]) {
+        STConferenceRepository *confRepo = [[STConferenceRepository alloc] init];
+        [confRepo setCategorieId:[[[self.conference objectForKey:@"Category"] objectForKey:@"Id"] intValue]];
+        [(STConferenceTableViewController *)segue.destinationViewController configureWithRepository:confRepo];
     }
 }
 

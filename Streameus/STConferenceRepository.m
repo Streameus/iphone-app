@@ -23,6 +23,8 @@
     NSURLRequest *request;
     if (self.userId) {
         request = [api createUrlController:[NSString stringWithFormat:@"user/%d/conferences", self.userId] withVerb:GET];
+    } else if (self.categorieId) {
+        request = [api createUrlController:[NSString stringWithFormat:@"conference/category/%d", self.categorieId] withVerb:GET];
     } else {
         request = [api createUrlController:@"conference" withVerb:GET];
     }

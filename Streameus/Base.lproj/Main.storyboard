@@ -877,6 +877,9 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wOF-0z-Axx" kind="push" identifier="categorieToConferenceSegue" id="Oee-08-zSr"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ijy-C6-cZn">
                                 <rect key="frame" x="71" y="312" width="20" height="20"/>
@@ -1551,5 +1554,6 @@
         <segue reference="ufg-uo-KWQ"/>
         <segue reference="aR4-Pj-XnK"/>
         <segue reference="ucy-gY-fnx"/>
+        <segue reference="6Jo-GT-RXh"/>
     </inferredMetricsTieBreakers>
 </document>

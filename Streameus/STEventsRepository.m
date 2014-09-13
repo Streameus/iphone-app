@@ -77,7 +77,7 @@
                                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
                                NSLog(@"URL %@", [response URL]);
                                NSLog(@"Response status code %ld", (long)statusCode);
-                               if (connectionError == nil && statusCode == 200) {
+                               if (connectionError == nil && statusCode <= 204) {
                                    id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    NSMutableArray *tmpItems = [NSMutableArray array];
                                    NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);
@@ -130,7 +130,7 @@
                                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
                                NSLog(@"URL %@", [response URL]);
                                NSLog(@"Response status code %ld", (long)statusCode);
-                               if (connectionError == nil && statusCode == 200) {
+                               if (connectionError == nil && statusCode <= 204) {
                                    id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    NSMutableArray *tmpItems = [NSMutableArray arrayWithArray:self.items];
                                    NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);

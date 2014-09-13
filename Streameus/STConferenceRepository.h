@@ -19,6 +19,7 @@
 @property (nonatomic, weak) id<STConferenceRepositoryDelegate>delegate;
 @property (nonatomic, strong, readonly) NSArray *items;
 @property (nonatomic, assign) int userId;
+@property (nonatomic, assign) int categorieId;
 
 - (void)fetch;
 
