@@ -20,6 +20,7 @@
 		A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367518ABA1AF00C23C38 /* STUserRepository.m */; };
 		A86E367918ABA24F00C23C38 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367818ABA24F00C23C38 /* Reachability.m */; };
 		A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */; };
+		A875782419C4B3F0006C8447 /* STSuggestionConfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A875782319C4B3F0006C8447 /* STSuggestionConfTableViewCell.m */; };
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
@@ -129,6 +130,8 @@
 		A86E367818ABA24F00C23C38 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A875782219C4B3F0006C8447 /* STSuggestionConfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionConfTableViewCell.h; sourceTree = "<group>"; };
+		A875782319C4B3F0006C8447 /* STSuggestionConfTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionConfTableViewCell.m; sourceTree = "<group>"; };
 		A8774AFF189CDFD6000A7E61 /* STSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSidebarViewController.h; sourceTree = "<group>"; };
 		A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSidebarViewController.m; sourceTree = "<group>"; };
 		A8774B04189CE7F8000A7E61 /* STProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilViewController.h; sourceTree = "<group>"; };
@@ -444,6 +447,8 @@
 				A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */,
 				A87A634C19ACB20000747F62 /* STButtonBackground.h */,
 				A87A634D19ACB20000747F62 /* STButtonBackground.m */,
+				A875782219C4B3F0006C8447 /* STSuggestionConfTableViewCell.h */,
+				A875782319C4B3F0006C8447 /* STSuggestionConfTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -492,7 +497,6 @@
 				A89F093A18869ED0008FE4D3 /* Resources */,
 				A85423D318C2CC3E00AA6FF8 /* ShellScript */,
 				A85C8C2718C2D4EE0034BD64 /* ShellScript */,
-				A86AF4A718EFA13300285A5F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -641,20 +645,6 @@
 			shellScript = "find . -name \\*.m | xargs genstrings -o ${PROJECT_DIR}/${PROJECT_NAME}/en.lproj";
 			showEnvVarsInLog = 0;
 		};
-		A86AF4A718EFA13300285A5F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"@?TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -696,6 +686,7 @@
 				A86E367918ABA24F00C23C38 /* Reachability.m in Sources */,
 				A8EB54061957B22B00A15831 /* MMCellBackground.m in Sources */,
 				A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */,
+				A875782419C4B3F0006C8447 /* STSuggestionConfTableViewCell.m in Sources */,
 				A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */,
 				A85900D8196D739C0084C527 /* STAgendaTableViewController.m in Sources */,
 				A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */,

@@ -12,6 +12,7 @@
 #import "STApiEvent.h"
 #import "STEventTableViewCell.h"
 #import "STSuggestionTableViewCell.h"
+#import "STSuggestionConfTableViewCell.h"
 #import "NSString+Common.h"
 #import "STProfilViewController.h"
 #import "STSuggestionCollectionViewCell.h"
@@ -125,7 +126,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 {
     if ([segue.identifier isEqualToString:@"suggestionToProfilSegue"]) {
         STProfilViewController *destViewController = segue.destinationViewController;
-        [destViewController setUser:[(STSuggestionCollectionViewCell *)sender user]];
+        [destViewController setUser:[(STSuggestionCollectionViewCell *)sender data]];
     }
 }
 
@@ -139,9 +140,16 @@ static NSString *EventCellIdentifier = @"eventCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]) {
-        STSuggestionTableViewCell *cell = (STSuggestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"suggestCell" forIndexPath:indexPath];
-        cell.items = [self.repository.items objectAtIndex:indexPath.row];
-        return cell;
+        NSArray *items = [self.repository.items objectAtIndex:indexPath.row];
+        if ([[items objectAtIndex:0] objectForKey:@"Pseudo"]) {
+            STSuggestionTableViewCell *cell = (STSuggestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"suggestCell" forIndexPath:indexPath];
+            cell.items = items;
+            return cell;
+        } else {
+            STSuggestionConfTableViewCell *cell = (STSuggestionConfTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"suggestConfCell" forIndexPath:indexPath];
+            cell.items = items;
+            return cell;
+        }
     }
     STEventTableViewCell *cell = (STEventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:EventCellIdentifier forIndexPath:indexPath];
     NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];

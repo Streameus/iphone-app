@@ -11,11 +11,10 @@
 
 @interface STSuggestionCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) NSDictionary *data;
 
 @property (weak, nonatomic) IBOutlet AsyncImageView *picture;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIButton *button;
-
 
 @end

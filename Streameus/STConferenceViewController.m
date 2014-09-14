@@ -137,7 +137,7 @@
 - (void)subscribe {
     self.subscribeBtn.enabled = false;
     [self.activityRegisteredIndicator startAnimating];
-    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/suscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/subscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
@@ -154,7 +154,7 @@
 - (void)unsubscribe {
     self.subscribeBtn.enabled = false;
     [self.activityRegisteredIndicator startAnimating];
-    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/unsuscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"conference/%@/unsubscribe", [self.conference objectForKey:@"Id"]] withVerb:GET];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];

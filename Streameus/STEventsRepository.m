@@ -15,12 +15,13 @@
 @end
 
 @implementation STEventsRepository
-@synthesize top = _top, skip = _skip;
+@synthesize top = _top, skip = _skip, numberOfItems = _numberOfItems;
 
 - (id)init {
     if (self == [super init]) {
         _top = kSTEventDefaultTop;
         _skip = 0;
+        _numberOfItems = 0;
     }
     return self;
 }
@@ -36,7 +37,34 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
     NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
     NSLog(@"[%ld] %@", (long)statusCode, [response URL]);
-    if (connectionError == nil && statusCode == 200) {
+    if (connectionError == nil && statusCode <= 204) {
+        NSArray *JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        return JSONData;
+    } else if (connectionError != nil){
+        NSLog(@"Error happened = %@", connectionError);
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Error"
+                              message:[connectionError localizedDescription]
+                              delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles: nil];
+        [alert show];
+    }
+    return nil;
+}
+
+- (NSArray *)getRecommendationsConf {
+    if (self.authorId) {
+        return nil;
+    }
+    StreameusAPI *api = [StreameusAPI sharedInstance];
+    NSURLRequest *request = [api createUrlController:@"recommendation/conferences" withVerb:GET];
+    NSURLResponse *response;
+    NSError *connectionError;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
+    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+    NSLog(@"[%ld] %@", (long)statusCode, [response URL]);
+    if (connectionError == nil && statusCode <= 204) {
         NSArray *JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         return JSONData;
     } else if (connectionError != nil){
@@ -84,9 +112,10 @@
                                    for (NSDictionary *it in JSONData) {
                                        [tmpItems addObject:it];
                                    }
-                                   NSArray *recommendations = [self getRecommendationsUser];
+                                   _numberOfItems = [tmpItems count];
+                                   NSArray *recommendations = [self getRecommendationsConf];
                                    if (recommendations != nil) {
-                                       int pos = arc4random() % [tmpItems count];
+                                       int pos = RAND_FROM_TO(0, (int)_numberOfItems + 1);
                                        NSLog(@"Insertion en pos : %d", pos);
                                        [tmpItems insertObject:recommendations atIndex:pos];
                                    }
@@ -134,9 +163,21 @@
                                    id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    NSMutableArray *tmpItems = [NSMutableArray arrayWithArray:self.items];
                                    NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);
+                                   NSInteger saveNumberOfItems = _numberOfItems;
                                    for (NSDictionary *it in JSONData) {
                                        [tmpItems addObject:it];
+                                       _numberOfItems++;
                                    }
+                                   int moreRand = RAND_FROM_TO(0, 2);
+                                   if (moreRand == 2) {
+                                       NSArray *recommendations = [self getRecommendationsUser];
+                                       if (recommendations != nil) {
+                                           int pos = (int)saveNumberOfItems + RAND_FROM_TO(0, (int)_top);
+                                           NSLog(@"Insertion en pos : %d", pos);
+                                           [tmpItems insertObject:recommendations atIndex:pos];
+                                       }
+                                   }
+
                                    dispatch_async(dispatch_get_main_queue(), ^{
                                        [self didFetchMore:tmpItems];
                                    });

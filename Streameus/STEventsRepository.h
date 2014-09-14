@@ -23,6 +23,7 @@
 @property (nonatomic, assign) BOOL dontLoad;
 @property (nonatomic, assign) NSInteger top;
 @property (nonatomic, assign) NSInteger skip;
+@property (nonatomic, assign) NSInteger numberOfItems;
 
 - (void)fetch;
 - (void)fetchMore;
