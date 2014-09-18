@@ -17,6 +17,8 @@
 #import "STProfilViewController.h"
 #import "STSuggestionCollectionViewCell.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+#import "STConferenceViewController.h"
+#import "FXBlurView.h"
 
 static NSString *EventCellIdentifier = @"eventCell";
 
@@ -60,7 +62,9 @@ static NSString *EventCellIdentifier = @"eventCell";
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     // Assign our own backgroud for the view
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
+    self.parentViewController.view.backgroundColor = [UIColor
+                                                      colorWithPatternImage:[[UIImage imageNamed:@"night-cafe_iphone5"]
+                                                                             blurredImageWithRadius:30 iterations:1 tintColor:[UIColor colorWithRed:246/255 green:241/255 blue:211/255 alpha:1]]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
     // Add padding to the top of the table view
@@ -127,6 +131,9 @@ static NSString *EventCellIdentifier = @"eventCell";
     if ([segue.identifier isEqualToString:@"suggestionToProfilSegue"]) {
         STProfilViewController *destViewController = segue.destinationViewController;
         [destViewController setUser:[(STSuggestionCollectionViewCell *)sender data]];
+    } else if ([segue.identifier isEqualToString:@"suggestionToConfSegue"]) {
+        STConferenceViewController *destViewController = segue.destinationViewController;
+        [destViewController setConference:[(STSuggestionCollectionViewCell *)sender data]];
     }
 }
 

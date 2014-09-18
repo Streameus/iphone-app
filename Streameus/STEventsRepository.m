@@ -117,6 +117,7 @@
                                    if (recommendations != nil) {
                                        int pos = RAND_FROM_TO(0, (int)_numberOfItems + 1);
                                        NSLog(@"Insertion en pos : %d", pos);
+                                       pos = (pos > _numberOfItems) ? (int)_numberOfItems : pos;
                                        [tmpItems insertObject:recommendations atIndex:pos];
                                    }
                                    dispatch_async(dispatch_get_main_queue(), ^{
@@ -174,6 +175,7 @@
                                        if (recommendations != nil) {
                                            int pos = (int)saveNumberOfItems + RAND_FROM_TO(0, (int)_top);
                                            NSLog(@"Insertion en pos : %d", pos);
+                                           pos = (pos > _numberOfItems) ? (int)_numberOfItems : pos;
                                            [tmpItems insertObject:recommendations atIndex:pos];
                                        }
                                    }

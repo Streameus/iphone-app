@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A804756419C5D2CB006A4C09 /* UIButton+Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */; };
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
@@ -24,6 +25,10 @@
 		A8774B01189CDFD6000A7E61 /* STSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */; };
 		A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B05189CE7F8000A7E61 /* STProfilViewController.m */; };
 		A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8774B08189CE871000A7E61 /* STLoginViewController.m */; };
+		A8776DF019C5DCAE0040C087 /* night-cafe_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = A8776DEE19C5DCAE0040C087 /* night-cafe_iphone5.png */; };
+		A8776DF119C5DCAE0040C087 /* night-cafe_iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8776DEF19C5DCAE0040C087 /* night-cafe_iphone5@2x.png */; };
+		A8776DF619C5E7130040C087 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8776DF519C5E7130040C087 /* FXBlurView.m */; };
+		A8776DF819C5E72D0040C087 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8776DF719C5E72D0040C087 /* Accelerate.framework */; };
 		A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634719AA4C5A00747F62 /* STConferenceViewController.m */; };
 		A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634D19ACB20000747F62 /* STButtonBackground.m */; };
 		A87A635119AD392B00747F62 /* STConferenceRegisteredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */; };
@@ -57,7 +62,6 @@
 		A8AFDD74197EA70B008FD630 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AFDD73197EA70B008FD630 /* page2.png */; };
 		A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115AF189E379F00D83511 /* STIntroViewController.m */; };
 		A8B115B3189E380A00D83511 /* STIntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B115B2189E380A00D83511 /* STIntroPageViewController.m */; };
-		A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */; };
 		A8BE5BD5196D7527003D8199 /* STAgendaRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BE5BD4196D7527003D8199 /* STAgendaRepository.m */; };
 		A8C8DD4B1952BAC30036B6FD /* STEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C8DD4A1952BAC30036B6FD /* STEventTableViewCell.m */; };
 		A8C9E9E619B508E8008FAA8A /* STLocalLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */; };
@@ -105,6 +109,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A804756219C5D2CB006A4C09 /* UIButton+Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Streameus.h"; sourceTree = "<group>"; };
+		A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Streameus.m"; sourceTree = "<group>"; };
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
@@ -138,6 +144,11 @@
 		A8774B05189CE7F8000A7E61 /* STProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilViewController.m; sourceTree = "<group>"; };
 		A8774B07189CE871000A7E61 /* STLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoginViewController.h; sourceTree = "<group>"; };
 		A8774B08189CE871000A7E61 /* STLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoginViewController.m; sourceTree = "<group>"; };
+		A8776DEE19C5DCAE0040C087 /* night-cafe_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night-cafe_iphone5.png"; sourceTree = "<group>"; };
+		A8776DEF19C5DCAE0040C087 /* night-cafe_iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night-cafe_iphone5@2x.png"; sourceTree = "<group>"; };
+		A8776DF419C5E7130040C087 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		A8776DF519C5E7130040C087 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		A8776DF719C5E72D0040C087 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A87A634619AA4C5900747F62 /* STConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceViewController.h; sourceTree = "<group>"; };
 		A87A634719AA4C5A00747F62 /* STConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceViewController.m; sourceTree = "<group>"; };
 		A87A634C19ACB20000747F62 /* STButtonBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STButtonBackground.h; sourceTree = "<group>"; };
@@ -191,7 +202,6 @@
 		A8B115AF189E379F00D83511 /* STIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroViewController.m; sourceTree = "<group>"; };
 		A8B115B1189E380A00D83511 /* STIntroPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIntroPageViewController.h; sourceTree = "<group>"; };
 		A8B115B2189E380A00D83511 /* STIntroPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIntroPageViewController.m; sourceTree = "<group>"; };
-		A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "freeios7.com_night-cafe_iphone5.jpg"; sourceTree = "<group>"; };
 		A8BE5BD3196D7527003D8199 /* STAgendaRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAgendaRepository.h; sourceTree = "<group>"; };
 		A8BE5BD4196D7527003D8199 /* STAgendaRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAgendaRepository.m; sourceTree = "<group>"; };
 		A8C8DD491952BAC30036B6FD /* STEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEventTableViewCell.h; sourceTree = "<group>"; };
@@ -222,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8776DF819C5E72D0040C087 /* Accelerate.framework in Frameworks */,
 				A887FC87197D86FD000B1BE2 /* QuartzCore.framework in Frameworks */,
 				A88ACFEB18E5AB1000626D92 /* libStreameusAPI.a in Frameworks */,
 				A8F471EA18B7260800CBD8A5 /* SystemConfiguration.framework in Frameworks */,
@@ -277,6 +288,8 @@
 				A8F08079189E0AEA005514AB /* STAideViewController.m */,
 				A8F0807E189E0B25005514AB /* STAproposViewController.h */,
 				A8F0807F189E0B25005514AB /* STAproposViewController.m */,
+				A87A634F19AD392B00747F62 /* STConferenceRegisteredTableViewController.h */,
+				A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */,
 				A8ACF0661924E48B00C026D9 /* STConferenceTableViewController.h */,
 				A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */,
 				A87A634619AA4C5900747F62 /* STConferenceViewController.h */,
@@ -289,6 +302,8 @@
 				A8B115B2189E380A00D83511 /* STIntroPageViewController.m */,
 				A8B115AE189E379F00D83511 /* STIntroViewController.h */,
 				A8B115AF189E379F00D83511 /* STIntroViewController.m */,
+				A8C9E9E419B508E8008FAA8A /* STLocalLoginViewController.h */,
+				A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */,
 				A8774B07189CE871000A7E61 /* STLoginViewController.h */,
 				A8774B08189CE871000A7E61 /* STLoginViewController.m */,
 				A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */,
@@ -301,10 +316,6 @@
 				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
 				A86266A418F8097D006C10BD /* STSubscriptionsTableViewController.h */,
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
-				A87A634F19AD392B00747F62 /* STConferenceRegisteredTableViewController.h */,
-				A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */,
-				A8C9E9E419B508E8008FAA8A /* STLocalLoginViewController.h */,
-				A8C9E9E519B508E8008FAA8A /* STLocalLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -375,6 +386,7 @@
 		A89F093E18869ED0008FE4D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8776DF719C5E72D0040C087 /* Accelerate.framework */,
 				A887FC86197D86FD000B1BE2 /* QuartzCore.framework */,
 				A8F471E918B7260800CBD8A5 /* SystemConfiguration.framework */,
 				A89F093F18869ED0008FE4D3 /* Foundation.framework */,
@@ -449,6 +461,8 @@
 				A87A634D19ACB20000747F62 /* STButtonBackground.m */,
 				A875782219C4B3F0006C8447 /* STSuggestionConfTableViewCell.h */,
 				A875782319C4B3F0006C8447 /* STSuggestionConfTableViewCell.m */,
+				A804756219C5D2CB006A4C09 /* UIButton+Streameus.h */,
+				A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -465,6 +479,8 @@
 				A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */,
 				A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */,
 				A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */,
+				A8776DF419C5E7130040C087 /* FXBlurView.h */,
+				A8776DF519C5E7130040C087 /* FXBlurView.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -479,7 +495,8 @@
 				A8512AB719C4953800BE86F9 /* sign-in-with-facebook.png */,
 				A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */,
 				A86BCB7C189FB08000943483 /* user.png */,
-				A8B115B4189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg */,
+				A8776DEE19C5DCAE0040C087 /* night-cafe_iphone5.png */,
+				A8776DEF19C5DCAE0040C087 /* night-cafe_iphone5@2x.png */,
 				A8F08072189DEEE6005514AB /* Logo_simple_transparent.png */,
 			);
 			name = Images;
@@ -591,7 +608,8 @@
 			files = (
 				A89F095818869ED0008FE4D3 /* Images.xcassets in Resources */,
 				A8AFDD74197EA70B008FD630 /* page2.png in Resources */,
-				A8B115B5189E790600D83511 /* freeios7.com_night-cafe_iphone5.jpg in Resources */,
+				A8776DF119C5DCAE0040C087 /* night-cafe_iphone5@2x.png in Resources */,
+				A8776DF019C5DCAE0040C087 /* night-cafe_iphone5.png in Resources */,
 				A8512AB819C4953800BE86F9 /* sign-in-with-facebook.png in Resources */,
 				A887FCA0197DBDC0000B1BE2 /* page1.png in Resources */,
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
@@ -654,6 +672,7 @@
 			files = (
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A8C8DD4B1952BAC30036B6FD /* STEventTableViewCell.m in Sources */,
+				A8776DF619C5E7130040C087 /* FXBlurView.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
 				A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */,
 				A8BE5BD5196D7527003D8199 /* STAgendaRepository.m in Sources */,
@@ -665,6 +684,7 @@
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A887FC9B197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m in Sources */,
+				A804756419C5D2CB006A4C09 /* UIButton+Streameus.m in Sources */,
 				A8C9E9E619B508E8008FAA8A /* STLocalLoginViewController.m in Sources */,
 				A89F094C18869ED0008FE4D3 /* main.m in Sources */,
 				A887FC8A197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m in Sources */,

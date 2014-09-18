@@ -10,6 +10,7 @@
 #import "STProfilViewController.h"
 #import "STConferenceRegisteredTableViewController.h"
 #import "STConferenceTableViewController.h"
+#import "UIButton+Streameus.h"
 
 @interface STConferenceViewController ()
 
@@ -50,8 +51,25 @@
     
     [self.categorieBtn setTitle:[[self.conference objectForKey:@"Category"] objectForKey:@"Name"] forState:UIControlStateNormal];
     
-    BOOL registered = [[self.conference objectForKey:@"Registered"] isEqualToString:@"true"] ? true : false;
-    [self updateSubscribe:registered];
+//    BOOL registered = [[self.conference objectForKey:@"Registered"] isEqualToString:@"true"] ? true : false;
+//    [self updateSubscribe:registered];
+    [self tmpUpdateRegistered];
+}
+
+- (void)tmpUpdateRegistered {
+    NSString *Id = [self.conference objectForKey:@"Id"];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"Conference/%@/Registered/me", Id] withVerb:GET];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               BOOL amIRegistered = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] isEqualToString:@"true"] ? true : false;
+                               NSLog(@"updateSubscribe [%ld] : %d", (long)[(NSHTTPURLResponse *)response statusCode], amIRegistered);
+                               if (amIRegistered) {
+                                   [self updateSubscribe:false];
+                               } else {
+                                   [self updateSubscribe:true];
+                               }
+                           }];
+
 }
 
 - (void)getParticipantsFromConferenceWithId:(NSString *)confId {
@@ -124,12 +142,12 @@
         [self.subscribeBtn removeTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn addTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn setTitle:NSLocalizedString(@"Subscribe", @"Register to a conference") forState:UIControlStateNormal];
-        [self.subscribeBtn setBackgroundColor:[UIColor colorWithRed:80/255 green:170/255 blue:56/255 alpha:1]];
+        [self.subscribeBtn successStyle];
     } else {
         [self.subscribeBtn removeTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn addTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn setTitle:NSLocalizedString(@"Unsubscribe", @"Un-Register from a conference") forState:UIControlStateNormal];
-        [self.subscribeBtn setBackgroundColor:[UIColor colorWithRed:238/255 green:77/255 blue:89/255 alpha:1]];
+        [self.subscribeBtn dangerStyle];
     }
     self.subscribeBtn.enabled = true;
 }

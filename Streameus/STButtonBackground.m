@@ -28,7 +28,7 @@
     CGRect frame = rect;
     
     //// Rounded Rectangle Drawing
-    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), 280, 30) cornerRadius:_cornerRadius];
+    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:_cornerRadius];
     [_color setFill];
     [roundedRectanglePath fill];
 }

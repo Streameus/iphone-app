@@ -53,7 +53,7 @@
     NSLog(@"subscribe");
     NSString *Id = [NSString stringWithFormat: @"%d", (int)btn.tag];
     btn.enabled = false;
-    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"/Conference/%@/Subscribe/", Id] withVerb:POST];
+    NSURLRequest *request = [[StreameusAPI sharedInstance] createUrlController:[NSString stringWithFormat:@"/Conference/%@/Subscribe/", Id] withVerb:GET];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
