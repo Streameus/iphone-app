@@ -17,9 +17,15 @@
 - (NSString *)replaceNil:(id)obj {
     NSLog(@"obj[%@] : %@", [obj class], obj);
     if ([NSNull null] != obj) {
-        NSString *str = obj;
-        if (str && [str length] > 0) {
-            return str;
+        if ([[obj class] isSubclassOfClass:[NSString class]]) {
+            NSString *str = obj;
+            if (str) {
+                if ([str length] > 0) {
+                    return str;
+                }
+            }
+        } else if ([[obj class] isSubclassOfClass:[NSNumber class]]) {
+            return (obj) ? NSLocalizedString(@"Male", nil) : NSLocalizedString(@"Female", nil);
         }
     }
     return @"n/a";

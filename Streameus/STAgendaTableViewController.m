@@ -31,8 +31,7 @@
         [self configureWithRepository:repo];
     }
 
-    UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealBtn;
+    self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.refreshControl = nil;

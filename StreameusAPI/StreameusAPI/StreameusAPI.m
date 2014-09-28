@@ -102,4 +102,56 @@
     return urlRequest;
 }
 
+- (void)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue*)queue
+                         before:(void (^)()) before
+                        success:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) success
+                        failure:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) failure
+                        after:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) after {
+    
+    if (!queue) {
+        queue = [NSOperationQueue mainQueue];
+    }
+    if (before) {
+        before();
+    }
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        id jsonResult;
+        
+        if ([data length] > 0) {
+            jsonResult = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        }
+        if ([data length] > 0 && connectionError == nil) {
+            NSHTTPURLResponse *responseStatus = (NSHTTPURLResponse *)response;
+            NSLog(@"CODE : %ld\nURL : %@", (long)responseStatus.statusCode, request.URL);
+            NSLog(@"BODY : \n%@", jsonResult);
+            switch (responseStatus.statusCode) {
+                case 200:
+                    success(response, data, connectionError, jsonResult);
+                    break;
+                case 204:
+                    success(response, data, connectionError, jsonResult);
+                    break;
+                case 404:
+                    failure(response, data, connectionError, jsonResult);
+                    break;
+                default:
+                    break;
+            }
+        } else if ([data length] == 0 && connectionError == nil) {
+            NSLog(@"Nothing was downloaded");
+        } else if (connectionError != nil) {
+            if ([data length] > 0) {
+                failure(response, data, connectionError, jsonResult);
+            } else {
+                failure(response, data, connectionError, nil);
+            }
+        }
+        if (data.length > 0) {
+            after(response, data, connectionError, jsonResult);
+        } else {
+            after(response, data, connectionError, nil);
+        }
+    }];
+}
+
 @end

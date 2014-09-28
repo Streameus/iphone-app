@@ -58,47 +58,35 @@
     
     NSURLRequest *request = [api createUrlController:@"../token" withVerb:POST args:nil andBody:[NSString stringWithFormat:@"grant_type=password&userName=%@&password=%@", self.username.text, self.password.text]];
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-                               NSLog(@"URL %@", [response URL]);
-                               NSLog(@"Response status code %ld", (long)statusCode);
-                               id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                               if (connectionError == nil && statusCode == 200) {
-                                   NSLog(@"JSONData =\n%@", JSONData);
-//                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                       [account connectUser:[JSONData objectForKey:@"access_token"]
-                                               andTokenType:[JSONData objectForKey:@"token_type"]
-                                          completionHandler:^(BOOL success) {
-                                              if (success) {
-                                                  NSLog(@"API : %@", [[api account] accessToken]);
-                                                  [self performSegueWithIdentifier:@"sign-inSegue"
-                                                                            sender:nil];
-                                              }
-                                          }];
-//                                   });
-                               } else if (connectionError == nil && statusCode == 400){
-                                   self.errorMessage.text = [JSONData objectForKey:@"error_description"];
-                                   [self bounceAnimation:self.username];
-                                   [self bounceAnimation:self.password];
-                                   [self.activityIndicator setHidden:true];
-                                   [self.signinBtn setEnabled:true];
-                               } else if (connectionError != nil || (connectionError == nil && statusCode == 404)){
-                                   NSLog(@"Error happened = %@", connectionError);
-                                   UIAlertView *alert = [[UIAlertView alloc]
-                                                         initWithTitle:@"Error"
-                                                         message:[connectionError localizedDescription]
-                                                         delegate:nil
-                                                         cancelButtonTitle:@"OK"
-                                                         otherButtonTitles: nil];
-                                   [alert show];
-                                   [self.activityIndicator setHidden:true];
-                                   [self.signinBtn setEnabled:true];
-                               }
-                           }];
-
-    
+    [api sendAsynchronousRequest:request queue:nil before:nil
+                         success:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             [account connectUser:[Json objectForKey:@"access_token"]
+                                     andTokenType:[Json objectForKey:@"token_type"]
+                                completionHandler:^(BOOL success) {
+                                    if (success) {
+                                        NSLog(@"API : %@", [[api account] accessToken]);
+                                        [self performSegueWithIdentifier:@"sign-inSegue"
+                                                                  sender:nil];
+                                    }
+                                }];
+                         } failure:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             if (Json) {
+                                 self.errorMessage.text = [Json objectForKey:@"error_description"];
+                             } else {
+                                 UIAlertView *alert = [[UIAlertView alloc]
+                                                       initWithTitle:@"Error"
+                                                       message:[connectionError localizedDescription]
+                                                       delegate:nil
+                                                       cancelButtonTitle:@"OK"
+                                                       otherButtonTitles: nil];
+                                 [alert show];
+                             }
+                             [self bounceAnimation:self.username];
+                             [self bounceAnimation:self.password];
+                         } after:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             [self.activityIndicator setHidden:true];
+                             [self.signinBtn setEnabled:true];
+                         }];
 }
 
 - (IBAction)cancel:(id)sender {

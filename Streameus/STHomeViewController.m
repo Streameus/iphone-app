@@ -44,10 +44,7 @@ static NSString *EventCellIdentifier = @"eventCell";
         [self configureWithRepository:repo];
     }
     
-//    [self.tableView registerClass:[STEventTableViewCell class] forCellReuseIdentifier:EventCellIdentifier];
-    
-    UIBarButtonItem *revealBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self.revealViewController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealBtn;
+    self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
 //    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.title = NSLocalizedString(@"News feed", @"Title navigation bar home view");

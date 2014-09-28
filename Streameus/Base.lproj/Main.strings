@@ -104,6 +104,15 @@
 /* Class = "IBUIButton"; normalTitle = "Facebook"; ObjectID = "mBc-Mz-rDK"; */
 "mBc-Mz-rDK.normalTitle" = "Facebook";
 
+/* Class = "IBUISegmentedControl"; npQ-IB-ydn.segmentTitles[0] = "Agenda"; ObjectID = "npQ-IB-ydn"; */
+"npQ-IB-ydn.segmentTitles[0]" = "Agenda";
+
+/* Class = "IBUISegmentedControl"; npQ-IB-ydn.segmentTitles[1] = "Live"; ObjectID = "npQ-IB-ydn"; */
+"npQ-IB-ydn.segmentTitles[1]" = "Live";
+
+/* Class = "IBUISegmentedControl"; npQ-IB-ydn.segmentTitles[2] = "Soon"; ObjectID = "npQ-IB-ydn"; */
+"npQ-IB-ydn.segmentTitles[2]" = "Soon";
+
 /* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "oa0-e2-XUn"; */
 "oa0-e2-XUn.normalTitle" = "Sign in";
 

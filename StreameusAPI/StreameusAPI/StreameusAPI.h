@@ -46,6 +46,12 @@ typedef enum {
  */
 - (NSURLRequest *)createUrlController:(NSString *)controller withVerb:(STHttpVerbs)verb args:(NSDictionary *)args andBody:(NSString *)body;
 
+- (void)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue*)queue
+before:(void (^)()) before
+success:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) success
+failure:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) failure
+after:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError, id Json)) after;
+
 @end
 
 // CODE FOR ASYNC CALL DURING UNIT TEST
