@@ -12,6 +12,9 @@
 @interface STAgendaTableViewController : UITableViewController
 
 @property (nonatomic, strong) STAgendaRepository *repository;
+@property (nonatomic, assign) STAgendaType agendaType;
+
+- (IBAction)segmentChanged:(UISegmentedControl *)sender;
 
 - (void)configureWithRepository:(STAgendaRepository *)repository;
 - (void)refresh;

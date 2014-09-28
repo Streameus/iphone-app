@@ -8,17 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    AGENDA,
+    LIVE,
+    SOON
+} STAgendaType;
+
 @protocol STAgendaRepositoryDelegate <NSObject>
 
-- (void)didFetch:(NSArray *)items;
+- (void)didFetch:(NSArray *)items forType:(STAgendaType)type;
 
 @end
 
 @interface STAgendaRepository : NSObject
 
 @property (nonatomic, weak) id<STAgendaRepositoryDelegate>delegate;
-@property (nonatomic, strong, readonly) NSArray *items;
+@property (nonatomic, strong, readonly) NSArray *agenda;
+@property (nonatomic, strong, readonly) NSArray *live;
+@property (nonatomic, strong, readonly) NSArray *soon;
 
-- (void)fetch;
+- (void)fetch:(STAgendaType)type;
 
 @end

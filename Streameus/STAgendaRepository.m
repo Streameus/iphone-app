@@ -10,54 +10,74 @@
 
 @interface STAgendaRepository ()
 
-@property (nonatomic, strong, readwrite) NSArray *items;
+@property (nonatomic, strong, readwrite) NSArray *agenda;
+@property (nonatomic, strong, readwrite) NSArray *live;
+@property (nonatomic, strong, readwrite) NSArray *soon;
 
 @end
 
 @implementation STAgendaRepository
 
-- (void)fetch {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+- (void)fetch:(STAgendaType)type {
     StreameusAPI *api = [StreameusAPI sharedInstance];
-    NSURLRequest *request = [api createUrlController:@"Agenda" withVerb:GET];
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-                               NSLog(@"URL %@", [response URL]);
-                               NSLog(@"Response status code %ld", (long)statusCode);
-                               if (connectionError == nil && statusCode == 200) {
-                                   id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                   NSMutableArray *tmpItems = [NSMutableArray array];
-                                   NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);
-                                   for (NSDictionary *it in JSONData) {
-                                       [tmpItems addObject:it];
-                                   }
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                       [self didFetch:tmpItems];
-                                   });
-                               } else if (connectionError == nil && statusCode == 404){
-                                   NSLog(@"No user found");
-                                   [self didFetch:nil];
-                               } else if (connectionError != nil){
-                                   NSLog(@"Error happened = %@", connectionError);
-                                   UIAlertView *alert = [[UIAlertView alloc]
-                                                         initWithTitle:@"Error"
-                                                         message:[connectionError localizedDescription]
-                                                         delegate:nil
-                                                         cancelButtonTitle:@"OK"
-                                                         otherButtonTitles: nil];
-                                   [alert show];
-                                   [self didFetch:[[NSArray alloc] init]];
-                               }
-                           }];
+    NSURLRequest *request;
     
+    switch (type) {
+        case LIVE:
+            request = [api createUrlController:@"Agenda/Live" withVerb:GET];
+            break;
+        case SOON:
+            request = [api createUrlController:@"Agenda/Soon" withVerb:GET];
+            break;
+        default:
+            request = [api createUrlController:@"Agenda" withVerb:GET];
+            break;
+    }
+    
+    [api sendAsynchronousRequest:request queue:nil
+                          before:^{
+                              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+                          }
+                         success:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             id JSONData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                             NSMutableArray *tmpItems = [NSMutableArray array];
+                             NSLog(@"JSONData [%@] =\n%@", [JSONData class], JSONData);
+                             for (NSDictionary *it in JSONData) {
+                                 [tmpItems addObject:it];
+                             }
+                             dispatch_async(dispatch_get_main_queue(), ^{
+                                 [self didFetch:tmpItems forType:type];
+                             });
+                         }
+                         failure:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             if (connectionError != nil) {
+                                 UIAlertView *alert = [[UIAlertView alloc]
+                                                       initWithTitle:@"Error"
+                                                       message:[connectionError localizedDescription]
+                                                       delegate:nil
+                                                       cancelButtonTitle:@"OK"
+                                                       otherButtonTitles: nil];
+                                 [alert show];
+                             }
+                             [self didFetch:[[NSArray alloc] init] forType:type];
+                         } after:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                         }];
 }
 
-- (void)didFetch:(NSArray *)items {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    self.items = items;
-    [self.delegate didFetch:self.items];
+- (void)didFetch:(NSArray *)items forType:(STAgendaType)type {
+    switch (type) {
+        case LIVE:
+            self.live = items;
+            break;
+        case SOON:
+            self.soon = items;
+            break;
+        default:
+            self.agenda = items;
+            break;
+    }
+    [self.delegate didFetch:items forType:type];
 }
 
 @end

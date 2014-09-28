@@ -25,7 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.agendaType = AGENDA;
     if (!self.repository) {
         STAgendaRepository *repo = [[STAgendaRepository alloc] init];
         [self configureWithRepository:repo];
@@ -48,12 +48,42 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.repository fetch];
+    [self.repository fetch:self.agendaType];
+}
+
+- (IBAction)segmentChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 1:
+            self.agendaType = LIVE;
+            if (![self.repository.live count]) {
+                [self refresh];
+            } else {
+                [self.tableView reloadData];
+            }
+            break;
+        case 2:
+            self.agendaType = SOON;
+            if (![self.repository.soon count]) {
+                [self refresh];
+            } else {
+                [self.tableView reloadData];
+            }
+            break;
+        default:
+            self.agendaType = AGENDA;
+            if (![self.repository.agenda count]) {
+                [self refresh];
+            } else {
+                [self.tableView reloadData];
+            }
+            break;
+    }
 }
 
 #pragma mark - refresh
 
-- (void)didFetch:(NSArray *)items {
+- (void)didFetch:(NSArray *)items forType:(STAgendaType)type {
+    self.agendaType = type;
     [self.refreshControl endRefreshing];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self.tableView reloadData];
@@ -61,28 +91,55 @@
 
 - (void)refresh {
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-    [self.repository fetch];
+    [self.repository fetch:self.agendaType];
 }
 
 #pragma mark - Table view data source
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.repository.items count];
+    if (self.agendaType == AGENDA) {
+        return [self.repository.agenda count];
+    } else {
+        return 1;
+    }
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[self.repository.items objectAtIndex:section] objectForKey:@"Value"] count];
+    switch (self.agendaType) {
+        case LIVE:
+            return [self.repository.live count];
+        case SOON:
+            return [self.repository.soon count];
+        default:
+            return [[[self.repository.agenda objectAtIndex:section] objectForKey:@"Value"] count];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[[self.repository.items objectAtIndex:section] objectForKey:@"Key"] dateFromApiDay];
+    if (self.agendaType == AGENDA) {
+        return [[[self.repository.agenda objectAtIndex:section] objectForKey:@"Key"] dateFromApiDay];
+    }
+    return nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"agendaCell" forIndexPath:indexPath];
-    NSDictionary *item = [[[self.repository.items objectAtIndex:indexPath.section] objectForKey:@"Value"] objectAtIndex:indexPath.row];
+    NSDictionary *item;
+    
+    switch (self.agendaType) {
+        case LIVE:
+            item = [self.repository.live objectAtIndex:indexPath.row];
+            break;
+        case SOON:
+            item = [self.repository.soon objectAtIndex:indexPath.row];
+            break;
+        default:
+            item = [[[self.repository.agenda objectAtIndex:indexPath.section] objectForKey:@"Value"] objectAtIndex:indexPath.row];
+            break;
+    }
     
     StreameusAPI *api = [StreameusAPI sharedInstance];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [api baseUrl], [item objectForKey:@"Id"]]];

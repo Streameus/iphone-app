@@ -641,6 +641,9 @@
                                             <segment title="Live"/>
                                             <segment title="Soon"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="Xaw-k5-6k4" eventType="valueChanged" id="gLW-XO-QSJ"/>
+                                        </connections>
                                     </segmentedControl>
                                 </navigationItem>
                             </items>
