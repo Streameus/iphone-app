@@ -57,6 +57,8 @@
 		A89F096118869ED0008FE4D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89F094318869ED0008FE4D3 /* UIKit.framework */; };
 		A89F096918869ED0008FE4D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A89F096718869ED0008FE4D3 /* InfoPlist.strings */; };
 		A89F096B18869ED0008FE4D3 /* StreameusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89F096A18869ED0008FE4D3 /* StreameusTests.m */; };
+		A8A4666919F3D5D200C2EC7B /* STRightMenuBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4666819F3D5D200C2EC7B /* STRightMenuBarButton.m */; };
+		A8A4667119F3D74600C2EC7B /* STSideSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */; };
 		A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */; };
 		A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACF06C1924E71C00C026D9 /* STConferenceRepository.m */; };
 		A8AD03F218F7A03C00AFDD3B /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */; };
@@ -194,6 +196,10 @@
 		A89F096618869ED0008FE4D3 /* StreameusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreameusTests-Info.plist"; sourceTree = "<group>"; };
 		A89F096818869ED0008FE4D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A89F096A18869ED0008FE4D3 /* StreameusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreameusTests.m; sourceTree = "<group>"; };
+		A8A4666719F3D5D200C2EC7B /* STRightMenuBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRightMenuBarButton.h; sourceTree = "<group>"; };
+		A8A4666819F3D5D200C2EC7B /* STRightMenuBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRightMenuBarButton.m; sourceTree = "<group>"; };
+		A8A4666F19F3D74600C2EC7B /* STSideSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSideSearchViewController.h; sourceTree = "<group>"; };
+		A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSideSearchViewController.m; sourceTree = "<group>"; };
 		A8ACF0661924E48B00C026D9 /* STConferenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceTableViewController.h; sourceTree = "<group>"; };
 		A8ACF0671924E48B00C026D9 /* STConferenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceTableViewController.m; sourceTree = "<group>"; };
 		A8ACF06B1924E71C00C026D9 /* STConferenceRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceRepository.h; sourceTree = "<group>"; };
@@ -319,6 +325,8 @@
 				A8774B00189CDFD6000A7E61 /* STSidebarViewController.m */,
 				A86266A418F8097D006C10BD /* STSubscriptionsTableViewController.h */,
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
+				A8A4666F19F3D74600C2EC7B /* STSideSearchViewController.h */,
+				A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -468,6 +476,8 @@
 				A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */,
 				A862C16A19D833DA00AFCF0C /* STLeftMenuBarButton.h */,
 				A862C16B19D833DA00AFCF0C /* STLeftMenuBarButton.m */,
+				A8A4666719F3D5D200C2EC7B /* STRightMenuBarButton.h */,
+				A8A4666819F3D5D200C2EC7B /* STRightMenuBarButton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -558,6 +568,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Streameus;
 				TargetAttributes = {
+					A89F093B18869ED0008FE4D3 = {
+						DevelopmentTeam = VQDZS24KK5;
+					};
 					A89F095C18869ED0008FE4D3 = {
 						TestTargetID = A89F093B18869ED0008FE4D3;
 					};
@@ -687,6 +700,7 @@
 				A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */,
 				A8774B06189CE7F8000A7E61 /* STProfilViewController.m in Sources */,
 				A86E367C18ABA9E600C23C38 /* MBProgressHUD.m in Sources */,
+				A8A4667119F3D74600C2EC7B /* STSideSearchViewController.m in Sources */,
 				A862C16C19D833DA00AFCF0C /* STLeftMenuBarButton.m in Sources */,
 				A8D1D468189CC61000186B1B /* STHomeViewController.m in Sources */,
 				A887FC9B197D973E000B1BE2 /* UIViewController+BetterLayoutGuides.m in Sources */,
@@ -703,6 +717,7 @@
 				A887FC9E197D973E000B1BE2 /* TLYShyViewController.m in Sources */,
 				A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */,
 				A887FC9D197D973E000B1BE2 /* TLYShyNavBarManager.m in Sources */,
+				A8A4666919F3D5D200C2EC7B /* STRightMenuBarButton.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
 				A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */,
@@ -863,6 +878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -871,9 +887,10 @@
 					$SOURCE_ROOT/include,
 				);
 				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
-				OTHER_CODE_SIGN_FLAGS = "-gta";
+				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -885,6 +902,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streameus/Streameus-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -893,9 +911,10 @@
 					$SOURCE_ROOT/include,
 				);
 				INFOPLIST_FILE = "Streameus/Streameus-Info.plist";
-				OTHER_CODE_SIGN_FLAGS = "-gta";
+				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};

@@ -45,6 +45,7 @@ static NSString *EventCellIdentifier = @"eventCell";
     }
     
     self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
+    self.navigationItem.rightBarButtonItem = [STRightMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(rightRevealToggle:)];
 //    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.title = NSLocalizedString(@"News feed", @"Title navigation bar home view");

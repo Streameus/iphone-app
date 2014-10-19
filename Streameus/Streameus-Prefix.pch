@@ -21,4 +21,5 @@
     #import "AsyncImageView.h"
     #import "NSString+Common.h"
     #import "STLeftMenuBarButton.h"
+    #import "STRightMenuBarButton.h"
 #endif
