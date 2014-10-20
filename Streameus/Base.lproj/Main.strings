@@ -122,6 +122,15 @@
 /* Class = "IBUINavigationItem"; title = "Streameus"; ObjectID = "qQ3-Rn-C1T"; */
 "qQ3-Rn-C1T.title" = "Streameus";
 
+/* Class = "IBUISearchBar"; rLM-Ul-92r.scopeButtonTitles[0] = "All"; ObjectID = "rLM-Ul-92r"; */
+"rLM-Ul-92r.scopeButtonTitles[0]" = "All";
+
+/* Class = "IBUISearchBar"; rLM-Ul-92r.scopeButtonTitles[1] = "Users"; ObjectID = "rLM-Ul-92r"; */
+"rLM-Ul-92r.scopeButtonTitles[1]" = "Users";
+
+/* Class = "IBUISearchBar"; rLM-Ul-92r.scopeButtonTitles[2] = "Conferences"; ObjectID = "rLM-Ul-92r"; */
+"rLM-Ul-92r.scopeButtonTitles[2]" = "Conferences";
+
 /* Class = "IBUIButton"; normalTitle = "Google"; ObjectID = "rVp-OZ-6ym"; */
 "rVp-OZ-6ym.normalTitle" = "Google";
 

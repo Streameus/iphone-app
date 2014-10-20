@@ -13,7 +13,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xFAF3D5)];
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x203543)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = UIColorFromRGBandAlpha(0xE1E1E1, 0.5);
     pageControl.currentPageIndicatorTintColor = UIColorFromRGBandAlpha(0xFEFEFE, 0.8);

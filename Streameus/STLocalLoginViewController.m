@@ -40,6 +40,15 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // TMP
+    self.password.text = @"123123";
+    [self signin:self.signinBtn];
+    // END TMP
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

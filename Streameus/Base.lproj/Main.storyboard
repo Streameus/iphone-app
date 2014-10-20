@@ -1092,6 +1092,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsScopeBar="YES" id="rLM-Ul-92r">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>All</string>
+                                <string>Users</string>
+                                <string>Conferences</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="Edq-Uu-sEA" id="enH-eN-ijw"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="115" id="xca-MH-Zy5" customClass="STEventTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="115"/>
@@ -1327,8 +1341,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1rV-bh-aeE"/>
+                    <connections>
+                        <outlet property="searchBar" destination="rLM-Ul-92r" id="jIm-xZ-qcc"/>
+                        <outlet property="searchDisplayController" destination="WXC-k4-by8" id="Ctd-Ey-h3a"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChE-qy-xhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="WXC-k4-by8">
+                    <connections>
+                        <outlet property="delegate" destination="Edq-Uu-sEA" id="QAx-7q-8a2"/>
+                        <outlet property="searchBar" destination="rLM-Ul-92r" id="Sgp-9n-0Lj"/>
+                        <outlet property="searchContentsController" destination="Edq-Uu-sEA" id="6AA-1c-cL5"/>
+                        <outlet property="searchResultsDataSource" destination="Edq-Uu-sEA" id="Eea-KO-8Cv"/>
+                        <outlet property="searchResultsDelegate" destination="Edq-Uu-sEA" id="PQv-fg-uV0"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1418" y="-1268"/>
         </scene>

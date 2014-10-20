@@ -17,6 +17,5 @@
 }
 
 #pragma mark - SearchBarDelegate methods
--sear
 
 @end
