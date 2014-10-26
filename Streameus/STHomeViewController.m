@@ -95,13 +95,22 @@ static NSString *EventCellIdentifier = @"eventCell";
     [self.repository fetch];
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                    message:@"Calm down cowboy, this app is still under development!"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Ok sry!"
-                                          otherButtonTitles:nil];
-    [alert show];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
+        if (indexPath.section == 0 && ![scope isEqualToString:@"Users"]) {
+            [self performSegueWithIdentifier:@"searchConfSegue" sender:[[searchResults objectForKey:@"Conferences"] objectAtIndex:indexPath.row]];
+        } else if (indexPath.section == 1 && ![scope isEqualToString:@"Conferences"]) {
+            [self performSegueWithIdentifier:@"searchUserSegue" sender:[[searchResults objectForKey:@"Users"] objectAtIndex:indexPath.row]];
+        }
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Calm down cowboy, this app is still under development!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok sry!"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -156,6 +165,12 @@ static NSString *EventCellIdentifier = @"eventCell";
     } else if ([segue.identifier isEqualToString:@"suggestionToConfSegue"]) {
         STConferenceViewController *destViewController = segue.destinationViewController;
         [destViewController setConference:[(STSuggestionCollectionViewCell *)sender data]];
+    } else if ([segue.identifier isEqualToString:@"searchConfSegue"]) {
+        STConferenceViewController *destViewController = segue.destinationViewController;
+        [destViewController setConference:sender];
+    } else if ([segue.identifier isEqualToString:@"searchUserSegue"]) {
+        STProfilViewController *destViewController = segue.destinationViewController;
+        [destViewController setUser:sender];
     }
 }
 
@@ -211,13 +226,26 @@ static NSString *EventCellIdentifier = @"eventCell";
         }
         NSDictionary *item;
         NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
-        NSLog(@"section %ld scope %@", (long)indexPath.section, scope);
         if (indexPath.section == 0 && ![scope isEqualToString:@"Users"]) {
+            UITableViewCell *searchConfCell = [tableView dequeueReusableCellWithIdentifier:@"searchConfCell"];
+            if (searchConfCell == nil) {
+                searchConfCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"searchConfCell"];
+            }
             item = [[searchResults objectForKey:@"Conferences"] objectAtIndex:indexPath.row];
-            cell.textLabel.text = [item objectForKey:@"Name"];
+            searchConfCell.textLabel.text = [item objectForKey:@"Name"];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [item objectForKey:@"Id"]]];
+            [searchConfCell.imageView setImageURL:url];
+            return searchConfCell;
         } else if (indexPath.section == 1 && ![scope isEqualToString:@"Conferences"]) {
+            UITableViewCell *searchUserCell = [tableView dequeueReusableCellWithIdentifier:@"searchUserCell"];
+            if (searchUserCell == nil) {
+                searchUserCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"searchUserCell"];
+            }
             item = [[searchResults objectForKey:@"Users"] objectAtIndex:indexPath.row];
-            cell.textLabel.text = [item objectForKey:@"DisplayName"];
+            searchUserCell.textLabel.text = [item objectForKey:@"DisplayName"];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [item objectForKey:@"Id"]]];
+            [searchUserCell.imageView setImageURL:url];
+            return searchUserCell;
         }
         return cell;
     }
@@ -283,7 +311,7 @@ static NSString *EventCellIdentifier = @"eventCell";
     }
     else
     {
-        [self.searchResults removeAllObjects];
+        [(NSMutableDictionary *)self.searchResults removeAllObjects];
         return YES;
     }
 }

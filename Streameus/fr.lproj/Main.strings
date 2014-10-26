@@ -55,6 +55,9 @@
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "N6m-Ow-TYK"; */
 "N6m-Ow-TYK.text" = "Title";
 
+/* Class = "IBUILabel"; text = "User Name"; ObjectID = "PML-vg-WwN"; */
+"PML-vg-WwN.text" = "User Name";
+
 /* Class = "IBUIButton"; normalTitle = "0 registered"; ObjectID = "Pd9-L5-NzW"; */
 "Pd9-L5-NzW.normalTitle" = "0 registered";
 
@@ -66,6 +69,9 @@
 
 /* Class = "IBUILabel"; text = "Error message"; ObjectID = "Tc0-te-TWB"; */
 "Tc0-te-TWB.text" = "Error message";
+
+/* Class = "IBUILabel"; text = "Conference Name"; ObjectID = "TlN-48-duX"; */
+"TlN-48-duX.text" = "Conference Name";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "VE3-lX-WzJ"; */
 "VE3-lX-WzJ.text" = "Subtitle";
