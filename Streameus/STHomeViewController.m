@@ -55,6 +55,7 @@ static NSString *EventCellIdentifier = @"eventCell";
     
     [self.searchBar setShowsScopeBar:false];
     [self.searchBar sizeToFit];
+    [self.searchBar setBackgroundColor:[UIColor clearColor]];
     self.searchBar.delegate = self;
     CGRect newBounds = [[self tableView] bounds];
     newBounds.origin.y = newBounds.origin.y + self.searchBar.bounds.size.height;
@@ -71,6 +72,7 @@ static NSString *EventCellIdentifier = @"eventCell";
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    [self.refreshControl setBackgroundColor:[UIColor clearColor]];
     
     // Remove table cell separator
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -311,7 +313,8 @@ static NSString *EventCellIdentifier = @"eventCell";
     }
     else
     {
-        [(NSMutableDictionary *)self.searchResults removeAllObjects];
+        self.searchResults = nil;
+//        [(NSMutableDictionary *)self.searchResults removeAllObjects];
         return YES;
     }
 }

@@ -146,15 +146,6 @@
 /* Class = "IBUILabel"; text = "About"; ObjectID = "tec-3j-LAj"; */
 "tec-3j-LAj.text" = "About";
 
-/* Class = "IBUISegmentedControl"; wv3-gG-FWm.segmentTitles[0] = "All"; ObjectID = "wv3-gG-FWm"; */
-"wv3-gG-FWm.segmentTitles[0]" = "All";
-
-/* Class = "IBUISegmentedControl"; wv3-gG-FWm.segmentTitles[1] = "Users"; ObjectID = "wv3-gG-FWm"; */
-"wv3-gG-FWm.segmentTitles[1]" = "Users";
-
-/* Class = "IBUISegmentedControl"; wv3-gG-FWm.segmentTitles[2] = "Conferences"; ObjectID = "wv3-gG-FWm"; */
-"wv3-gG-FWm.segmentTitles[2]" = "Conferences";
-
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "News feed";
 

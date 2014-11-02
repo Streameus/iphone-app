@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A804756419C5D2CB006A4C09 /* UIButton+Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */; };
+		A8114C0A1A0666D600246492 /* update_storyboard_strings.sh in Resources */ = {isa = PBXBuildFile; fileRef = A8114C091A0666D600246492 /* update_storyboard_strings.sh */; };
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
@@ -114,6 +115,7 @@
 /* Begin PBXFileReference section */
 		A804756219C5D2CB006A4C09 /* UIButton+Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Streameus.h"; sourceTree = "<group>"; };
 		A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Streameus.m"; sourceTree = "<group>"; };
+		A8114C091A0666D600246492 /* update_storyboard_strings.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update_storyboard_strings.sh; sourceTree = "<group>"; };
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
@@ -264,6 +266,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8114C081A0666D600246492 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				A8114C091A0666D600246492 /* update_storyboard_strings.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		A86E366F18AB8FAC00C23C38 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +386,7 @@
 		A89F093318869ED0008FE4D3 = {
 			isa = PBXGroup;
 			children = (
+				A8114C081A0666D600246492 /* scripts */,
 				A81C5BFD189D43FD007A2C9B /* README.md */,
 				A88ACFD618E5A30600626D92 /* StreameusAPI.xcodeproj */,
 				A89F094518869ED0008FE4D3 /* Streameus */,
@@ -633,6 +644,7 @@
 				A89F094A18869ED0008FE4D3 /* InfoPlist.strings in Resources */,
 				A81C5BFE189D43FD007A2C9B /* README.md in Resources */,
 				A86BCB7D189FB08000943483 /* user.png in Resources */,
+				A8114C0A1A0666D600246492 /* update_storyboard_strings.sh in Resources */,
 				A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */,
 				A85C8C2518C2D4100034BD64 /* Localizable.strings in Resources */,
 				A89F095318869ED0008FE4D3 /* Main.storyboard in Resources */,
