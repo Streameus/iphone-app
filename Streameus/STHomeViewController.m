@@ -25,6 +25,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 @interface STHomeViewController () <STEventsRepositoryDelegate>
 
 @property (nonatomic, assign) NSUInteger currentRow;
+@property (nonatomic, assign) CGFloat currentOffset;
 
 @end
 
@@ -120,9 +121,8 @@ static NSString *EventCellIdentifier = @"eventCell";
 }
 
 - (void)goToSearch {
-    NSLog(@"%f", self.tableView.contentOffset.y);
+    self.currentOffset = self.tableView.contentOffset.y;
     [self.tableView setContentOffset:CGPointMake(0.0f, -self.tableView.contentInset.top) animated:NO];
-    NSLog(@"%f", self.tableView.contentOffset.y);
     [self.searchBar becomeFirstResponder];
 }
 
@@ -326,6 +326,10 @@ static NSString *EventCellIdentifier = @"eventCell";
 
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller {
     [self.searchQueue cancelAllOperations];
+}
+
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
+    [self.tableView setContentOffset:CGPointMake(0.0f, self.currentOffset) animated:NO];
 }
 
 @end
