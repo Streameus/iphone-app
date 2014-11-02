@@ -88,6 +88,8 @@
     }
     
     cell.textLabel.text = [[self.items objectAtIndex:indexPath.row] objectForKey:@"Pseudo"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [[StreameusAPI sharedInstance] baseUrl], [[self.items objectAtIndex:indexPath.row] objectForKey:@"Id"]]];
+    [cell.imageView setImageURL:url];
     
     return cell;
 }
