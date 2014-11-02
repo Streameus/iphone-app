@@ -11,6 +11,7 @@
 #import "STSearchViewController.h"
 #import "STApiOAuthViewController.h"
 #import "STHomeViewController.h"
+#import "STCategorieTableViewController.h"
 
 @interface STSidebarViewController ()
 
@@ -39,6 +40,9 @@
 //        [(STHomeViewController *)destViewController configureWithRepository:repo];
     } else if ([segue.identifier isEqualToString:@"logoutSegue"]) {
         [STApiOAuthViewController clearCookies];
+    } else if ([segue.identifier isEqualToString:@"browseCellToTableSegue"]) {
+        STCategorieRepository *repo = [[STCategorieRepository alloc] init];
+        [(STCategorieTableViewController *)destViewController configureWithRepository:repo];
     }
 
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {

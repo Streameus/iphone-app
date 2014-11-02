@@ -41,6 +41,9 @@
 /* Class = "IBUIButton"; normalTitle = "Conference"; ObjectID = "KnB-l4-OcW"; */
 "KnB-l4-OcW.normalTitle" = "Conference";
 
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Kpc-pW-irV"; */
+"Kpc-pW-irV.text" = "Title";
+
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "LZp-vo-c1W"; */
 "LZp-vo-c1W.normalTitle" = "Cancel";
 
@@ -98,6 +101,9 @@
 /* Class = "IBUILabel"; text = "UserName"; ObjectID = "icd-2s-9bU"; */
 "icd-2s-9bU.text" = "UserName";
 
+/* Class = "IBUILabel"; text = "Browse"; ObjectID = "ieg-Rz-QbN"; */
+"ieg-Rz-QbN.text" = "Browse";
+
 /* Class = "IBUILabel"; text = "or"; ObjectID = "ixj-u2-BFn"; */
 "ixj-u2-BFn.text" = "or";
 
@@ -121,6 +127,9 @@
 
 /* Class = "IBUIButton"; normalTitle = "Sign in"; ObjectID = "oa0-e2-XUn"; */
 "oa0-e2-XUn.normalTitle" = "Sign in";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "ozX-ng-Cxs"; */
+"ozX-ng-Cxs.text" = "Subtitle";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
 "qFk-Vz-Q4T.text" = "Subtitle";

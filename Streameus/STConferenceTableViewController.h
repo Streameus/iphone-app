@@ -11,6 +11,8 @@
 
 @interface STConferenceTableViewController : UITableViewController
 
+@property (nonatomic, assign) NSString *categorieName;
+
 - (void)configureWithRepository:(STConferenceRepository *)repository;
 - (void)refresh;
 

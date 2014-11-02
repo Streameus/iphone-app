@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A804756419C5D2CB006A4C09 /* UIButton+Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */; };
 		A8114C0A1A0666D600246492 /* update_storyboard_strings.sh in Resources */ = {isa = PBXBuildFile; fileRef = A8114C091A0666D600246492 /* update_storyboard_strings.sh */; };
+		A8114C0F1A06A8E700246492 /* STCategorieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */; };
+		A8114C121A06A95100246492 /* STCategorieRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8114C111A06A95100246492 /* STCategorieRepository.m */; };
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
 		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
@@ -116,6 +118,10 @@
 		A804756219C5D2CB006A4C09 /* UIButton+Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Streameus.h"; sourceTree = "<group>"; };
 		A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Streameus.m"; sourceTree = "<group>"; };
 		A8114C091A0666D600246492 /* update_storyboard_strings.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update_storyboard_strings.sh; sourceTree = "<group>"; };
+		A8114C0D1A06A8E700246492 /* STCategorieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategorieTableViewController.h; sourceTree = "<group>"; };
+		A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategorieTableViewController.m; sourceTree = "<group>"; };
+		A8114C101A06A95100246492 /* STCategorieRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategorieRepository.h; sourceTree = "<group>"; };
+		A8114C111A06A95100246492 /* STCategorieRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategorieRepository.m; sourceTree = "<group>"; };
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 				A861CBEB19443A5E0080DF8A /* STEventsRepository.m */,
 				A8BE5BD3196D7527003D8199 /* STAgendaRepository.h */,
 				A8BE5BD4196D7527003D8199 /* STAgendaRepository.m */,
+				A8114C101A06A95100246492 /* STCategorieRepository.h */,
+				A8114C111A06A95100246492 /* STCategorieRepository.m */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -337,6 +345,8 @@
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
 				A8A4666F19F3D74600C2EC7B /* STSideSearchViewController.h */,
 				A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */,
+				A8114C0D1A06A8E700246492 /* STCategorieTableViewController.h */,
+				A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -732,6 +742,7 @@
 				A8A4666919F3D5D200C2EC7B /* STRightMenuBarButton.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
+				A8114C121A06A95100246492 /* STCategorieRepository.m in Sources */,
 				A86266A618F8097D006C10BD /* STSubscriptionsTableViewController.m in Sources */,
 				A887FC9A197D973E000B1BE2 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
 				A8F08080189E0B25005514AB /* STAproposViewController.m in Sources */,
@@ -741,6 +752,7 @@
 				A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */,
 				A875782419C4B3F0006C8447 /* STSuggestionConfTableViewCell.m in Sources */,
 				A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */,
+				A8114C0F1A06A8E700246492 /* STCategorieTableViewController.m in Sources */,
 				A85900D8196D739C0084C527 /* STAgendaTableViewController.m in Sources */,
 				A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */,
 				A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */,

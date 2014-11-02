@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     
+    if (self.categorieName) {
+        self.title = self.categorieName;
+    }
     self.refreshControl = nil;
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
