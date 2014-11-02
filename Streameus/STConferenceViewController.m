@@ -22,8 +22,38 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"Conference : \n %@", self.conference);
+    if (self.conference) {
+        NSLog(@"Conference : \n %@", self.conference);
+        [self initialLoad];
+    } else if (self.conferenceId) {
+        StreameusAPI *api = [StreameusAPI sharedInstance];
+        NSURLRequest *urlRequest = [api createUrlController:[NSString stringWithFormat:@"conference/%@", self.conferenceId] withVerb:GET];
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.labelText = @"Loading...";
+        hud.animationType = MBProgressHUDAnimationZoomIn;
+        [api sendAsynchronousRequest:urlRequest
+                               queue:nil
+                              before:nil
+                             success:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                                 self.conference = Json;
+                             }
+                             failure:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                                 UIAlertView *alert = [[UIAlertView alloc]
+                                                       initWithTitle:@"Oops!"
+                                                       message:[connectionError localizedDescription]
+                                                       delegate:nil
+                                                       cancelButtonTitle:@"OK"
+                                                       otherButtonTitles: nil];
+                                 [alert show];
+                             }
+                               after:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
+                                   [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                   [self initialLoad];
+                               }];
+    }
+}
 
+- (void)initialLoad {
     [self getParticipantsFromConferenceWithId:[self.conference objectForKey:@"Id"]];
     self.Name.text = [self.conference objectForKey:@"Name"];
     self.Picture.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/conference/%@", [[StreameusAPI sharedInstance] baseUrl], [self.conference objectForKey:@"Id"]]];
@@ -51,8 +81,8 @@
     
     [self.categorieBtn setTitle:[[self.conference objectForKey:@"Category"] objectForKey:@"Name"] forState:UIControlStateNormal];
     
-//    BOOL registered = [[self.conference objectForKey:@"Registered"] isEqualToString:@"true"] ? true : false;
-//    [self updateSubscribe:registered];
+    //    BOOL registered = [[self.conference objectForKey:@"Registered"] isEqualToString:@"true"] ? true : false;
+    //    [self updateSubscribe:registered];
     [self tmpUpdateRegistered];
 }
 

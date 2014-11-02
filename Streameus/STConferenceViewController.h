@@ -11,6 +11,7 @@
 @interface STConferenceViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *conference;
+@property (nonatomic, strong) NSString *conferenceId;
 
 @property (weak, nonatomic) IBOutlet UILabel *Name;
 @property (weak, nonatomic) IBOutlet AsyncImageView *Picture;
@@ -25,6 +26,7 @@
 
 @property (nonatomic, strong) NSArray *participants;
 
+- (void)initialLoad;
 - (void)getParticipantsFromConferenceWithId:(NSString *)confId;
 - (void)didFetchParticipants:(NSArray *)items;
 - (void)subscribe;

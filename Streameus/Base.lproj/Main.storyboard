@@ -649,7 +649,7 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="agendaCell" textLabel="N6m-Ow-TYK" detailTextLabel="VE3-lX-WzJ" style="IBUITableViewCellStyleSubtitle" id="qwz-Yv-hTJ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="agendaCell" textLabel="N6m-Ow-TYK" detailTextLabel="VE3-lX-WzJ" style="IBUITableViewCellStyleSubtitle" id="qwz-Yv-hTJ">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qwz-Yv-hTJ" id="I2W-S1-zAL">
@@ -679,6 +679,9 @@
                             <outlet property="delegate" destination="Xaw-k5-6k4" id="c4K-9x-fdH"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="nQ5-R5-dRJ" kind="push" identifier="agendaToConferenceSegue" id="W1A-1W-naJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfY-Wv-Rjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1668,8 +1671,8 @@
         <segue reference="aR4-Pj-XnK"/>
         <segue reference="bNj-r8-y7A"/>
         <segue reference="0WQ-oP-oc2"/>
-        <segue reference="WDb-KM-Up6"/>
-        <segue reference="AAR-75-fmk"/>
+        <segue reference="W1A-1W-naJ"/>
         <segue reference="Oee-08-zSr"/>
+        <segue reference="ucy-gY-fnx"/>
     </inferredMetricsTieBreakers>
 </document>

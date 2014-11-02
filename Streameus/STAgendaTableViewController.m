@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "NSString+Common.h"
 #import "AsyncImageView.h"
+#import "STConferenceViewController.h"
 
 @interface STAgendaTableViewController () <STAgendaRepositoryDelegate>
 
@@ -151,6 +152,30 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *item;
+    
+    switch (self.agendaType) {
+        case LIVE:
+            item = [self.repository.live objectAtIndex:indexPath.row];
+            break;
+        case SOON:
+            item = [self.repository.soon objectAtIndex:indexPath.row];
+            break;
+        default:
+            item = [[[self.repository.agenda objectAtIndex:indexPath.section] objectForKey:@"Value"] objectAtIndex:indexPath.row];
+            break;
+    }
+    [self performSegueWithIdentifier:@"agendaToConferenceSegue" sender:item];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"agendaToConferenceSegue"]) {
+        STConferenceViewController *dest = (STConferenceViewController *)segue.destinationViewController;
+        [dest setConference:nil];
+        [dest setConferenceId:[sender objectForKey:@"Id"]];
+    }
+}
 
 
 @end
