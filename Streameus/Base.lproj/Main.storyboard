@@ -1732,11 +1732,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aR4-Pj-XnK"/>
-        <segue reference="bNj-r8-y7A"/>
+        <segue reference="hg3-b8-F9L"/>
         <segue reference="0WQ-oP-oc2"/>
-        <segue reference="Zhw-xx-fV4"/>
+        <segue reference="bNj-r8-y7A"/>
+        <segue reference="aR4-Pj-XnK"/>
         <segue reference="hsI-ED-2WY"/>
-        <segue reference="PcE-z5-mK6"/>
+        <segue reference="TyZ-2d-hGM"/>
     </inferredMetricsTieBreakers>
 </document>

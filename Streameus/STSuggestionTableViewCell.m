@@ -46,6 +46,7 @@
                                    btn.hidden = false;
                                }
                                btn.enabled = true;
+                               [self.collectionView reloadData];
                            }];
 }
 

@@ -18,7 +18,7 @@
 
 @implementation STConferenceViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidLoad];
     
@@ -92,11 +92,11 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                BOOL amIRegistered = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] isEqualToString:@"true"] ? true : false;
-                               NSLog(@"updateSubscribe [%ld] : %d", (long)[(NSHTTPURLResponse *)response statusCode], amIRegistered);
+                               NSLog(@"tmpUpdateRegistered [%ld] : %d", (long)[(NSHTTPURLResponse *)response statusCode], amIRegistered);
                                if (amIRegistered) {
-                                   [self updateSubscribe:false];
-                               } else {
                                    [self updateSubscribe:true];
+                               } else {
+                                   [self updateSubscribe:false];
                                }
                            }];
 
@@ -171,13 +171,13 @@
     if (registered) {
         [self.subscribeBtn removeTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn addTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
-        [self.subscribeBtn setTitle:NSLocalizedString(@"Subscribe", @"Register to a conference") forState:UIControlStateNormal];
-        [self.subscribeBtn successStyle];
+        [self.subscribeBtn setTitle:NSLocalizedString(@"Unsubscribe", @"Un-Register from a conference") forState:UIControlStateNormal];
+        [self.subscribeBtn dangerStyle];
     } else {
         [self.subscribeBtn removeTarget:self action:@selector(unsubscribe) forControlEvents:UIControlEventTouchUpInside];
         [self.subscribeBtn addTarget:self action:@selector(subscribe) forControlEvents:UIControlEventTouchUpInside];
-        [self.subscribeBtn setTitle:NSLocalizedString(@"Unsubscribe", @"Un-Register from a conference") forState:UIControlStateNormal];
-        [self.subscribeBtn dangerStyle];
+        [self.subscribeBtn setTitle:NSLocalizedString(@"Subscribe", @"Register to a conference") forState:UIControlStateNormal];
+        [self.subscribeBtn successStyle];
     }
     self.subscribeBtn.enabled = true;
 }

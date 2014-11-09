@@ -36,13 +36,14 @@
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading...";
     hud.animationType = MBProgressHUDAnimationZoomIn;
     [self.repository fetch];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
 }
 
 #pragma mark - refresh
