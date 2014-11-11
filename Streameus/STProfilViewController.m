@@ -114,6 +114,7 @@
         }
         self.eventsViewController = segue.destinationViewController;
         [self.eventsViewController configureWithRepository:repo];
+        self.eventsViewController.hideSearchBar = true;
     }
 }
 

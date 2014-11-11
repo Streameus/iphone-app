@@ -14,6 +14,7 @@
 @property (nonatomic, strong) STEventsRepository *repository;
 @property (nonatomic, strong) NSMutableDictionary *searchResults;
 @property (nonatomic, retain) NSOperationQueue *searchQueue;
+@property (nonatomic, assign) BOOL hideSearchBar;
 
 @property IBOutlet UISearchBar *searchBar;
 

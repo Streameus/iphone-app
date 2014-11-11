@@ -26,6 +26,7 @@ static NSString *EventCellIdentifier = @"eventCell";
 
 @property (nonatomic, assign) NSUInteger currentRow;
 @property (nonatomic, assign) CGFloat currentOffset;
+@property (nonatomic, strong) STEventTableViewCell *prototypeCell;
 
 @end
 
@@ -37,10 +38,20 @@ static NSString *EventCellIdentifier = @"eventCell";
     self.repository.delegate = self;
 }
 
+- (STEventTableViewCell *)prototypeCell
+{
+    if (!_prototypeCell)
+    {
+        _prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:EventCellIdentifier];
+    }
+    return _prototypeCell;
+}
+
 - (id)init {
     if ((self = [super init])) {
         self.searchResults = [NSMutableDictionary new];
         self.searchQueue = [NSOperationQueue new];
+        self.hideSearchBar = false;
     }
     return self;
 }
@@ -54,13 +65,18 @@ static NSString *EventCellIdentifier = @"eventCell";
         [self configureWithRepository:repo];
     }
     
-    [self.searchBar setShowsScopeBar:false];
-    [self.searchBar sizeToFit];
-    [self.searchBar setBackgroundColor:[UIColor clearColor]];
-    self.searchBar.delegate = self;
-    CGRect newBounds = [[self tableView] bounds];
-    newBounds.origin.y = newBounds.origin.y + self.searchBar.bounds.size.height;
-    [[self tableView] setBounds:newBounds];
+    if (self.hideSearchBar == false) {
+        [self.searchBar setShowsScopeBar:false];
+        [self.searchBar sizeToFit];
+        [self.searchBar setBackgroundColor:[UIColor clearColor]];
+        self.searchBar.delegate = self;
+        CGRect newBounds = [[self tableView] bounds];
+        newBounds.origin.y = newBounds.origin.y + self.searchBar.bounds.size.height;
+        [[self tableView] setBounds:newBounds];
+    } else {
+        [self.searchBar removeFromSuperview];
+        self.tableView.tableHeaderView = nil;
+    }
     
     self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
     self.navigationItem.rightBarButtonItem = [STRightMenuBarButton menuBarItemTarget:self action:@selector(goToSearch)];
@@ -264,16 +280,29 @@ static NSString *EventCellIdentifier = @"eventCell";
         }
     }
     STEventTableViewCell *cell = (STEventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:EventCellIdentifier forIndexPath:indexPath];
-    NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
-
-    StreameusAPI *api = [StreameusAPI sharedInstance];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [api baseUrl], [item objectForKey:@"AuthorId"]]];
-    [cell.picture setImageURL:url];
-    cell.content.text = [STApiEvent getContentString:item];
-    cell.date.text = [[item objectForKey:@"Date"] dateFromApi];
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[STEventTableViewCell class]])
+    {
+        STEventTableViewCell *aCell = (STEventTableViewCell *)cell;
+        NSDictionary *item = [self.repository.items objectAtIndex:indexPath.row];
+        
+        StreameusAPI *api = [StreameusAPI sharedInstance];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [api baseUrl], [item objectForKey:@"AuthorId"]]];
+        [aCell.picture setImageURL:url];
+        aCell.picture.layer.masksToBounds = YES;
+        aCell.picture.layer.cornerRadius = 35.0f;
+        
+        NSString* content = [STApiEvent getContentString:item];
+        aCell.content.text = [NSString stringWithFormat:@"%@", content];
+        aCell.date.text = [[item objectForKey:@"Date"] dateFromApi];
+        
+        aCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -283,7 +312,16 @@ static NSString *EventCellIdentifier = @"eventCell";
     }
     if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]])
         return 135;
-    return 115;
+    
+    [self configureCell:self.prototypeCell forRowAtIndexPath:indexPath];
+    self.prototypeCell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.bounds), CGRectGetHeight(self.prototypeCell.bounds));
+    [self.prototypeCell layoutIfNeeded];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return (size.height >= 120) ? size.height : 120;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods

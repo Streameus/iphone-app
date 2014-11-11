@@ -32,9 +32,9 @@
     CGFloat fillColorRGBA[4];
     [fillColor getRed: &fillColorRGBA[0] green: &fillColorRGBA[1] blue: &fillColorRGBA[2] alpha: &fillColorRGBA[3]];
     
-    UIColor* grisClair = [UIColor colorWithRed: (fillColorRGBA[0] * 0.1 + 0.9) green: (fillColorRGBA[1] * 0.1 + 0.9) blue: (fillColorRGBA[2] * 0.1 + 0.9) alpha: (fillColorRGBA[3] * 0.1 + 0.9)];
+    UIColor* grisClair = [UIColor colorWithRed: (fillColorRGBA[0] * 0.1 + 0.9) green: (fillColorRGBA[1] * 0.1 + 0.9) blue: (fillColorRGBA[2] * 0.1 + 0.9) alpha: (fillColorRGBA[3] * 0.1 + 0.5)];
     UIColor* strokeColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0.1];
-    UIColor* color = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+    UIColor* color = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 0.5];
     UIColor* shadowColor2 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0.319];
     
     //// Shadow Declarations
