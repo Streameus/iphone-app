@@ -1,87 +1,55 @@
 //
-//  STLocalLoginViewController.m
+//  STRegisterViewController.m
 //  Streameus
 //
-//  Created by Anas Ait Ali on 01/09/2014.
+//  Created by Anas Ait Ali on 15/11/14.
 //  Copyright (c) 2014 Streameus. All rights reserved.
 //
 
-#import "STLocalLoginViewController.h"
+#import "STRegisterViewController.h"
 
-@interface STLocalLoginViewController ()
+@interface STRegisterViewController ()
 
 @end
 
-@implementation STLocalLoginViewController
+@implementation STRegisterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.username setDelegate:self];
+    [self.email setDelegate:self];
+    [self.pseudo setDelegate:self];
     [self.password setDelegate:self];
     self.errorMessage.text = @"";
     [self.activityIndicator setHidden:true];
     
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *userName = [prefs stringForKey:@"STLocalLoginUsername"];
-    if (userName) {
-        self.username.text = userName;
-    }
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
     
-    // TMP
-//    self.password.text = @"123123";
-//    [self signin:self.signinBtn];
-    // END TMP
-}
+    // TEMP
+    self.email.text = @"anas.ait-ali@epitech.eu";
+    self.pseudo.text = @"aitali";
+    self.password.text = @"qweasd";
+    // FIN TEMP
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)signin:(id)sender {
     self.errorMessage.text = @"";
-    STApiAccount *account = [[StreameusAPI sharedInstance] account];
     StreameusAPI *api = [StreameusAPI sharedInstance];
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    if (self.username.text.length > 0 && self.password.text.length > 0) {
+
+    if (self.email.text.length > 0 && self.password.text.length > 0 && self.pseudo.text.length > 0) {
         [self.signinBtn setEnabled:false];
         [self.activityIndicator setHidden:false];
-        [prefs setObject:self.username.text forKey:@"STLocalLoginUsername"];
         
-        NSURLRequest *request = [api createUrlController:@"../token" withVerb:POST args:nil andBody:[NSString stringWithFormat:@"grant_type=password&userName=%@&password=%@", self.username.text, self.password.text]];
+        NSData *body = [NSJSONSerialization dataWithJSONObject:@{@"username": self.email.text, @"pseudo": self.pseudo.text, @"password": self.password.text, @"confirmpassword": self.password.text} options:0 error:nil];
+        NSURLRequest *request = [api createUrlController:@"account/register" withVerb:POST args:nil andBody:[[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding]];
         
         [api sendAsynchronousRequest:request queue:nil before:nil
                              success:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
-                                 [account connectUser:[Json objectForKey:@"access_token"]
-                                         andTokenType:[Json objectForKey:@"token_type"]
-                                    completionHandler:^(BOOL success) {
-                                        if (success) {
-                                            NSLog(@"API : %@", [[api account] accessToken]);
-                                            [self performSegueWithIdentifier:@"sign-inSegue"
-                                                                      sender:nil];
-                                        }
-                                    }];
+                                 [self performSegueWithIdentifier:@"registerToLoginSegue" sender:nil];
                              } failure:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
                                  if (Json) {
-                                     self.errorMessage.text = [Json objectForKey:@"error_description"];
+                                     self.errorMessage.text = [Json objectForKey:@"error_description"]; // ERROR NOT HANDLED CORRECTLY
                                  } else {
                                      UIAlertView *alert = [[UIAlertView alloc]
                                                            initWithTitle:@"Error"
@@ -91,16 +59,17 @@
                                                            otherButtonTitles: nil];
                                      [alert show];
                                  }
-                                 [self bounceAnimation:self.username];
+                                 [self bounceAnimation:self.email];
+                                 [self bounceAnimation:self.pseudo];
                                  [self bounceAnimation:self.password];
                              } after:^(NSURLResponse *response, NSData *data, NSError *connectionError, id Json) {
                                  [self.activityIndicator setHidden:true];
                                  [self.signinBtn setEnabled:true];
                              }];
-    
     } else {
-        [self bounceAnimation:self.username];
-        [self bounceAnimation:self.password];    
+        [self bounceAnimation:self.email];
+        [self bounceAnimation:self.pseudo];
+        [self bounceAnimation:self.password];
     }
 }
 
@@ -110,14 +79,16 @@
 }
 
 - (IBAction)backgroundTouched:(id)sender {
-    [self.username resignFirstResponder];
+    [self.email resignFirstResponder];
     [self.password resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.tag == 1) {
-        [self.password becomeFirstResponder];
+        [self.pseudo becomeFirstResponder];
     } else if (textField.tag == 2) {
+        [self.password becomeFirstResponder];
+    } else if (textField.tag == 3) {
         [textField resignFirstResponder];
         [self signin:nil];
     }

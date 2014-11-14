@@ -11,6 +11,12 @@
 /* Class = "IBUILabel"; text = "Conference name"; ObjectID = "6FQ-eF-Po4"; */
 "6FQ-eF-Po4.text" = "Conference name";
 
+/* Class = "IBUIButton"; normalTitle = "Sign up"; ObjectID = "7OV-j8-q5M"; */
+"7OV-j8-q5M.normalTitle" = "Sign up";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "7se-ds-VvK"; */
+"7se-ds-VvK.placeholder" = "Password";
+
 /* Class = "IBUILabel"; text = "date here"; ObjectID = "AZr-zx-XNt"; */
 "AZr-zx-XNt.text" = "date here";
 
@@ -65,6 +71,9 @@
 /* Class = "IBUIButton"; normalTitle = "0 registered"; ObjectID = "Pd9-L5-NzW"; */
 "Pd9-L5-NzW.normalTitle" = "0 registered";
 
+/* Class = "IBUITextField"; placeholder = "Pseudo"; ObjectID = "QKl-Gf-Ol8"; */
+"QKl-Gf-Ol8.placeholder" = "Pseudo";
+
 /* Class = "IBUISegmentedControl"; Tac-Xe-t36.segmentTitles[0] = "Following"; ObjectID = "Tac-Xe-t36"; */
 "Tac-Xe-t36.segmentTitles[0]" = "Following";
 
@@ -80,6 +89,9 @@
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "VE3-lX-WzJ"; */
 "VE3-lX-WzJ.text" = "Subtitle";
 
+/* Class = "IBUITextField"; placeholder = "E-mail"; ObjectID = "XrZ-hj-oy9"; */
+"XrZ-hj-oy9.placeholder" = "E-mail";
+
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "YMA-R5-6Qb"; */
 "YMA-R5-6Qb.normalTitle" = "Cancel";
 
@@ -94,6 +106,9 @@
 
 /* Class = "IBUIButton"; normalTitle = "Subscribe"; ObjectID = "eLY-zI-0Ei"; */
 "eLY-zI-0Ei.normalTitle" = "Subscribe";
+
+/* Class = "IBUILabel"; text = "Error message"; ObjectID = "fx6-RB-AFy"; */
+"fx6-RB-AFy.text" = "Error message";
 
 /* Class = "IBUILabel"; text = "Help"; ObjectID = "gXZ-ED-xKE"; */
 "gXZ-ED-xKE.text" = "Help";
@@ -116,6 +131,9 @@
 /* Class = "IBUIButton"; normalTitle = "Facebook"; ObjectID = "mBc-Mz-rDK"; */
 "mBc-Mz-rDK.normalTitle" = "Facebook";
 
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "mtY-X3-xJC"; */
+"mtY-X3-xJC.normalTitle" = "Cancel";
+
 /* Class = "IBUISegmentedControl"; npQ-IB-ydn.segmentTitles[0] = "Agenda"; ObjectID = "npQ-IB-ydn"; */
 "npQ-IB-ydn.segmentTitles[0]" = "Agenda";
 
@@ -130,6 +148,9 @@
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "ozX-ng-Cxs"; */
 "ozX-ng-Cxs.text" = "Subtitle";
+
+/* Class = "IBUIButton"; normalTitle = "Sign up with Streameus"; ObjectID = "q8p-mS-e7I"; */
+"q8p-mS-e7I.normalTitle" = "Sign up with Streameus";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "qFk-Vz-Q4T"; */
 "qFk-Vz-Q4T.text" = "Subtitle";
@@ -157,6 +178,9 @@
 
 /* Class = "IBUILabel"; text = "News feed"; ObjectID = "yvW-Oj-tR7"; */
 "yvW-Oj-tR7.text" = "News feed";
+
+/* Class = "IBUILabel"; text = "or"; ObjectID = "z5j-YM-0Hg"; */
+"z5j-YM-0Hg.text" = "or";
 
 /* Class = "IBUIButton"; normalTitle = "Discover now"; ObjectID = "zg0-at-FB9"; */
 "zg0-at-FB9.normalTitle" = "Discover now";

@@ -36,6 +36,7 @@
 		A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634719AA4C5A00747F62 /* STConferenceViewController.m */; };
 		A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A634D19ACB20000747F62 /* STButtonBackground.m */; };
 		A87A635119AD392B00747F62 /* STConferenceRegisteredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */; };
+		A87B0BC11A17AD1400500B8D /* STRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87B0BC01A17AD1400500B8D /* STRegisterViewController.m */; };
 		A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */; };
 		A887FC85197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A887FC84197D4F73000B1BE2 /* STSuggestionCollectionViewCell.m */; };
 		A887FC87197D86FD000B1BE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A887FC86197D86FD000B1BE2 /* QuartzCore.framework */; };
@@ -168,6 +169,8 @@
 		A87A634D19ACB20000747F62 /* STButtonBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STButtonBackground.m; sourceTree = "<group>"; };
 		A87A634F19AD392B00747F62 /* STConferenceRegisteredTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConferenceRegisteredTableViewController.h; sourceTree = "<group>"; };
 		A87A635019AD392B00747F62 /* STConferenceRegisteredTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConferenceRegisteredTableViewController.m; sourceTree = "<group>"; };
+		A87B0BBF1A17AD1400500B8D /* STRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRegisterViewController.h; sourceTree = "<group>"; };
+		A87B0BC01A17AD1400500B8D /* STRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRegisterViewController.m; sourceTree = "<group>"; };
 		A887FC7E197BE274000B1BE2 /* STSuggestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionTableViewCell.h; sourceTree = "<group>"; };
 		A887FC7F197BE274000B1BE2 /* STSuggestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSuggestionTableViewCell.m; sourceTree = "<group>"; };
 		A887FC83197D4F73000B1BE2 /* STSuggestionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSuggestionCollectionViewCell.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */,
 				A8114C0D1A06A8E700246492 /* STCategorieTableViewController.h */,
 				A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */,
+				A87B0BBF1A17AD1400500B8D /* STRegisterViewController.h */,
+				A87B0BC01A17AD1400500B8D /* STRegisterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -738,6 +743,7 @@
 				A89F095018869ED0008FE4D3 /* STAppDelegate.m in Sources */,
 				A887FC9E197D973E000B1BE2 /* TLYShyViewController.m in Sources */,
 				A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */,
+				A87B0BC11A17AD1400500B8D /* STRegisterViewController.m in Sources */,
 				A887FC9D197D973E000B1BE2 /* TLYShyNavBarManager.m in Sources */,
 				A8A4666919F3D5D200C2EC7B /* STRightMenuBarButton.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,

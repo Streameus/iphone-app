@@ -116,29 +116,21 @@
     }
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         id jsonResult;
-        
+        NSHTTPURLResponse *responseStatus = (NSHTTPURLResponse *)response;
+        NSLog(@"\nCODE : %ld\nURL : [%@]%@\nREQUEST BODY:%@", (long)responseStatus.statusCode, request.HTTPMethod, request.URL, [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]);
         if ([data length] > 0) {
             jsonResult = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         }
         if ([data length] > 0 && connectionError == nil) {
-            NSHTTPURLResponse *responseStatus = (NSHTTPURLResponse *)response;
-            NSLog(@"CODE : %ld\nURL : %@", (long)responseStatus.statusCode, request.URL);
-            NSLog(@"BODY : \n%@", jsonResult);
-            switch (responseStatus.statusCode) {
-                case 200:
-                    success(response, data, connectionError, jsonResult);
-                    break;
-                case 204:
-                    success(response, data, connectionError, jsonResult);
-                    break;
-                case 404:
-                    failure(response, data, connectionError, jsonResult);
-                    break;
-                default:
-                    break;
+            NSLog(@"RESPONSE : \n%@", jsonResult);
+            if (responseStatus.statusCode >= 200 && responseStatus.statusCode <= 300) {
+                success(response, data, connectionError, jsonResult);
+            } else {
+                failure(response, data, connectionError, jsonResult);
             }
         } else if ([data length] == 0 && connectionError == nil) {
             NSLog(@"Nothing was downloaded");
+            success(response, data, connectionError, jsonResult);
         } else if (connectionError != nil) {
             if ([data length] > 0) {
                 failure(response, data, connectionError, jsonResult);
