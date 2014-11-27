@@ -10,14 +10,19 @@
 #import "AsyncImageView.h"
 
 @interface STProfilViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *tmpIBBackground;
 
 @property (nonatomic, strong) NSDictionary *user;
 @property (nonatomic, strong) NSString *userId;
 
 @property (weak, nonatomic) IBOutlet UILabel *pseudoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pseudoLabelSubtitle;
 @property (weak, nonatomic) IBOutlet AsyncImageView *profilPicture;
 @property (weak, nonatomic) IBOutlet UIButton *followBtn;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *followActivityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *followingButton;
+@property (weak, nonatomic) IBOutlet UIButton *followersButton;
+@property (weak, nonatomic) IBOutlet UIButton *conferencesButton;
 
 - (void)follow;
 - (void)unFollow;

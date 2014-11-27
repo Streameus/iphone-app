@@ -691,7 +691,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/scripts/update_storyboard_strings.sh";
+			shellScript = "#${PROJECT_DIR}/scripts/update_storyboard_strings.sh";
 			showEnvVarsInLog = 0;
 		};
 		A85C8C2718C2D4EE0034BD64 /* ShellScript */ = {

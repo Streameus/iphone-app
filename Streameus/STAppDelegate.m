@@ -16,6 +16,7 @@
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x203543)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     [[UISearchBar appearance] setBarTintColor:UIColorFromRGB(0x203543)];
     [[UISearchBar appearance] setTintColor:UIColorFromRGB(0xEFEFEF)];
     

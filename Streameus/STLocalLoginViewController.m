@@ -44,8 +44,8 @@
     [super viewDidAppear:animated];
     
     // TMP
-//    self.password.text = @"123123";
-//    [self signin:self.signinBtn];
+    self.password.text = @"123123";
+    [self signin:self.signinBtn];
     // END TMP
 }
 

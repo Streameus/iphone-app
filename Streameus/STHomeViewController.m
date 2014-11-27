@@ -94,8 +94,9 @@ static NSString *EventCellIdentifier = @"eventCell";
     // Remove table cell separator
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
+    [self.navigationController.navigationBar setTranslucent:true];
+    
     // Assign our own backgroud for the view
-
     self.parentViewController.view.backgroundColor = [UIColor
                                                       colorWithPatternImage:[[UIImage imageNamed:@"night-cafe_iphone5"]
                                                                              blurredImageWithRadius:30 iterations:1 tintColor:[UIColor colorWithRed:246/255 green:241/255 blue:211/255 alpha:1]]];
@@ -295,7 +296,7 @@ static NSString *EventCellIdentifier = @"eventCell";
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/picture/user/%@", [api baseUrl], [item objectForKey:@"AuthorId"]]];
         [aCell.picture setImageURL:url];
         aCell.picture.layer.masksToBounds = YES;
-        aCell.picture.layer.cornerRadius = 35.0f;
+        aCell.picture.layer.cornerRadius = aCell.picture.frame.size.width / 2;
         
         NSString* content = [STApiEvent getContentString:item];
         aCell.content.text = [NSString stringWithFormat:@"%@", content];

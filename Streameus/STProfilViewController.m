@@ -12,6 +12,7 @@
 #import "STSubscriptionsTableViewController.h"
 #import "STConferenceTableViewController.h"
 #import "STHomeViewController.h"
+#import "FXBlurView.h"
 
 @interface STProfilViewController ()
 
@@ -25,8 +26,27 @@
 {
     [super viewDidLoad];
 
+    self.tmpIBBackground.hidden = true; // Background set to help while in IB not needed after
+    
+    self.profilPicture.layer.cornerRadius = self.profilPicture.frame.size.width / 2;
+    self.profilPicture.clipsToBounds = true;
+    self.profilPicture.layer.borderWidth = 4.0f;
+    self.profilPicture.layer.borderColor = [UIColor  colorWithWhite:1 alpha:0.95].CGColor;
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"night-cafe_iphone5"] blurredImageWithRadius:70 iterations:2 tintColor:[UIColor colorWithRed:246/255 green:241/255 blue:211/255 alpha:1]]];
+    
     self.followBtn.enabled = false;
     [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
+    
+    [UIView animateWithDuration:0.8
+                          delay:1
+         usingSpringWithDamping:0.3
+          initialSpringVelocity:1.0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         self.followBtn.transform = CGAffineTransformMakeRotation(M_PI_4);
+                     } completion:nil];
+    
     if (!self.user || self.userId) { // Check pour pouvoir afficher back | A perfectionner
         if (!self.userId) {
             self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
@@ -55,12 +75,16 @@
                                    if (connectionError == nil && statusCode == 200) {
                                        dispatch_async(dispatch_get_main_queue(), ^{
                                            self.user = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                           NSLog(@"User :\n%@", self.user);
                                            [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                           [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ (%@ %@)",
-                                                                      [self.user objectForKey:@"Pseudo"],
+                                           [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ %@",
                                                                       [self.user objectForKey:@"FirstName"],
                                                                       [self.user objectForKey:@"LastName"]]];
+                                           [self.pseudoLabelSubtitle setText:[NSString stringWithFormat:@"@%@", [self.user objectForKey:@"Pseudo"]]];
                                            [self loadProfilPicture:[self.user objectForKey:@"Id"]];
+                                           [self.conferencesButton setTitle:[NSString stringWithFormat:@"%@\nConferences", [self.user objectForKey:@"Conferences"]] forState:UIControlStateNormal];
+                                           [self.followersButton setTitle:[NSString stringWithFormat:@"%@\nFollowers", [self.user objectForKey:@"Followers"]] forState:UIControlStateNormal];
+                                           [self.followingButton setTitle:[NSString stringWithFormat:@"%@\nFollowing", [self.user objectForKey:@"Followings"]] forState:UIControlStateNormal];
                                            [[self.eventsViewController repository] setDontLoad:false];
                                            [[self.eventsViewController repository] setAuthorId:[[self.user objectForKey:@"Id"] intValue]];
                                            [self.eventsViewController refresh];
@@ -79,11 +103,14 @@
                                }];
     } else {
         NSLog(@"User :\n%@", self.user);
-        [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ (%@ %@)",
-                                   [self.user objectForKey:@"Pseudo"],
+        [self.pseudoLabel setText:[NSString stringWithFormat:@"%@ %@",
                                    [self.user objectForKey:@"FirstName"],
                                    [self.user objectForKey:@"LastName"]]];
+        [self.pseudoLabelSubtitle setText:[NSString stringWithFormat:@"@%@", [self.user objectForKey:@"Pseudo"]]];
         [self loadProfilPicture:[self.user objectForKey:@"Id"]];
+        [self.conferencesButton setTitle:[NSString stringWithFormat:@"%@\nConferences", [self.user objectForKey:@"Conferences"]] forState:UIControlStateNormal];
+        [self.followersButton setTitle:[NSString stringWithFormat:@"%@\nFollowers", [self.user objectForKey:@"Followers"]] forState:UIControlStateNormal];
+        [self.followingButton setTitle:[NSString stringWithFormat:@"%@\nFollowing", [self.user objectForKey:@"Followings"]] forState:UIControlStateNormal];
         [[self.eventsViewController repository] setDontLoad:false];
         [[self.eventsViewController repository] setAuthorId:[[self.user objectForKey:@"Id"] intValue]];
         [self.eventsViewController refresh];
