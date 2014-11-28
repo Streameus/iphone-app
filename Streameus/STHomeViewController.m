@@ -124,13 +124,16 @@ static NSString *EventCellIdentifier = @"eventCell";
             [self performSegueWithIdentifier:@"searchUserSegue" sender:[[searchResults objectForKey:@"Users"] objectAtIndex:indexPath.row]];
         }
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:@"Calm down cowboy, this app is still under development!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok sry!"
-                                              otherButtonTitles:nil];
-        [alert show];
+        if ([self.repository.items count] > 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"Calm down cowboy, this app is still under development!"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok sry!"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -233,7 +236,7 @@ static NSString *EventCellIdentifier = @"eventCell";
         }
         return 0;
     }
-    return [self.repository.items count];
+    return ([self.repository.items count] > 0)? [self.repository.items count] : 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -266,6 +269,19 @@ static NSString *EventCellIdentifier = @"eventCell";
             [searchUserCell.imageView setImageURL:url];
             return searchUserCell;
         }
+        return cell;
+    }
+    if ([self.repository.items count] == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"searchCell"];
+        }
+        cell.textLabel.text = NSLocalizedString(@"It seems that there is no content available.", nil);
+        cell.textLabel.textColor = UIColorFromRGB(0xDDDDDD);
+        cell.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:18];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.numberOfLines = 0;
+        cell.backgroundColor = [UIColor clearColor];
         return cell;
     }
     if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]) {
@@ -310,6 +326,9 @@ static NSString *EventCellIdentifier = @"eventCell";
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         return 50;
+    }
+    if ([self.repository.items count] == 0) {
+        return 150;
     }
     if ([[self.repository.items objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]])
         return 135;
