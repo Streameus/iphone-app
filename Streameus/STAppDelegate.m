@@ -8,6 +8,7 @@
 
 #import "STAppDelegate.h"
 #import "StreameusAPI/STApiConstants.h"
+#import "FXBlurView.h"
 
 @implementation STAppDelegate
 
@@ -25,7 +26,8 @@
     pageControl.currentPageIndicatorTintColor = UIColorFromRGBandAlpha(0xFEFEFE, 0.8);
     pageControl.backgroundColor = [UIColor clearColor];
     
-    [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
+//    [self.window setBackgroundColor:UIColorFromRGB(0xFAF3D5)];
+    [self.window setBackgroundColor:[UIColor colorWithPatternImage:[[UIImage imageNamed:@"night-cafe_iphone5"] blurredImageWithRadius:80 iterations:2 tintColor:[UIColor colorWithRed:246/255 green:241/255 blue:211/255 alpha:1]]]];
     
     [[StreameusAPI sharedInstance] initializeWithBaseUrl:kSTStreameusAPIURL];
     

@@ -549,7 +549,7 @@ static NSString * const SWSegueRightIdentifier = @"sw_right";
     [self loadStoryboardControllers];
     
     // Apple also tells us to do this:
-    _contentView.backgroundColor = [UIColor blackColor];
+    _contentView.backgroundColor = [UIColor clearColor];
     
     // we set the current frontViewPosition to none before seting the
     // desired initial position, this will force proper controller reload
@@ -1155,9 +1155,16 @@ static NSString * const SWSegueRightIdentifier = @"sw_right";
     
     if ( duration > 0.0f )
     {
-        [UIView animateWithDuration:duration delay:0.0
-        options:UIViewAnimationOptionCurveEaseOut
-        animations:animations completion:completion];
+        [UIView animateWithDuration:0.8
+                              delay:0.0
+             usingSpringWithDamping:0.6
+              initialSpringVelocity:1.0
+                            options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:animations completion:completion];
+        
+//        [UIView animateWithDuration:duration delay:0.0
+//        options:UIViewAnimationOptionCurveEaseOut
+//        animations:animations completion:completion];
     }
     else
     {

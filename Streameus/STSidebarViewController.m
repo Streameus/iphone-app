@@ -12,6 +12,7 @@
 #import "STApiOAuthViewController.h"
 #import "STHomeViewController.h"
 #import "STCategorieTableViewController.h"
+#import "FXBlurView.h"
 
 @interface STSidebarViewController ()
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setTranslucent:true];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"night-cafe_iphone5"] blurredImageWithRadius:80 iterations:2 tintColor:[UIColor colorWithRed:246/255 green:241/255 blue:211/255 alpha:1]]];
 }
 
 #pragma mark - Navigation

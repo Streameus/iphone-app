@@ -254,6 +254,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Edq-Uu-sEA" kind="custom" identifier="fluxSegue" customClass="SWRevealViewControllerSegue" id="0WQ-oP-oc2"/>
                                         </connections>
@@ -274,6 +275,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="BXJ-xj-Ur9" kind="custom" identifier="profilSegue" customClass="SWRevealViewControllerSegue" id="Zhw-xx-fV4"/>
                                         </connections>
@@ -294,6 +296,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Xaw-k5-6k4" kind="custom" customClass="SWRevealViewControllerSegue" id="evf-dD-Ve9"/>
                                         </connections>
@@ -314,6 +317,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="EBs-AQ-AzC" kind="custom" identifier="browseCellToTableSegue" customClass="SWRevealViewControllerSegue" id="Mcc-Xe-yHV"/>
                                         </connections>
@@ -338,6 +342,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="CCR-2F-nye" kind="custom" customClass="SWRevealViewControllerSegue" id="3he-3u-uxQ"/>
                                         </connections>
@@ -358,6 +363,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Nme-0i-MYE" kind="custom" customClass="SWRevealViewControllerSegue" id="YHa-7E-Y2k"/>
                                         </connections>
@@ -378,6 +384,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="GLz-y6-e2l" kind="custom" customClass="SWRevealViewControllerSegue" id="yke-pY-BdO"/>
                                         </connections>
@@ -402,6 +409,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="JXC-dF-Vab" kind="modal" identifier="logoutSegue" modalTransitionStyle="coverVertical" id="aR4-Pj-XnK"/>
                                         </connections>
@@ -1934,12 +1942,12 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ufg-uo-KWQ"/>
-        <segue reference="OPx-mJ-JG5"/>
-        <segue reference="wXm-mM-PHj"/>
+        <segue reference="aR4-Pj-XnK"/>
+        <segue reference="0WQ-oP-oc2"/>
+        <segue reference="Zhw-xx-fV4"/>
         <segue reference="TyZ-2d-hGM"/>
-        <segue reference="JtA-0x-mqL"/>
-        <segue reference="hg3-b8-F9L"/>
         <segue reference="EHo-Hj-BIQ"/>
         <segue reference="UJ2-cj-FRZ"/>
+        <segue reference="wXm-mM-PHj"/>
     </inferredMetricsTieBreakers>
 </document>
