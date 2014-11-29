@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSDictionary *user;
 @property (nonatomic, strong) NSString *userId;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *pseudoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pseudoLabelSubtitle;
 @property (weak, nonatomic) IBOutlet AsyncImageView *profilPicture;

@@ -22,11 +22,25 @@
 
 @implementation STProfilViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+    [UIView animateWithDuration:1.2
+                          delay:0.0
+         usingSpringWithDamping:0.5
+          initialSpringVelocity:1.0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         self.topConstraint.constant = 8;
+                         [self.view layoutIfNeeded];
+                     } completion:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.topConstraint.constant = -self.view.frame.size.height;
     self.tmpIBBackground.hidden = true; // Background set to help while in IB not needed after
+    self.followBtn.transform = CGAffineTransformMakeRotation(0);
     
     self.profilPicture.layer.cornerRadius = self.profilPicture.frame.size.width / 2;
     self.profilPicture.clipsToBounds = true;
@@ -38,19 +52,11 @@
     self.followBtn.enabled = false;
     [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
     
-    [UIView animateWithDuration:0.8
-                          delay:1
-         usingSpringWithDamping:0.3
-          initialSpringVelocity:1.0
-                        options:UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         self.followBtn.transform = CGAffineTransformMakeRotation(M_PI_4);
-                     } completion:nil];
-    
     if (!self.user || self.userId) { // Check pour pouvoir afficher back | A perfectionner
         if (!self.userId) {
             self.navigationItem.leftBarButtonItem = [STLeftMenuBarButton menuBarItemTarget:self.revealViewController action:@selector(revealToggle:)];
             [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+            [self.followBtn setHidden:YES];
         }
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -64,8 +70,6 @@
             urlRequest = [[StreameusAPI sharedInstance] createUrlController:@"user/me" withVerb:GET];
         }
         
-        
-        [self.followBtn setHidden:YES];
         [NSURLConnection sendAsynchronousRequest:urlRequest
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -88,6 +92,7 @@
                                            [[self.eventsViewController repository] setDontLoad:false];
                                            [[self.eventsViewController repository] setAuthorId:[[self.user objectForKey:@"Id"] intValue]];
                                            [self.eventsViewController refresh];
+                                           [self updateFollowBtn];
                                        });
                                    } else if (connectionError != nil){
                                        NSLog(@"Error happened = %@", connectionError);
@@ -155,10 +160,28 @@
                                    [self.followBtn removeTarget:self action:@selector(follow) forControlEvents:UIControlEventTouchUpInside];
                                    [self.followBtn addTarget:self action:@selector(unFollow) forControlEvents:UIControlEventTouchUpInside];
                                    [self.followBtn setTitle:NSLocalizedString(@"unFollow", nil) forState:UIControlStateNormal];
+                                   [UIView animateWithDuration:0.8
+                                                         delay:0.0
+                                        usingSpringWithDamping:0.3
+                                         initialSpringVelocity:1.0
+                                                       options:UIViewAnimationOptionBeginFromCurrentState
+                                                    animations:^{
+                                                        self.followBtn.transform = CGAffineTransformMakeRotation(M_PI_4);
+                                                    } completion:nil];
+
                                } else {
                                    [self.followBtn removeTarget:self action:@selector(unFollow) forControlEvents:UIControlEventTouchUpInside];
                                    [self.followBtn addTarget:self action:@selector(follow) forControlEvents:UIControlEventTouchUpInside];
                                    [self.followBtn setTitle:NSLocalizedString(@"Follow", nil) forState:UIControlStateNormal];
+                                   [UIView animateWithDuration:0.8
+                                                         delay:0.0
+                                        usingSpringWithDamping:0.3
+                                         initialSpringVelocity:1.0
+                                                       options:UIViewAnimationOptionBeginFromCurrentState
+                                                    animations:^{
+                                                        self.followBtn.transform = CGAffineTransformMakeRotation(0);
+                                                    } completion:nil];
+
                                }
                                [self.followActivityIndicator stopAnimating];
                                self.followBtn.enabled = true;
