@@ -11,7 +11,7 @@
 #import "STSearchViewController.h"
 #import "STApiOAuthViewController.h"
 #import "STHomeViewController.h"
-#import "STCategorieTableViewController.h"
+#import "STCategorieCollectionViewController.h"
 #import "FXBlurView.h"
 
 @interface STSidebarViewController ()
@@ -46,7 +46,7 @@
         [STApiOAuthViewController clearCookies];
     } else if ([segue.identifier isEqualToString:@"browseCellToTableSegue"]) {
         STCategorieRepository *repo = [[STCategorieRepository alloc] init];
-        [(STCategorieTableViewController *)destViewController configureWithRepository:repo];
+        [(STCategorieCollectionViewController *)destViewController configureWithRepository:repo];
     }
 
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {

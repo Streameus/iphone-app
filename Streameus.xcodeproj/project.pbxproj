@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		A804756419C5D2CB006A4C09 /* UIButton+Streameus.m in Sources */ = {isa = PBXBuildFile; fileRef = A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */; };
 		A8114C0A1A0666D600246492 /* update_storyboard_strings.sh in Resources */ = {isa = PBXBuildFile; fileRef = A8114C091A0666D600246492 /* update_storyboard_strings.sh */; };
-		A8114C0F1A06A8E700246492 /* STCategorieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */; };
 		A8114C121A06A95100246492 /* STCategorieRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A8114C111A06A95100246492 /* STCategorieRepository.m */; };
 		A81C5BFE189D43FD007A2C9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A81C5BFD189D43FD007A2C9B /* README.md */; };
+		A81F417A1A2B60CD00F0287E /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A81F41791A2B60CD00F0287E /* AWCollectionViewDialLayout.m */; };
+		A81F417F1A2B623E00F0287E /* STCategorieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81F417E1A2B623E00F0287E /* STCategorieCollectionViewController.m */; };
 		A82C2DD918EE44D000AB2AC1 /* sign-in-with-google.png in Resources */ = {isa = PBXBuildFile; fileRef = A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */; };
 		A839FA3518C9FB720083BA4E /* STProfilAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */; };
 		A8512AB819C4953800BE86F9 /* sign-in-with-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A8512AB719C4953800BE86F9 /* sign-in-with-facebook.png */; };
@@ -119,11 +120,13 @@
 		A804756219C5D2CB006A4C09 /* UIButton+Streameus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Streameus.h"; sourceTree = "<group>"; };
 		A804756319C5D2CB006A4C09 /* UIButton+Streameus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Streameus.m"; sourceTree = "<group>"; };
 		A8114C091A0666D600246492 /* update_storyboard_strings.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update_storyboard_strings.sh; sourceTree = "<group>"; };
-		A8114C0D1A06A8E700246492 /* STCategorieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategorieTableViewController.h; sourceTree = "<group>"; };
-		A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategorieTableViewController.m; sourceTree = "<group>"; };
 		A8114C101A06A95100246492 /* STCategorieRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategorieRepository.h; sourceTree = "<group>"; };
 		A8114C111A06A95100246492 /* STCategorieRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategorieRepository.m; sourceTree = "<group>"; };
 		A81C5BFD189D43FD007A2C9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A81F41781A2B60CD00F0287E /* AWCollectionViewDialLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewDialLayout.h; sourceTree = "<group>"; };
+		A81F41791A2B60CD00F0287E /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
+		A81F417D1A2B623E00F0287E /* STCategorieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategorieCollectionViewController.h; sourceTree = "<group>"; };
+		A81F417E1A2B623E00F0287E /* STCategorieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategorieCollectionViewController.m; sourceTree = "<group>"; };
 		A82C2DD818EE44D000AB2AC1 /* sign-in-with-google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-with-google.png"; sourceTree = "<group>"; };
 		A839FA3318C9FB720083BA4E /* STProfilAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STProfilAboutViewController.h; sourceTree = "<group>"; };
 		A839FA3418C9FB720083BA4E /* STProfilAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STProfilAboutViewController.m; sourceTree = "<group>"; };
@@ -348,10 +351,10 @@
 				A86266A518F8097D006C10BD /* STSubscriptionsTableViewController.m */,
 				A8A4666F19F3D74600C2EC7B /* STSideSearchViewController.h */,
 				A8A4667019F3D74600C2EC7B /* STSideSearchViewController.m */,
-				A8114C0D1A06A8E700246492 /* STCategorieTableViewController.h */,
-				A8114C0E1A06A8E700246492 /* STCategorieTableViewController.m */,
 				A87B0BBF1A17AD1400500B8D /* STRegisterViewController.h */,
 				A87B0BC01A17AD1400500B8D /* STRegisterViewController.m */,
+				A81F417D1A2B623E00F0287E /* STCategorieCollectionViewController.h */,
+				A81F417E1A2B623E00F0287E /* STCategorieCollectionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -511,17 +514,19 @@
 		A8D1D462189CBF7D00186B1B /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				A887FC8E197D973E000B1BE2 /* TLYShyNavBar */,
-				A887FC88197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.h */,
-				A887FC89197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m */,
 				A8AD03F018F7A03C00AFDD3B /* AsyncImageView.h */,
 				A8AD03F118F7A03C00AFDD3B /* AsyncImageView.m */,
+				A81F41781A2B60CD00F0287E /* AWCollectionViewDialLayout.h */,
+				A81F41791A2B60CD00F0287E /* AWCollectionViewDialLayout.m */,
+				A8776DF419C5E7130040C087 /* FXBlurView.h */,
+				A8776DF519C5E7130040C087 /* FXBlurView.m */,
 				A86E367A18ABA9E600C23C38 /* MBProgressHUD.h */,
 				A86E367B18ABA9E600C23C38 /* MBProgressHUD.m */,
 				A8D1D463189CBFBA00186B1B /* SWRevealViewController.h */,
 				A8D1D464189CBFBA00186B1B /* SWRevealViewController.m */,
-				A8776DF419C5E7130040C087 /* FXBlurView.h */,
-				A8776DF519C5E7130040C087 /* FXBlurView.m */,
+				A887FC8E197D973E000B1BE2 /* TLYShyNavBar */,
+				A887FC88197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.h */,
+				A887FC89197D873D000B1BE2 /* UIScrollView+SVInfiniteScrolling.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				A8B115B0189E379F00D83511 /* STIntroViewController.m in Sources */,
 				A8C8DD4B1952BAC30036B6FD /* STEventTableViewCell.m in Sources */,
 				A8776DF619C5E7130040C087 /* FXBlurView.m in Sources */,
+				A81F417F1A2B623E00F0287E /* STCategorieCollectionViewController.m in Sources */,
 				A86E367618ABA1AF00C23C38 /* STUserRepository.m in Sources */,
 				A887FC80197BE274000B1BE2 /* STSuggestionTableViewCell.m in Sources */,
 				A8BE5BD5196D7527003D8199 /* STAgendaRepository.m in Sources */,
@@ -745,6 +751,7 @@
 				A8ACF06D1924E71C00C026D9 /* STConferenceRepository.m in Sources */,
 				A87B0BC11A17AD1400500B8D /* STRegisterViewController.m in Sources */,
 				A887FC9D197D973E000B1BE2 /* TLYShyNavBarManager.m in Sources */,
+				A81F417A1A2B60CD00F0287E /* AWCollectionViewDialLayout.m in Sources */,
 				A8A4666919F3D5D200C2EC7B /* STRightMenuBarButton.m in Sources */,
 				A8774B09189CE871000A7E61 /* STLoginViewController.m in Sources */,
 				A8F0807D189E0B0B005514AB /* STEquipeViewController.m in Sources */,
@@ -758,7 +765,6 @@
 				A87A634819AA4C5A00747F62 /* STConferenceViewController.m in Sources */,
 				A875782419C4B3F0006C8447 /* STSuggestionConfTableViewCell.m in Sources */,
 				A8ACF0681924E48B00C026D9 /* STConferenceTableViewController.m in Sources */,
-				A8114C0F1A06A8E700246492 /* STCategorieTableViewController.m in Sources */,
 				A85900D8196D739C0084C527 /* STAgendaTableViewController.m in Sources */,
 				A87A634E19ACB20000747F62 /* STButtonBackground.m in Sources */,
 				A86E367218ABA0DC00C23C38 /* STSearchViewController.m in Sources */,
